@@ -1,0 +1,28 @@
+{
+  "name": "formo2022",
+  "version": "1.0.0",
+  "description": "formo.bio wordpress theme",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saiminh/formo2022.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saiminh/formo2022/issues"
+  },
+  "homepage": "https://github.com/saiminh/formo2022#readme",
+  "devDependencies": {
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "gsap": "npm:@gsap/shockingly@^3.10.4",
+    "sass": "^1.53.0"
+  }
+}

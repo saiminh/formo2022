@@ -65,3 +65,9 @@ add_action( 'wp_enqueue_scripts', 'formo2022_styles' );
 
 // Add block patterns
 require get_template_directory() . '/inc/block-patterns.php';
+
+// Add custom post types
+require get_template_directory() . '/inc/custom-post-types.php';
+
+// Customise admin
+require get_template_directory() . '/inc/customise-admin.php';

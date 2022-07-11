@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkformo2022=self.webpackChunkformo2022||[]).push([[726],{459:(o,r,s)=>{s(358).ZP.to("body",{backgroundColor:"#000",duration:1})}},o=>{o.O(0,[712],(()=>(459,o(o.s=459)))),o.O()}]);

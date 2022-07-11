@@ -1,0 +1,22 @@
+const path = require('path');
+
+module.exports = {
+  entry: {
+    index: {
+      import: './src/index.js',
+      dependOn: 'shared'
+    },
+    second: {
+      import: './src/second.js',
+      dependOn: 'shared'
+    },
+    shared: 'gsap'
+  },
+  optimization: {
+    runtimeChunk: 'single',
+  },
+  // output: {
+  //   filename: '[name].bundle.js',
+  //   path: path.resolve(__dirname, 'dist'),
+  // },
+};
