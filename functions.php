@@ -25,7 +25,7 @@ if ( ! function_exists( 'formo2022_support' ) ) :
 		add_theme_support( 'wp-block-styles' );
 
 		// Enqueue editor styles.
-		add_editor_style( 'style.css' );
+		add_editor_style( 'index.css' );
 
 	}
 
@@ -49,14 +49,17 @@ if ( ! function_exists( 'formo2022_styles' ) ) :
 		$version_string = is_string( $theme_version ) ? $theme_version : false;
 		wp_register_style(
 			'formo2022-style',
-			get_template_directory_uri() . '/style.css',
+			get_template_directory_uri() . '/index.css',
 			array(),
 			$version_string
 		);
-
 		// Enqueue theme stylesheet.
 		wp_enqueue_style( 'formo2022-style' );
 
+    wp_register_script( 'runtime', get_template_directory_uri().'/dist/runtime.js', [], $version_string, true );
+    wp_enqueue_script( 'runtime' );
+    wp_register_script( 'global-js', get_template_directory_uri().'/dist/index.js', [], $version_string, true );
+    wp_enqueue_script( 'global-js' );
 	}
 
 endif;

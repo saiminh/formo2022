@@ -1,0 +1,384 @@
+@charset "UTF-8";
+/*
+Theme Name: Formo 2022
+Theme URI: https://wordpress.org/themes/formo2022/
+Author: the WordPress team
+Author URI: https://wordpress.org/
+Description: Built on a solidly designed foundation, Formo 2022 embraces the idea that everyone deserves a truly unique website. The theme’s subtle styles are inspired by the diversity and versatility of birds: its typography is lightweight yet strong, its color palette is drawn from nature, and its layout elements sit gently on the page. The true richness of Formo 2022 lies in its opportunity for customization. The theme is built to take advantage of the Full Site Editing features introduced in WordPress 5.9, which means that colors, typography, and the layout of every single page on your site can be customized to suit your vision. It also includes dozens of block patterns, opening the door to a wide range of professionally designed layouts in just a few clicks. Whether you’re building a single-page website, a blog, a business website, or a portfolio, Formo 2022 will help you create a site that is uniquely yours.
+Requires at least: 5.9
+Tested up to: 6.0
+Requires PHP: 5.6
+Version: 1.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: formo2022
+Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments
+
+Formo 2022 WordPress Theme, (C) 2021 WordPress.org
+Formo 2022 is distributed under the terms of the GNU GPL.
+*/
+/*
+ * Font smoothing.
+ * This is a niche setting that will not be available via Global Styles.
+ * https://github.com/WordPress/gutenberg/issues/35934
+ */
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+ * Text and navigation link styles.
+ * Necessary until the following issue is resolved in Gutenberg:
+ * https://github.com/WordPress/gutenberg/issues/27075
+ */
+a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25ch;
+}
+
+a:hover,
+a:focus {
+  text-decoration-style: dashed;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+.wp-block-navigation .wp-block-navigation-item a:hover,
+.wp-block-navigation .wp-block-navigation-item a:focus {
+  text-decoration: underline;
+  text-decoration-style: solid;
+}
+
+/*
+ * Search and File Block button styles.
+ * Necessary until the following issues are resolved in Gutenberg:
+ * https://github.com/WordPress/gutenberg/issues/36444
+ * https://github.com/WordPress/gutenberg/issues/27760
+ */
+.wp-block-search__button,
+.wp-block-file .wp-block-file__button {
+  background-color: var(--wp--preset--color--primary);
+  border-radius: 0;
+  border: none;
+  color: var(--wp--preset--color--background);
+  font-size: var(--wp--preset--font-size--medium);
+  padding: calc(0.667em + 2px) calc(1.333em + 2px);
+}
+
+/*
+ * Button hover styles.
+ * Necessary until the following issue is resolved in Gutenberg:
+ * https://github.com/WordPress/gutenberg/issues/27075
+ */
+.wp-block-search__button:hover,
+.wp-block-file .wp-block-file__button:hover,
+.wp-block-button__link:hover {
+  opacity: 0.9;
+}
+
+/*
+ * Alignment styles.
+ * These rules are temporary, and should not be relied on or
+ * modified too heavily by themes or plugins that build on
+ * Formo 2022. These are meant to be a precursor to
+ * a global solution provided by the Block Editor.
+ *
+ * Relevant issues:
+ * https://github.com/WordPress/gutenberg/issues/35607
+ * https://github.com/WordPress/gutenberg/issues/35884
+ */
+.wp-site-blocks,
+body > .is-root-container,
+.edit-post-visual-editor__post-title-wrapper,
+.wp-block-group.alignfull,
+.wp-block-group.has-background,
+.wp-block-cover.alignfull,
+.is-root-container .wp-block[data-align=full] > .wp-block-group,
+.is-root-container .wp-block[data-align=full] > .wp-block-cover {
+  padding-left: var(--wp--custom--spacing--outer);
+  padding-right: var(--wp--custom--spacing--outer);
+}
+
+.wp-site-blocks .alignfull,
+.wp-site-blocks > .wp-block-group.has-background,
+.wp-site-blocks > .wp-block-cover,
+.wp-site-blocks > .wp-block-template-part > .wp-block-group.has-background,
+.wp-site-blocks > .wp-block-template-part > .wp-block-cover,
+body > .is-root-container > .wp-block-cover,
+body > .is-root-container > .wp-block-template-part > .wp-block-group.has-background,
+body > .is-root-container > .wp-block-template-part > .wp-block-cover,
+.is-root-container .wp-block[data-align=full] {
+  margin-left: calc(-1 * var(--wp--custom--spacing--outer)) !important;
+  margin-right: calc(-1 * var(--wp--custom--spacing--outer)) !important;
+  width: unset;
+}
+
+/* Blocks inside columns don't have negative margins. */
+.wp-site-blocks .wp-block-columns .wp-block-column .alignfull,
+.is-root-container .wp-block-columns .wp-block-column .wp-block[data-align=full],
+.wp-site-blocks .alignfull:not(.wp-block-group) .alignfull,
+.is-root-container .wp-block[data-align=full] > *:not(.wp-block-group) .wp-block[data-align=full] {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: inherit;
+}
+
+/*
+ * Responsive menu container padding.
+ * This ensures the responsive container inherits the same
+ * spacing defined above. This behavior may be built into
+ * the Block Editor in the future.
+ */
+.wp-block-navigation__responsive-container.is-menu-open {
+  padding-top: var(--wp--custom--spacing--outer);
+  padding-bottom: var(--wp--custom--spacing--large);
+  padding-right: var(--wp--custom--spacing--outer);
+  padding-left: var(--wp--custom--spacing--outer);
+}
+
+/* 
+.wp-block-post-title {
+  font-size: 1.5rem!important;
+  color: #FFF;
+}
+.wp-block-post-title:before {
+  content: 'Title: ';
+  color: #CCC;
+} */
+.edit-post-visual-editor__post-title-wrapper {
+  margin: 0;
+  padding: 1em;
+  border-bottom: 1px solid #DDD;
+  background-color: var(--wp--preset--color--foreground);
+}
+
+.edit-post-visual-editor__post-title-wrapper h1 {
+  font-size: var(--wp--preset--font-size--medium);
+  color: #AAAAFF;
+}
+
+body .edit-post-visual-editor__post-title-wrapper > * + * {
+  margin-block-start: 0 !important;
+}
+
+.wp-block-group.alignfull.formo-hero-video,
+.formo-hero-video {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: calc(-1 * var(--wp--custom--spacing--outer)) !important;
+  margin-right: calc(-1 * var(--wp--custom--spacing--outer)) !important;
+}
+
+.is-root-container .wp-block-group.alignfull.formo-hero-video {
+  width: calc(100% + 2 * var(--wp--custom--spacing--outer));
+  height: 100%;
+}
+
+.formo-hero-video-text {
+  position: absolute !important;
+  top: var(--wp--custom--spacing--outer);
+  left: var(--wp--custom--spacing--outer);
+  right: var(--wp--custom--spacing--outer);
+  bottom: var(--wp--custom--spacing--outer);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.formo-hero-video-text h1,
+.formo-hero-video-text h2 {
+  font-size: var(--wp--custom--typography--font-size--colossal);
+  margin-top: 0;
+  letter-spacing: -0.033em;
+}
+
+.formo-hero-video-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.formo-hero-video-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.is-root-container .formo-hero-video-video {
+  position: relative;
+}
+
+.formo2022_teammember .wp-block-post-title {
+  font-size: var(--wp--preset--font-size--medium);
+}
+.formo2022_teammember p {
+  font-size: var(--wp--preset--font-size--small);
+}
+
+.formo-navi {
+  font-size: var(--wp--preset--font-size--small);
+  position: fixed;
+  z-index: 2;
+  width: calc(100% - 2 * var(--wp--custom--spacing--outer));
+  top: calc(0.5 * var(--wp--custom--spacing--outer));
+}
+
+.formo-navi > .wp-block-group {
+  align-items: baseline;
+}
+
+.formo-navi-logo {
+  width: 140px;
+  padding: 1rem 0;
+}
+
+.formo-navi a.wp-block-navigation-item__content:hover {
+  text-decoration: none;
+}
+
+.cursor-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  z-index: 200;
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+
+.cursor-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%) scale(1);
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: yellow;
+  border-radius: 1rem;
+  transition: width 100ms ease, height 100ms ease;
+  z-index: -1;
+  pointer-events: none;
+}
+@media (hover: none) and (pointer: coarse) {
+  .cursor-container {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .is-over-draggable .container {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :global(.is-dragging) .container {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+}
+
+.cursor-content {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .cursor-content {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.icon {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .icon {
+    position: absolute;
+    top: 50%;
+    right: -1rem;
+    transform: translateX(-50%);
+    display: block;
+    opacity: 0;
+    transition: opacity 100ms ease;
+  }
+  .icon::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: -0.1rem;
+    width: 0.2rem;
+    height: 1rem;
+    transform: rotate(45deg);
+    background-color: yellow;
+    border-radius: 0.1rem;
+  }
+  .icon::after {
+    content: "";
+    position: absolute;
+    top: 0.3rem;
+    display: block;
+    width: 0.2rem;
+    height: 1rem;
+    transform: translateY(-100%) rotate(-45deg);
+    background-color: yellow;
+    border-radius: 0.1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .icon__left {
+    left: -1rem;
+    right: unset;
+    transform: translateX(-50%) rotate(-180deg);
+  }
+}
+
+.drag {
+  opacity: 0;
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+@media (min-width: 1024px) {
+  .is-over-draggable .icon {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .is-over-draggable .drag {
+    opacity: 1;
+  }
+}
+
+.wp-site-blocks > header + * {
+  margin-block-start: 0;
+}
+
+h1, h2 {
+  line-height: 1;
+}
+
+h1, h2, h3, p {
+  font-feature-settings: "ss01" 1, "ss02" 0, "ss03" 1, "dlig" 1, "liga" 1, "calt" 1;
+}
+
+/*# sourceMappingURL=index.css.map */

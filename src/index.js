@@ -1,9 +1,3 @@
-import gsap from 'gsap';
+import { cursor } from './cursor';
 
-gsap.to('body', {
-  backgroundColor: '#000',
-  duration: 1,
-  onComplete: () => {
-    console.log('done');
-  }
-})
+cursor();

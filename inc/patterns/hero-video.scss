@@ -1,0 +1,52 @@
+.wp-block-group.alignfull.formo-hero-video,
+.formo-hero-video {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: calc(-1 * var(--wp--custom--spacing--outer)) !important;
+  margin-right: calc(-1 * var(--wp--custom--spacing--outer)) !important;
+}
+//for editor
+.is-root-container .wp-block-group.alignfull.formo-hero-video {
+  width: calc(100% + 2 * var(--wp--custom--spacing--outer));
+  height: 100%;
+}
+
+.formo-hero-video-text {
+  position: absolute!important;
+  top: var(--wp--custom--spacing--outer);
+  left: var(--wp--custom--spacing--outer);
+  right: var(--wp--custom--spacing--outer);
+  bottom: var(--wp--custom--spacing--outer);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.formo-hero-video-text h1,
+.formo-hero-video-text h2 {
+  font-size: var(--wp--custom--typography--font-size--colossal);
+  margin-top: 0;
+  letter-spacing: -.033em;
+}
+
+.formo-hero-video-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+
+  & video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+//for editor
+.is-root-container .formo-hero-video-video {
+  position: relative;
+}

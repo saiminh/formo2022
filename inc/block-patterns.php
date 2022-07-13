@@ -88,6 +88,7 @@ function formo2022_register_block_patterns() {
 		'header-centered-logo-black-background',
 		'header-centered-title-navigation-social',
 		'header-title-and-button',
+    'hero-video',
 		'hidden-404',
 		'hidden-bird',
 		'hidden-heading-and-bird',
@@ -112,6 +113,7 @@ function formo2022_register_block_patterns() {
 		'query-image-grid',
 		'query-large-titles',
 		'query-irregular-grid',
+		'team-query',
 	);
 
 	/**

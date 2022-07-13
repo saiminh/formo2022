@@ -4,7 +4,6 @@ module.exports = {
   entry: {
     index: {
       import: './src/index.js',
-      dependOn: 'shared'
     },
     second: {
       import: './src/second.js',

@@ -1,0 +1,17 @@
+.formo-navi {
+  font-size: var(--wp--preset--font-size--small);
+  position: fixed;
+  z-index: 2;
+  width: calc(100% - 2 * var(--wp--custom--spacing--outer));
+  top: calc(0.5 * var(--wp--custom--spacing--outer));
+}
+.formo-navi > .wp-block-group {
+  align-items: baseline;
+}
+.formo-navi-logo {
+  width: 140px;
+  padding: 1rem 0;
+}
+.formo-navi a.wp-block-navigation-item__content:hover {
+  text-decoration: none;
+}

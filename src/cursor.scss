@@ -1,0 +1,126 @@
+@use '../global-styles/breakpoints.scss' as bps;
+
+.cursor-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    z-index: 200;
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
+
+.cursor-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%) scale(1);
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background-color: yellow;
+    border-radius: 1rem;
+    transition: width 100ms ease,
+                height 100ms ease;
+    z-index: -1;
+    pointer-events: none;
+
+    @media (hover: none) and (pointer: coarse) {
+      display: none;
+    }
+}
+
+.is-over-draggable .container {
+  @include bps.bp(large) {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+:global(.is-dragging) .container {
+  @include bps.bp(large) {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+}
+
+.cursor-content {
+  display: none;
+
+  @include bps.bp(large) {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.icon {
+  display: none;
+
+  @include bps.bp(large) {
+    position: absolute;
+    top: 50%;
+    right: -1rem;
+    transform: translateX(-50%);
+    display: block;
+    opacity: 0;
+    transition: opacity 100ms ease;
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      top: -0.1rem;
+      width: 0.2rem;
+      height: 1rem;
+      transform: rotate(45deg);
+      background-color: yellow;
+      border-radius: 0.1rem;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0.3rem;
+      display: block;
+      width: 0.2rem;
+      height: 1rem;
+      transform: translateY(-100%) rotate(-45deg);
+      background-color: yellow;
+      border-radius: 0.1rem;
+    }
+  }
+}
+
+.icon__left {
+  @include bps.bp(large) {
+    left: -1rem;
+    right: unset;
+    transform: translateX(-50%) rotate(-180deg);
+  }
+}
+
+.drag {
+  opacity: 0;
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.is-over-draggable .icon {
+  @include bps.bp(large) {
+    opacity: 1;
+  }
+}
+
+.is-over-draggable .drag {
+  @include bps.bp(large) {
+    opacity: 1;
+  }
+}

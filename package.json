@@ -4,7 +4,8 @@
   "description": "formo.bio wordpress theme",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sass --watch index.scss:index.css & npx webpack --watch --mode development"
   },
   "repository": {
     "type": "git",
