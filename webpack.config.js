@@ -3,10 +3,10 @@ const path = require('path');
 module.exports = {
   entry: {
     index: {
-      import: './src/index.js',
+      import: './js-src/index.js',
     },
     second: {
-      import: './src/second.js',
+      import: './js-src/second.js',
       dependOn: 'shared'
     },
     shared: 'gsap'
@@ -14,8 +14,8 @@ module.exports = {
   optimization: {
     runtimeChunk: 'single',
   },
-  // output: {
-  //   filename: '[name].bundle.js',
-  //   path: path.resolve(__dirname, 'dist'),
-  // },
+  output: {
+    // filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'js-dist'),
+  },
 };

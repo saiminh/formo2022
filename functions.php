@@ -56,15 +56,20 @@ if ( ! function_exists( 'formo2022_styles' ) ) :
 		// Enqueue theme stylesheet.
 		wp_enqueue_style( 'formo2022-style' );
 
-    wp_register_script( 'runtime', get_template_directory_uri().'/dist/runtime.js', [], $version_string, true );
+    wp_register_script( 'runtime', get_template_directory_uri().'/js-dist/runtime.js', [], $version_string, true );
     wp_enqueue_script( 'runtime' );
-    wp_register_script( 'global-js', get_template_directory_uri().'/dist/index.js', [], $version_string, true );
+    wp_register_script( 'global-js', get_template_directory_uri().'/js-dist/index.js', [], $version_string, true );
     wp_enqueue_script( 'global-js' );
 	}
 
 endif;
 
 add_action( 'wp_enqueue_scripts', 'formo2022_styles' );
+
+// Remove WP default block patterns
+add_action('init', function() {
+  remove_theme_support('core-block-patterns');
+});
 
 // Add block patterns
 require get_template_directory() . '/inc/block-patterns.php';

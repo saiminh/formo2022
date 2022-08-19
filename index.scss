@@ -1,7 +1,7 @@
 @use 'style.css';
 @use './inc/block-patterns.scss';
 @use './parts/header.scss';
-@use './src/cursor.scss';
+@use './js-src/cursor.scss';
 
 .wp-site-blocks > header + * {
   margin-block-start: 0;

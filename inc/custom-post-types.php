@@ -25,7 +25,15 @@ function formo2022_custom_post_type() {
       'menu_icon'   => 'dashicons-calendar-alt',
       'show_ui'     => true,
       'show_in_rest' => true,
-      'supports' => array('title', 'editor', 'excerpt', 'custom-fields', 'permalinks', 'thumbnail'),
+      'template' => array(
+        array( 'create-block/event-date', array(
+            'lock' => array(
+              'move'   => true,
+              'remove' => true,
+          ),
+        ) ),
+      ),
+      'supports' => array('title', 'editor', 'custom-fields', 'thumbnail'),
     )
   );
   register_post_type('formo2022_teammember',

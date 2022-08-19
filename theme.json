@@ -23,46 +23,19 @@
 				"page"				
 			]
 		},
-		{
-			"name": "page-large-header",
-			"title": "Page (Large Header)",
-			"postTypes": [
-				"page"
-			]
-		},
-		{
-			"name": "single-no-separators",
-			"title": "Single Post (No Separators)",
-			"postTypes": [
-				"post",
+    {
+      "name": "event",
+      "title": "Event",
+      "postTypes": [
         "formo2022_event"
-			]
-		},
-		{
-			"name": "page-no-separators",
-			"title": "Page (No Separators)",
-			"postTypes": [
-				"page"
-			]
-		}
+      ]
+    }
 	],
 	"settings": {
 		"appearanceTools": true,
 		"color": {
-			"duotone": [
-				{
-					"colors": [ "#000000", "#ffffff" ],
-					"slug": "foreground-and-background",
-					"name": "Foreground and background"
-				}
-			],
-			"gradients": [
-				{
-					"slug": "vertical-secondary-to-tertiary",
-					"gradient": "linear-gradient(to bottom,var(--wp--preset--color--secondary) 0%,var(--wp--preset--color--tertiary) 100%)",
-					"name": "Vertical secondary to tertiary"
-				}
-			],
+      "duotone": null,
+      "customDuotone": false,
 			"palette": [
 				{
 					"slug": "foreground",

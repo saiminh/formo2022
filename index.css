@@ -204,7 +204,7 @@ body .edit-post-visual-editor__post-title-wrapper > * + * {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -1;
+  z-index: 0;
 }
 .formo-hero-video-video video {
   width: 100%;
@@ -244,6 +244,13 @@ body .edit-post-visual-editor__post-title-wrapper > * + * {
   text-decoration: none;
 }
 
+body.cursor-ready {
+  cursor: none;
+}
+body.cursor-ready a:hover {
+  cursor: none;
+}
+
 .cursor-wrapper {
   position: fixed;
   top: 0;
@@ -253,7 +260,6 @@ body .edit-post-visual-editor__post-title-wrapper > * + * {
   display: block;
   z-index: 200;
   pointer-events: none;
-  mix-blend-mode: difference;
 }
 
 .cursor-container {
@@ -264,7 +270,7 @@ body .edit-post-visual-editor__post-title-wrapper > * + * {
   display: block;
   width: 1rem;
   height: 1rem;
-  background-color: yellow;
+  background-color: var(--wp--preset--color--foreground);
   border-radius: 1rem;
   transition: width 100ms ease, height 100ms ease;
   z-index: -1;
