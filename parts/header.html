@@ -1,31 +1,45 @@
-<!-- wp:group {
-  "className":"formo-navi",
-  "layout":{"type":"default"}
-} -->
-<div class="wp-block-group formo-navi">
+<!-- wp:group {"tagName":"header","className":"formo-navbar"} -->
+<header class="wp-block-group formo-navi">
   
-  <!-- wp:group {
-    "align":"wide",
-    "className":"alignfull",
-    "layout":{
-      "type":"flex",
-      "justifyContent":"space-between",
-      "verticalAlignment":"bottom"
-    }
-  } -->
-  <div class="wp-block-group alignwide alignfull">
+  <!-- wp:columns -->
+  <div class="wp-block-columns">
     
-    <!-- wp:site-logo {"shouldSyncIcon":true} /-->
-  
-    <!-- wp:navigation {
-      "layout":{
-        "type":"flex",
-        "setCascadingProperties":true,
-        "justifyContent":"right",
-        "verticalAlignment":"bottom"
-      }
-    } /-->
+    <!-- wp:column {"className":"span3 gridline content-centered"} -->
+    <div class="wp-block-column span3 gridline content-centered">
+      <!-- wp:site-logo {"className":"style-svg"} /-->
+    </div>
+    <!-- /wp:column -->
 
-  </div><!-- /wp:group -->
+    <!-- wp:column {"className":"span6 gridline content-centered"} -->
+    <div class="wp-block-column span6 gridline content-centered">
+      <!-- wp:navigation {"ref":214,"overlayMenu":"never","layout":{"type":"flex","flexWrap":"nowrap"}} /-->
+    </div>
+    <!-- /wp:column -->
+
+    <!-- wp:column {"className":"span3 content-centered"} -->
+    <div class="wp-block-column span3 content-centered">
+      <!-- wp:navigation {"ref":520,"overlayMenu":"never","layout":{"type":"flex","flexWrap":"nowrap"}} /-->
+    </div>
+    <!-- /wp:column -->
+  
+  </div>
+  <!-- /wp:columns -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons mobile-nav-toggle">
+  <!-- wp:button -->
+  <div class="wp-block-button">
+    <a class="wp-block-button__link">
+      <svg class="mobile-nav-toggle-graphic" width="48" height="47" viewBox="0 0 48 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="9.5" y1="15.5" x2="38.5" y2="15.5" stroke="#0000FF" stroke-width="3" stroke-linecap="round"/>
+        <line x1="15.5" y1="23.5" x2="38.5" y2="23.5" stroke="#0000FF" stroke-width="3" stroke-linecap="round"/>
+        <line x1="9.5" y1="31.5" x2="38.5" y2="31.5" stroke="#0000FF" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+    </a>
+  </div>
+  <!-- /wp:button -->
 </div>
+<!-- /wp:buttons -->
+
+</header>
 <!-- /wp:group -->

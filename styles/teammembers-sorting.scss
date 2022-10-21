@@ -1,0 +1,216 @@
+@use 'breakpoints.scss' as bps;
+
+.formo2022-teammember-sorting {
+  position: relative;
+  overflow: hidden;
+  height: calc( var(--vh, 1vh) * 100 - var(--wp--custom--height--navbar) );
+  
+  &:before, &:after {
+    content: 'No';
+    display: block;
+    font-size: 15vw;
+    font-family: var(--wp--preset--font-family--krana);
+    text-transform: uppercase;
+    text-align: center;
+    color: rgba(0,0,255,0.3);
+    padding: calc( var(--vh, 1vh) * 50 - .85em ) 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--wp--preset--color--formo-grey);
+    z-index: 0;
+  }
+  &:after {
+    content: 'Yes';
+    left: auto;
+    right: 0;
+    background-color: white;
+  }
+}
+
+h3.formo2022-teammember-sorting-title {
+  margin: 0.75em auto;
+  position: relative;
+  z-index: 3;
+}
+.formo2022-teammember-sorting-questions {
+  
+  position: absolute;
+  width: calc( 100% - 2 * var(--wp--custom--spacing--outer) );
+  z-index: 10;
+  padding-top: .75em;
+
+  & p {
+    margin: 0;
+  }
+  & p a {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+    font-size: 2.5vw;
+    line-height: 1;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.2s ease-in-out;
+
+    @include bps.bp-down(smallTablet) {
+      font-size: var(--wp--preset--font-size--body);
+    }
+    
+    &.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+.formo2022-teammember-sorting-nav {
+  width: calc( 100% - 2 * var(--wp--custom--spacing--outer) );
+  position: absolute;
+  z-index: 10;
+  padding-top: 1.5em;
+  
+  @include bps.bp-down(smallTablet) {
+    padding-top: 1em;
+  }
+  
+  & > .wp-block-button:first-child {
+    text-align: right;
+  }
+  & > .wp-block-button {
+    width: 50%;
+    padding: .25em;
+  }
+  & a {
+    font-size: var(--wp--preset--font-size--small);
+  }
+}
+.formo2022-teammember-sorting-teammembers {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  height: calc( var(--vh, 1vh) * 70 - var(--wp--custom--height--navbar) );
+  // margin-left: calc( -1 * var(--wp--custom--spacing--outer) );
+  // margin-right: calc( -1 * var(--wp--custom--spacing--outer) );
+
+  @include bps.bp-down(smallTablet){
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.formo2022_teammember {
+
+  --tmwidth: 100px;
+  width: var(--tmwidth)!important;
+  height: var(--tmwidth)!important;
+
+  @include bps.bp-down(smallTablet){
+    --tmwidth: 15vw;
+  }
+
+  position: absolute;  
+  z-index: 1;
+  top: calc( 50% - var(--tmwidth) / 2 );
+  left: calc( 50% - var(--tmwidth) / 2 );
+
+  transition: all .5s .3s cubic-bezier(1.000, -0.340, 0.000, 1.245);
+
+  &.hidden {
+    opacity: 0;
+  }
+
+  & .entry-content *,
+  & .entry-content + * {
+    display: none;
+  }
+  &:hover .entry-content * {
+    &:not(figure):not(video):not(img) {
+      display: block;
+      position: relative;
+      left: 50%;
+      top: -20px;
+      background-color: var(--wp--preset--color--formo-blue);
+      color: white;
+      padding: .25em;
+      margin: 0!important;
+      min-width: 150px;
+      &:nth-child(2) {
+        border-radius: 5px 5px 0 0;
+      }
+      &:last-child {
+        border-radius: 0 0 5px 5px;
+      }
+      &:is(h2) {
+        // font-family: var(--wp--preset--font-family--roobert);
+        font-size: var(--wp--preset--font-size--body);
+      }
+    }
+  }
+  & .entry-content figure, 
+  & .entry-content figure > * {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  & .entry-content figure {
+    height: var(--tmwidth);
+    width: var(--tmwidth);
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  & .entry-content figure > * {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+body > .block-editor-block-list__layout {
+  
+  .formo2022-teammember-sorting {
+    overflow: auto;
+  }
+
+  .formo2022-teammember-sorting .formo2022-teammember-sorting-nav {
+    display: none;
+  }
+  .formo2022-teammember-sorting .formo2022-teammember-sorting-teammembers {
+    position: relative;
+    width: 100%;
+    z-index: 0;
+
+    & > * {
+      visibility: hidden;
+    }
+    &:after, &:before {
+      content: none;
+    }
+  }
+  .formo2022-teammember-sorting-questions { 
+    &:before {
+      content: 'ℹ︎ Questions for the team member sorting block. \A Link the question to the tagname for the yes answer and add a "#" in front.';
+      font-style: italic;
+      white-space: pre; /* or pre-wrap */
+      display: inline-block;
+      margin: 0 auto 1em auto;
+      padding: 1em;
+      background-color: blue;
+      color: #FFF;
+    }
+    & p a {
+      opacity: 1;
+    }
+  }
+}

@@ -1,11 +1,17 @@
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
 
 <!-- wp:group {"tagName":"main"} -->
-<main class="wp-block-group"><!-- wp:group {"layout":{"inherit":true}} -->
-<div class="wp-block-group">
-<!-- wp:pattern {"slug":"formo2022/hidden-404"} /-->
-</div>
-<!-- /wp:group --></main>
-<!-- /wp:group -->
+<main id="swup" class="wp-block-group content-wrapper transition-default">
+  <!-- wp:group {"layout":{"inherit":true}} -->
+  <div class="wp-block-group entry-content">
 
-<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
+    <!-- wp:pattern {"slug":"formo2022/hidden-404"} /-->
+
+  </div><!-- /wp:group -->
+  <!-- wp:spacer {"height":30} -->
+  <div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+  <!-- /wp:spacer -->
+  
+  <!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
+</main><!-- /wp:group -->
+

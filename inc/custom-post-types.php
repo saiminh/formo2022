@@ -26,16 +26,72 @@ function formo2022_custom_post_type() {
       'show_ui'     => true,
       'show_in_rest' => true,
       'template' => array(
-        array( 'create-block/event-date', array(
-            'lock' => array(
-              'move'   => true,
-              'remove' => true,
-          ),
-        ) ),
+        array( 'core/group', array(
+          'className' => 'gridline-middle-bg',
+          'align' => 'full',
+        ), array(
+          array( 'core/columns', array( 'className' => 'event-single-content', ), array(
+            array( 'core/column', array( 'className' => 'span6',), array(
+              array('core/post-featured-image', array(
+                'lock' => array(
+                  'move'   => true,
+                  'remove' => true,
+                ),
+                'rel' => 'Can you see me?',
+              ) )
+            )),
+            array( 'core/column', array( 'className' => 'span6', ), array(
+              array('core/post-title', array(
+                'lock' => array(
+                  'move'   => true,
+                  'remove' => true,
+                ),
+                'placeholder' => 'Add Event Title',
+                'fontSize' => 'xxx-large',
+              )),
+              array( 'create-block/event-date', array(
+                'lock' => array(
+                  'move'   => true,
+                  'remove' => true,
+                ),
+              ) ),
+              array( 'create-block/event-location', array(
+                'lock' => array(
+                  'move'   => true,
+                  'remove' => true,
+                ),
+              ) ),
+              array('core/paragraph', array(
+                'placeholder' => 'Add a description of the Event here...',
+                'content' => 'Add a description of the Event here...'
+              )),
+              array('core/paragraph', array(
+                'placeholder' => 'Add a description of the Event here...',
+                'content' => 'Speakers: <strong>John Does</strong>',
+              )),
+              array('core/button', array(
+                'placeholder' => 'Buy Tickets?',
+              )),
+            ))
+          )),
+          array( 'core/spacer', array(
+            'height' => 100,
+          )),
+          array( 'core/group', array( 'align' => 'full',), array(
+            array('core/heading', array(
+              'content' => 'More Events',
+              'level' => 3,
+            )),
+            array( 'create-block/events-query', array(
+              'layout' => 'layout-latest',
+            ) ),
+          )),
+        )),
       ),
-      'supports' => array('title', 'editor', 'custom-fields', 'thumbnail'),
+      'supports' => array('title', 'editor', 'excerpt', 'eventdate', 'eventlocation', 'custom-fields', 'thumbnail'),
     )
   );
+
   register_post_type('formo2022_teammember',
     array(
       'labels'      => array(
@@ -51,6 +107,7 @@ function formo2022_custom_post_type() {
       'taxonomies' => array('traits')
     )
   );
+  
   register_taxonomy('traits', 'formo2022_teammember', [
     'label' => __('Traits', 'txtdomain'),
     'hierarchical' => false,

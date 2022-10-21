@@ -20,7 +20,7 @@ function remove_comments(){
 }
 add_action( 'wp_before_admin_bar_render', 'remove_comments' );
 
-// Remoce comments from menu
+// Remove comments from menu
 function prefix_remove_comments_tl() {
   remove_menu_page( 'edit-comments.php' );
 }
@@ -82,6 +82,21 @@ function override_admin_bar_css() {
       }
       #adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head, #adminmenu .wp-menu-arrow, #adminmenu .wp-menu-arrow div, #adminmenu li.current a.menu-top, #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu {
         background-color: #5555ff;
+      }
+      .components-button.components-dropdown-menu__menu-item.is-active.has-text.has-icon {
+        background: black;
+        color: white;
+      }
+      .editor-styles-wrapper .edit-post-visual-editor__post-title-wrapper h1 {
+        font-family: var(--wp--preset--font-family--roobert);
+        text-transform: none;
+      }
+      .edit-post-visual-editor {
+        width: 100vw;
+      }
+      font[size="1"] {
+        position: relative;
+        z-index: 9999;
       }
     </style>
   <?php }

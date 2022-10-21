@@ -1,0 +1,202 @@
+@use 'breakpoints.scss' as bps;
+
+.formo-jobs-listing-filter {
+  display: flex;
+  gap: .25em;
+  text-align: center;
+  padding: 1em 0;
+  
+  & .wp-block-button__link {
+    font-size: var(--wp--preset--font-size--tiny);
+    color: var(--wp--preset--color--formo-blue);
+    background-color: transparent;
+    border-width: 1px;
+    border-style: solid;
+    padding: .5em .75em;
+  }
+  & .wp-block-button__link.filter-active {
+    background-color: var(--wp--preset--color--formo-blue);
+    color: var(--wp--preset--color--formo-white);
+    border-color: var(--wp--preset--color--formo-blue);
+  }
+}
+
+.formo-jobs-listing {
+
+  --job-border-radius: 30px;
+
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+
+  .job {
+    font-size: var(--wp--preset--font-size--body);
+    margin: 0 0 1em 0;
+    position: relative;
+    opacity: 1;
+    order:1;
+    animation: fadeOutBackIn .5s ease-out forwards;
+  }
+  .job-header, .job-content {
+    background-color: var(--wp--preset--color--formo-grey);
+    border-radius: var(--job-border-radius);
+    padding: .5em 1.5em;
+    overflow: hidden;
+    
+    .has-background & {
+      background-color: #FFF;
+    }
+  }
+  .job.filtered {
+    animation: fadeOut .5s ease-out forwards;
+  }
+  @keyframes fadeOutBackIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0px) }
+  }
+  @keyframes fadeOut {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: .2; transform: translateY(0px); }
+  }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .job-header-title,
+  .job-header-title a {
+    font-family: var(--wp--preset--font-family--roobert);
+    font-size: var(--wp--preset--font-size--body);
+    color: var(--wp--preset--color--formo-darktone);
+    letter-spacing: normal;
+    text-transform: none;
+    margin: 0;
+  }
+  .job-header-title {
+    flex: 60% 0 0;
+  }
+  .job-header-location {
+    font-family: var(--wp--preset--font-family--roobert);
+    font-size: var(--wp--preset--font-size--small);
+    color: var(--wp--preset--color--formo-darktone);
+    font-style: normal;
+    text-transform: uppercase;
+    flex: calc(40% - 9 * var(--wp--preset--font-size--tiny)) 0 0;
+  }
+  .job-header-buttons {
+    flex: 9em 0 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: .25em;
+    position: relative;
+    right: -1em;
+    font-size: var(--wp--preset--font-size--tiny);
+  }
+  .job-header-button {
+    font-size: inherit;
+  }
+  .job-header-button.expanded {
+    color: var(--wp--preset--color--formo-darktone);
+    background-color: transparent;
+    border-width: 1px;
+    border-style: solid;
+  }
+  .job-content {
+    display: none;
+    color: var(--wp--preset--color--formo-darktone);
+    gap: 1.5em;
+    flex-direction: row;
+    padding-top: 0;
+    border-radius: 0 0 var(--job-border-radius) var(--job-border-radius);
+  }
+  .job.hash-shown {
+    padding-top: calc( 1em + var(--wp--custom--height--navbar) );
+    margin-top: calc( -1 * ( 1em + var(--wp--custom--height--navbar) ) );
+  }
+  .job.hash-shown .job-header {
+    border-radius: var(--job-border-radius) var(--job-border-radius) 0 0 ;
+  }
+  .job.hash-shown .job-content {
+    display: flex;
+  }
+  .job-content > * {
+    flex: calc(50% - .75em) 0 0;
+  }
+  .job-content-title {
+    margin: 2em 0 1em 0;
+    font-family: var(--wp--preset--font-family--roobert);
+    font-size: var(--wp--preset--font-size--body);
+    text-transform: none;
+    font-weight: 600;
+  }
+  .job-content strong {
+    font-weight: 600;
+    padding-bottom: .5em;
+    // display: block;
+  }
+  .job-content ul {
+    list-style: square;
+    padding: 0 0 0 .75em;
+    margin: 0;
+    & li {
+      margin: 0 0 .5em 0;
+    }
+    & li > p {
+       margin: 0;
+    }
+  }
+  .job-content p,
+  .job-content li {
+    font-size: var(--wp--preset--font-size--small);
+  }
+}
+
+@include bps.bp-down(bigTablet) {
+  
+  #working-it-at-formo {
+    font-size: 29vw;
+  }
+
+  .formo-jobs-listing-filter {
+    flex-wrap: wrap;
+  }
+
+  .formo-jobs-listing {
+
+    --job-border-radius: 15px;
+    
+    & .job-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: .3em;
+      padding: 0.5em 0.75em;
+      
+      & > * {
+        flex: 33.3% 0 0;
+      }
+    }
+    & .job-header-title {
+      line-height: 1.2;
+    }
+    & .job-header-buttons {
+      display: block;
+      right: auto;
+      width: 100%;
+      text-align: right;
+    }
+    & .job-header-location {
+      position: absolute;
+      bottom: 15px;
+      max-width: 66%;
+    }
+    & .job.hash-shown .job-content {
+      padding: 0.5em 0.75em;
+      display: block;
+    }
+
+  }
+}

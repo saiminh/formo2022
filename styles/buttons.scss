@@ -1,0 +1,26 @@
+@use 'mixins.scss' as mixins;
+
+.wp-block-button__link {
+  @include mixins.button;
+}
+
+/*
+ * Search and File Block button styles.
+ * Necessary until the following issues are resolved in Gutenberg:
+ * https://github.com/WordPress/gutenberg/issues/36444
+ * https://github.com/WordPress/gutenberg/issues/27760
+ */
+
+ .wp-block-search__button,
+ .wp-block-file .wp-block-file__button {
+   background-color: var(--wp--preset--color--formo-peach);
+   border-radius: 0;
+   border: none;
+   color: var(--wp--preset--color--formo-white);
+   font-size: var(--wp--preset--font-size--medium);
+   padding: calc(.667em + 2px) calc(1.333em + 2px);
+ }
+ .is-style-outline > .wp-block-button__link:not(.has-background), 
+ .wp-block-button__link.is-style-outline:not(.has-background) {
+    @include mixins.button-outline;
+ }

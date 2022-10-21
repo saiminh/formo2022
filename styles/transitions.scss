@@ -1,0 +1,19 @@
+.transition-default {
+  opacity: 1;
+  transition: .3s;
+
+  & video {
+    opacity: 1;
+    transition: 1s .2s;
+  }
+}
+
+html.is-animating .transition-default {
+  opacity: 0;
+  transition: .1s;
+  
+  & video {
+    opacity: 0;
+    transition: .1s;
+  }
+}

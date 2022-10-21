@@ -1,0 +1,39 @@
+@use 'mixins.scss' as mixins;
+
+.formo-contact-form {
+  border-radius: 15px;
+  
+  &.wp-block-group.has-background {
+    padding: 1.5em;
+  }
+  
+  & .meow-contact-form--default .meow-contact-form__group .meow-contact-form__group-input, 
+  & .meow-contact-form--default .meow-contact-form__group .meow-contact-form__group-textarea {
+    padding: 0.25em 15px;
+    font-size: var(--wp--preset--font-size--body);
+    color: var(--wp--preset--color--formo-darktone);
+  }
+  & .meow-contact-form--default .meow-contact-form__group .meow-contact-form__group-textarea {
+    font-size: var(--wp--preset--font-size--small);
+    padding: 15px;
+  }
+  & .meow-contact-form__group-label {
+    padding: 0 15px;
+    color: var(--wp--preset--color--formo-darktone);
+  }
+  & .meow-contact-form__group-button {
+    @include mixins.button;
+    padding: 0.5em 1em!important;
+    font-size: var(--wp--preset--font-size--small);
+    cursor: none;
+    &:hover {
+      padding: .5em 1.5em!important;
+    }
+  }
+}
+
+.wp-block-webfactory-map {
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: .5em;
+}

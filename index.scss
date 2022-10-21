@@ -1,16 +1,55 @@
 @use 'style.css';
+@use './styles/editor-specific.scss';
+@use './js-src/cursor/cursor.scss';
 @use './inc/block-patterns.scss';
 @use './parts/header.scss';
-@use './js-src/cursor.scss';
+@use './parts/footer.scss';
+@use './styles/root.scss';
+@use './styles/header-typography.scss';
+@use './styles/gridlines.scss';
+@use './styles/transitions.scss';
+@use './styles/mailchimp.scss';
+@use './styles/jobs.scss';
+@use './styles/event-query.scss';
+@use './styles/event-single.scss';
+@use './styles/post-query.scss';
+@use './styles/post-meta.scss';
+@use './styles/post-single.scss';
+@use './styles/page-cheese.scss';
+@use './styles/page-mission.scss';
+@use './styles/page-team.scss';
+@use './styles/page-method.scss';
+@use './styles/page-contact.scss';
+@use './styles/buttons.scss';
+@use './styles/teammembers-sorting.scss';
+@use './styles/formo-image-gallery.scss';
+@use './styles/formo-news-block.scss';
+@use './styles/formo-nofunction-tagslist.scss';
 
+// @use './styles/overlay-grid.scss'; 
+
+.wp-site-blocks {
+  overflow: hidden;
+}
+
+main.content-wrapper > .entry-content > :first-child {
+  &:not(figure) {
+    padding-top: var(--wp--custom--height--navbar);
+  }
+  &:is(h1) {
+    padding-top: calc( var(--wp--custom--height--navbar) + var(--wp--custom--spacing--outer));
+  }
+  & > h1:first-child,
+  & > .wp-block-group:first-child > h1:first-child {
+    padding-top: var(--wp--custom--spacing--outer);
+  }
+}
 .wp-site-blocks > header + * {
   margin-block-start: 0;
 }
-
 h1, h2 {
-  line-height: 1;
+  line-height: .8;
 }
-
 h1, h2, h3, p {
   font-feature-settings: 'ss01' 1, 'ss02' 0, 'ss03' 1, 'dlig' 1, 'liga' 1, 'calt' 1;
 }

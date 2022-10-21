@@ -1,0 +1,69 @@
+@use 'mixins.scss' as mixins;
+@use 'breakpoints.scss' as bps;
+
+.formo-news-block-4-columns {
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--wp--custom--spacing--between)!important;
+
+  @include bps.bp-down(bigTablet) {
+    flex-wrap: wrap!important;
+  }
+
+  & .wp-block-column {
+    padding-right: 0;
+  }
+  & > .wp-block-group {
+    @include bps.bp(bigTablet) {
+      flex: var(--wp--custom--width--col-3) 0 0;
+    }
+    @include mixins.post-card;
+    @include mixins.post-card-small;
+    
+    & > .wp-block-group > .wp-block-columns .wp-block-column:first-child {
+      @include bps.bp-down(bigTablet) {
+        height: auto!important;
+      }
+    }
+    & .is-nowrap {
+      @include bps.bp-down(bigTablet) {
+        display: block;
+      }
+    }
+    & .wp-block-buttons + p {
+      font-size: var(--wp--preset--font-size--tiny);
+    }
+  }
+  
+}
+
+// The ball shape doesnt play well in the editor, but it works in the front end.
+
+div:not(.block-editor-block-list__layout) {
+  & .formo-news-block-4-columns {
+    // Ball
+    & > .wp-block-group:nth-child(3) {
+      @include mixins.post-card-small-ball;
+      @include bps.bp(bigTablet) {
+        min-height: calc( var(--wp--custom--width--col-3) + var(--wp--custom--spacing--between) );
+      }
+      
+      & > .wp-block-group > .wp-block-columns .wp-block-column:first-child {
+        @include bps.bp-down(bigTablet) {
+          height: calc(100% + 2em)!important;
+        }
+      }
+      & > .wp-block-group > .wp-block-columns .wp-block-column:last-child {
+        & > :last-child {
+          display: block;
+          & > * {
+            display: block;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+  }
+}

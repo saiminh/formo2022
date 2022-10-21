@@ -1,0 +1,129 @@
+@use '../../styles/breakpoints.scss' as bps;
+
+//Specific styles for the hero on the cheese page
+
+.formo-hero.formo-hero-mission {
+  overflow: hidden;
+  
+  & .formo-hero-text h1 { 
+    margin: 0 auto;
+  }
+
+  & .formo-hero-text {
+    & > .wp-block-group,
+    & > .wp-block-columns {
+      flex-basis: 33.3%;
+    }
+  }
+  
+  & .outlined:first-child {
+    vertical-align: top;
+    position: relative;
+    top: 6px;
+  }
+
+  & .special {
+    opacity: 0;
+    transform: translateY(-10%);
+    animation: fadeIn .5s cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards;
+    display: inline-block;
+  }
+  & .special:nth-child(3) {
+    animation-delay: 0.3s;
+    display: block;
+  } 
+  & .special:nth-child(4) {
+    animation-delay: 0.6s;
+  } 
+  & .special:nth-child(3), 
+  & .special:nth-child(4) {
+    &::before {
+      content: 'why ';
+      font-size: 0.63em;
+      letter-spacing: -0.03em;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  .wp-block-image {
+    position: absolute;
+    right: calc( var(--wp--custom--spacing--outer) * -1 );
+    width: 45%;
+    animation: handIn .5s cubic-bezier(0.645, 0.045, 0.355, 1.000) .8s forwards;
+    transform-origin: 100% 100%;
+    transform: translate(100%, 10%) rotate(-45deg);
+    // animation: name duration timing-function delay iteration-count direction fill-mode;
+  }
+}
+
+@media (max-width: 690px) {
+
+  .formo-hero.formo-hero-mission {
+
+    & .formo-hero-text h1 {
+      
+      & .smaller {
+        font-size: 1em;
+      }
+      & .outlined:first-child {
+        vertical-align: inherit;
+        position: relative;
+        top: 0;
+      }
+    }
+
+    & .special:nth-child(2){
+      display: block;
+    }
+    & .special:nth-child(3), 
+    & .special:nth-child(4) {
+      &::before {
+        content: none;
+      }
+    }
+  
+    & .wp-block-image {
+      position: absolute;
+      right: calc( var(--wp--custom--spacing--outer) * -1 );
+      width: 75%;
+      bottom: 0;
+      animation: handInMobile .5s cubic-bezier(0.645, 0.045, 0.355, 1.000) .8s forwards;
+      transform-origin: 100% 50%;
+    }
+  }
+
+}
+
+@include bps.bp-down(smallTablet) {
+  .formo-hero.formo-hero-mission .formo-hero-text h1 { 
+    font-size: 26vw;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes handIn {
+  0% {
+    transform: translate(100%, 10%) rotate(-45deg);
+  }
+  100% {
+    transform: translate(10%, 0) rotate(0deg);
+  }
+}
+@keyframes handInMobile {
+  0% {
+    transform: translate(0%, 100%) rotate(0deg);
+  }
+  100% {
+    transform: translate(0%, 55%) rotate(45deg);
+  }
+}

@@ -1,0 +1,42 @@
+@use '../../styles/breakpoints.scss' as bp;
+
+//Specific styles for the hero on the cheese page
+
+.formo-hero.formo-hero-cheese {
+  & h1 { 
+    padding: .2em 0;
+    .outlined {
+      position: absolute;
+    }
+    .outlined + .special {
+      color: var(--wp--preset--color--formo-blue);
+      font-size: 0.6666em;
+      position: relative;
+      top: -.16666em;
+      left: .25em;
+    }
+  }
+  & .formo-hero-text {
+    & > .wp-block-columns:first-child {
+      flex-basis: 66%;
+    }
+    & > .wp-block-columns:nth-child(2) {
+      flex-basis: 25%;
+    }
+  }
+
+  @include bp.bp-down(bigTablet) {
+    & h1 { 
+      .outlined {
+        position: relative;
+        display: block;
+      }
+      .outlined + .special {
+        position: absolute;
+        top:auto;
+        left: auto;
+        transform: translate(9%, -125%);
+      }
+    }
+  }
+}

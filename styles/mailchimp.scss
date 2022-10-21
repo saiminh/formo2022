@@ -1,0 +1,151 @@
+@use 'mixins.scss' as mixin;
+
+input[type="text"],
+input[type="email"],
+::placeholder {
+  font-family: var(--wp--preset--font-family--roobert);
+}
+input[type="checkbox"], 
+input[type="radio"] {
+  visibility: hidden;
+  width: 0;
+  margin: 0;
+
+  & + * {
+    position: relative;
+    padding-left: 1.2em!important;
+  }
+  
+  & + :before,
+  & + :after {
+    content: '';
+    position: absolute;
+    top: .125em;
+    left: 0;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border: 1px solid var(--wp--preset--color--formo-darktone, #000);
+    border-radius: 50%;
+  }
+  & + :after {
+    background-color: var(--wp--preset--color--formo-darktone);
+    transform: scale(0);
+    transition: transform .3s cubic-bezier(0.080, 1.635, 0.430, 0.840);
+  }
+  &:checked + :after {
+    transform: scale(.6);
+    
+  }
+}
+
+#mc-embedded-subscribe-form {
+  color: var(--wp--preset--color--formo-darktone, #000);
+
+  p {
+    font-size: var(--wp--preset--font-size--small);
+  }
+  
+  a {
+    text-decoration: underline;
+    color: var(--wp--preset--color--formo-darktone, #000);
+  }
+  .helper_text {
+    color: red;
+  }
+  .indicates-required {
+    font-size: var(--wp--preset--font-size--tiny, 12px);
+    text-align: right;
+  }
+  strong {
+    font-weight: 300;
+  }
+  
+  h2 {
+    display: none;
+  }
+  label {
+    display: block;
+    padding: 0.2em 1.125em;
+    font-size: .75em;
+  }
+  input[type="text"],
+  input[type="email"] {
+    border-radius: 50px;
+    border: 1px solid var(--wp--preset--color--formo-darktone, #000);
+    background-color: transparent;
+    padding: .5em .75em;
+    font-size: var(--wp--preset-font-size--body);
+    color: var(--wp--preset--color--formo-darktone, #000);
+    
+    & ::-webkit-placeholder,
+    & ::-moz-placeholder,
+    & ::placeholder {
+      color: var(--wp--preset--color--formo-darktone, #000);
+    }
+
+    &:focus {
+      outline: none;
+      border-color: var(--wp--preset--color--formo-blue);
+    }
+  }
+  .clear.foot {
+    text-align: right;
+  }
+  .button {
+    @include mixin.button;
+    background-color: var(--wp--preset--color--formo-blue);
+    color: #FFF;
+    border-color: var(--wp--preset--color--formo-blue);
+  }
+  .brandingLogo {
+    display: none;
+  }
+  .mc-field-group.input-group {
+    font-size: var(--wp--preset--font-size--small);
+    margin: 1em 0 1em 1.125em;
+    
+    input[type="radio"] {
+      position: relative;
+      top: -2px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.5em 0;
+    }
+    label {
+      display: inline;
+      padding: 0 0 0 0.2em;
+      font-size: 1em;
+    }
+  }
+  .content__gdpr, .content__gdprLegal {
+    padding: .5em;
+    background: rgba(0,0,255,0.04);
+    border-radius: 10px;
+    margin-bottom: 1em;
+    
+    & > label {
+      font-size: var(--wp--preset--font-size--small, 16px);
+      padding: 0;
+      margin: 0 0 1em 0;
+    }
+    fieldset {
+      border: none;
+      padding: 0.5em 0;
+      line-height: 0;
+  
+      & label {
+        display: inline;
+        padding: 0;
+        font-size: var(--wp--preset--font-size--tiny, 14px);
+      }
+    }
+    & p {
+      font-size: var(--wp--preset--font-size--tiny, 14px);
+      margin: 0.2em 0;
+    }
+
+  }
+}

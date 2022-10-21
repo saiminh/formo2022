@@ -1,0 +1,20 @@
+@use '../../styles/breakpoints.scss' as bp;
+
+//Specific styles for the hero on the cheese page
+
+.formo-hero.formo-hero-method {
+  & .formo-hero-text {
+    top: var(--wp--custom--height--navbar);
+
+    & h1, & h2 {
+      margin-bottom: 0;
+      & .smaller {
+        display: block;
+      }
+    }
+  }
+
+  @include bp.bp-down(bigTablet) {
+    
+  }
+}

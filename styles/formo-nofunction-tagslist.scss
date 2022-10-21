@@ -1,0 +1,14 @@
+@use 'mixins.scss' as mixins;
+
+.formo-nofunction-tagslist {
+  display: flex;
+  list-style: none;
+  padding: .5em 0;
+
+  & li {
+    margin: 0;
+    font-size: var(--wp--preset--font-size--tiny);
+    @include mixins.button;
+    @include mixins.button-outline;
+  }
+}

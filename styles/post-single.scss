@@ -1,0 +1,41 @@
+@use 'mixins.scss' as mixins;
+
+main.content-wrapper > .entry-content > figure.wp-block-post-featured-image:first-child ,
+.is-root-container > figure.wp-block-post-featured-image:first-child {
+  margin-left: calc(-1 * var(--wp--custom--spacing--outer));
+  margin-right: calc(-1 * var(--wp--custom--spacing--outer));
+  height: calc(var(--vh, 1vh) * 100);
+  position: relative;
+  
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+// the featured image if it is the first element inside the first block
+main.content-wrapper > .entry-content > .alignfull:first-child > figure.wp-block-post-featured-image,
+.is-root-container > .alignfull:first-child > figure.wp-block-post-featured-image {
+  margin-top: calc( -1 * var(--wp--custom--height--navbar) );
+  height: calc(var(--vh, 1vh) * 100);
+  margin-left: calc(-1 * var(--wp--custom--spacing--outer));
+  margin-right: calc(-1 * var(--wp--custom--spacing--outer));
+  margin-bottom: 2em;
+  position: relative;
+  
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.more-posts-query .wp-block-post{
+  @include mixins.post-card;
+  @include mixins.post-card-small;
+}
+.more-posts-query:not(.block-editor-block-list__block) .wp-block-post{
+  &:nth-child(3) {
+    @include mixins.post-card-small-ball;
+  }
+}

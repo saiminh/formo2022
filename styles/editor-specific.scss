@@ -1,0 +1,92 @@
+@use 'breakpoints.scss' as bps;
+// Editor: make alignfull actually full width
+body > .block-editor-block-list__layout.is-root-container > .alignfull {
+  margin-left: calc( -1 * var(--wp--custom--spacing--outer) ) !important;
+  margin-right: calc( -1 * var(--wp--custom--spacing--outer) ) !important;
+}
+body > .block-editor-block-list__layout.is-root-container .wp-block {
+  outline: 2px dashed transparent;
+  &:hover {
+    outline-color: rgba(211, 134, 17, 0.25);
+  }
+  &:hover *:hover {
+    outline-color: rgba(211, 134, 17, .5);
+  }
+  &:hover *:hover *:hover {
+    outline-color: rgba(211, 134, 17, .75);
+  }
+  &:hover *:hover *:hover *:hover{
+    outline-color: rgba(211, 134, 17, 1);
+  }
+  &.is-selected {
+    outline: 2px solid rgba(0,0,255, 1);
+  }
+}
+body > .block-editor-block-list__layout [class*="wp-container-"] > h1 {
+  margin-block-end: .25em;
+}
+body > .block-editor-block-list__layout blockquote p {
+  font-size: inherit;
+}
+body > .block-editor-block-list__layout .formo2022-teammember-sorting-questions p a {
+  display: block;
+}
+body > .block-editor-block-list__layout {
+
+  & .wp-block-post-featured-image .block-editor-media-placeholder:after {
+    content: "Featured Image";
+    position: absolute;
+    background-color: blue;
+    color: #FFF;
+    padding: 0.25em;
+    top: 0;
+    left: 0;
+    right: auto;
+    bottom: auto;
+    font-size: .75em;
+  }
+
+  .the-time-is-ripe {
+    position: relative;
+    width: 100%;
+    max-width: 4.5em;
+    height: 1.6em;
+    font-size: var(--wp--preset--font-size--huge);
+    margin: 0 auto;
+    top: .2em;
+
+    @include bps.bp-down(bigTablet) {
+      font-size: 20vw;
+    }
+      
+    & .special {
+      position: absolute;
+
+      &:nth-child(2) {
+        top: .8em;
+        left: .5em;
+        z-index: 2;
+      }
+      &:nth-child(3) {
+        right: 1.075em;
+      }
+      &:nth-child(4) {
+        top: .8em;
+        right: 0;
+      }
+    }
+  }
+  .ciao-cow {
+    position: relative;
+    text-align: right;
+    width: 100%;
+    max-width: calc(4.5 * var(--wp--preset--font-size--huge) );
+    top: calc(0.2 * var(--wp--preset--font-size--huge) );
+    margin: 0 auto;
+      
+    @include bps.bp-down(bigTablet) {
+      max-width: calc( 4.5 * 20vw );
+      font-size: 12vw;
+    }
+  }
+}

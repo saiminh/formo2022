@@ -1,9 +1,14 @@
-@use '../global-styles/breakpoints.scss' as bps;
+@use '../../styles/breakpoints.scss' as bps;
+
 
 body.cursor-ready {
-  cursor: none;
+  @media (hover: hover) {
+    cursor: none; //counterintuitive, but for testing in repsonsive design mode i need to see a cursor
+  }
 
-  & a:hover {
+  & a:hover,
+  & label:hover,
+  & input[type="submit"]:hover {
     cursor: none;
   }
 }
@@ -15,28 +20,31 @@ body.cursor-ready {
     bottom: 0;
     left: 0;
     display: block;
-    z-index: 200;
+    z-index: var( --z-cursor, 99999);
     pointer-events: none;
-    // mix-blend-mode: difference;
+    mix-blend-mode: difference;
 }
 
 .cursor-container {
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(-50%, -50%) scale(1);
     display: block;
-    width: 1rem;
-    height: 1rem;
-    background-color: var(--wp--preset--color--foreground);
-    border-radius: 1rem;
-    transition: width 100ms ease,
-                height 100ms ease;
+    width: 10px;
+    height: 10px;
+    background-color: #ff0;
+    border-radius: 10px;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform .2s ease-in-out;
     z-index: -1;
     pointer-events: none;
 
     @media (hover: none) and (pointer: coarse) {
       display: none;
+    }
+
+    &.hovering {
+      transform: scale(2);
     }
 }
 

@@ -1,0 +1,97 @@
+@use 'breakpoints.scss' as bps;
+
+.cheese-timeisripe-cover {
+  height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+
+  & .wp-block-cover__inner-container {
+
+    & figure {
+      position: absolute;
+      right: 50%;
+      bottom: 50%;
+      width: calc(.75 * 4.5 * var(--wp--preset--font-size--huge) );
+      transform: translate(20%,20%);
+      z-index: 1;
+      & img {
+        width: 100%;
+        
+      }
+    }
+    @include bps.bp-down(bigTablet) {
+      & figure {
+        width: calc(.75 * 4.5 * var(--wp--preset--font-size--huge) );
+      }
+    }
+  }
+  #the-time-is-ripe {
+    position: relative;
+    width: 100%;
+    max-width: 4.5em;
+    height: 1.6em;
+    font-size: var(--wp--preset--font-size--huge);
+    margin: 0 auto;
+    top: .2em;
+
+    @include bps.bp-down(bigTablet) {
+      font-size: 20vw;
+    }
+    
+    & .special {
+      position: absolute;
+
+      &:nth-child(1) {
+        @include bps.bp-down(bigTablet) {
+          z-index: 2;
+        }
+      }
+      &:nth-child(2) {
+        top: .8em;
+        left: .5em;
+        z-index: 2;
+      }
+      &:nth-child(3) {
+        right: 1.075em;
+      }
+      &:nth-child(4) {
+        top: .8em;
+        right: 0;
+      }
+    }
+  }
+  #ciao-cow {
+    position: relative;
+    text-align: right;
+    width: 100%;
+    max-width: calc(4.5 * var(--wp--preset--font-size--huge) );
+    top: calc(0.2 * var(--wp--preset--font-size--huge) );
+    margin: 0 auto;
+    
+    @include bps.bp-down(bigTablet) {
+      max-width: calc( 4.5 * 20vw );
+      font-size: 12vw;
+    }
+  }
+}
+
+@include bps.bp(bigTablet) {
+  .cheese-comingsoon-cover {
+    padding: .5em;
+    margin-left: calc( -0.5 * var(--wp--custom--spacing--between) );
+    margin-right: calc( -1 * var(--wp--custom--spacing--outer) );
+    width: calc( var(--wp--custom--width--col-9) + var(--wp--custom--spacing--outer) + 0.5 * var(--wp--custom--spacing--between) );
+
+    & h2, & h3 {
+      font-size: var(--wp--preset--font-size--xxx-large);
+      margin: 0;
+    }
+  }
+}
+
+@include bps.bp-down(bigTablet) {
+  .cheese-comingsoon-cover {
+    margin-left: 20vw;
+    margin-right: calc( -1 * var(--wp--custom--spacing--outer));
+    width: 80vw;
+  }
+}

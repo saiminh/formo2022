@@ -1,0 +1,35 @@
+// --------------------------------
+// Display Grid Guides (uncomment)
+// --------------------------------
+body:before{
+  content: '';
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--wp--custom--spacing--outer) - 0.5 * var(--wp--custom--spacing--between));
+  right: calc(var(--wp--custom--spacing--outer) - 0.5 * var(--wp--custom--spacing--between));
+  opacity: .1;
+  background-image: repeating-linear-gradient(
+    to right, 
+    #FFF , 
+    #FFF calc( var(--wp--custom--width--col-3) + var(--wp--custom--spacing--between) - 1.5px ), 
+    #FFF calc( var(--wp--custom--width--col-3) + var(--wp--custom--spacing--between) - 1.5px ), 
+    red calc( var(--wp--custom--width--col-3) + var(--wp--custom--spacing--between) ),
+  );
+  z-index: 100;
+  pointer-events: none;
+}
+body:after{
+  content: '';
+  position: fixed;
+  top: 0;
+  bottom: 0;  
+  left: var(--wp--custom--spacing--outer);
+  right: calc( var(--wp--custom--spacing--outer) - var(--wp--custom--spacing--between) );
+  background-color: transparent;
+  opacity: 0.1;
+  background-size: calc( var(--wp--custom--width--col-1) + var(--wp--custom--spacing--between) ); 
+  background-image:  repeating-linear-gradient(to right, #f7a8ee, #f7a8ee var(--wp--custom--width--col-1), #fff var(--wp--custom--spacing--between), #fff);
+  z-index: 100;
+  pointer-events: none;
+}

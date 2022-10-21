@@ -1,0 +1,36 @@
+@use '../../styles/breakpoints.scss' as bp;
+
+//Specific styles for the hero on the cheese page
+
+.formo-hero.formo-hero-team {
+  
+  & .formo-hero-text {
+
+    & h1, & h2 {
+      
+      font-size: 8.3vw!important;
+      line-height: .85;
+
+      & .special:nth-child(1) {
+        font-size: 1em;
+      }
+      & .special:nth-child(1) + br + .special {
+        font-size: 1.3em;
+      }
+      & .special:nth-child(1) + br + .special + br + .special {
+        font-size: 1.666em;
+      }
+      & .special:nth-child(1) + br + .special + br + .special + br + .special {
+        font-size: 1.9em;
+        color: var(--wp--preset--color--formo-blue);
+      }
+    }
+  }
+
+  @include bp.bp-down(bigTablet) {
+    & .formo-hero-text h1,
+    & .formo-hero-text h2 {
+      font-size: 12.25vw!important;
+    }
+  }
+}

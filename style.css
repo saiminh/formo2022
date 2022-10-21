@@ -39,50 +39,6 @@ a {
 	text-underline-offset: 0.25ch;
 }
 
-a:hover,
-a:focus {
-	text-decoration-style: dashed;
-}
-
-a:active {
-	text-decoration: none;
-}
-
-.wp-block-navigation .wp-block-navigation-item a:hover,
-.wp-block-navigation .wp-block-navigation-item a:focus {
-	text-decoration: underline;
-	text-decoration-style: solid;
-}
-
-/*
- * Search and File Block button styles.
- * Necessary until the following issues are resolved in Gutenberg:
- * https://github.com/WordPress/gutenberg/issues/36444
- * https://github.com/WordPress/gutenberg/issues/27760
- */
-
-.wp-block-search__button,
-.wp-block-file .wp-block-file__button {
-	background-color: var(--wp--preset--color--primary);
-	border-radius: 0;
-	border: none;
-	color: var(--wp--preset--color--background);
-	font-size: var(--wp--preset--font-size--medium);
-	padding: calc(.667em + 2px) calc(1.333em + 2px);
-}
-
-/*
- * Button hover styles.
- * Necessary until the following issue is resolved in Gutenberg:
- * https://github.com/WordPress/gutenberg/issues/27075
- */
-
-.wp-block-search__button:hover,
-.wp-block-file .wp-block-file__button:hover,
-.wp-block-button__link:hover {
-	opacity: 0.90;
-}
-
 /*
  * Alignment styles.
  * These rules are temporary, and should not be relied on or
@@ -95,7 +51,7 @@ a:active {
  * https://github.com/WordPress/gutenberg/issues/35884
  */
 
-.wp-site-blocks,
+ .wp-site-blocks,
 body > .is-root-container,
 .edit-post-visual-editor__post-title-wrapper,
 .wp-block-group.alignfull,
@@ -145,20 +101,12 @@ body > .is-root-container > .wp-block-template-part > .wp-block-cover,
 	padding-right: var(--wp--custom--spacing--outer);
 	padding-left: var(--wp--custom--spacing--outer);
 }
-/* 
-.wp-block-post-title {
-  font-size: 1.5rem!important;
-  color: #FFF;
-}
-.wp-block-post-title:before {
-  content: 'Title: ';
-  color: #CCC;
-} */
 .edit-post-visual-editor__post-title-wrapper {
   margin: 0;
   padding: 1em;
   border-bottom: 1px solid #DDD;
-  background-color: var(--wp--preset--color--foreground);
+  background-color: var(--wp--preset--color--formo-blue);
+  width: 100vw;
 }
 .edit-post-visual-editor__post-title-wrapper h1 {
   font-size: var(--wp--preset--font-size--medium);

@@ -1,0 +1,16 @@
+.wp-block-post-author__content {
+  display: flex;
+  justify-content: flex-end;
+  gap: .2em;
+
+  & p, 
+  & .wp-block-post-author__byline {
+    font-size: var(--wp--preset--font-size--small);
+    display: inline;
+    width: auto;
+    white-space: nowrap;
+  }
+}
+.wp-block-post-date {
+  font-size: var(--wp--preset--font-size--small);
+}

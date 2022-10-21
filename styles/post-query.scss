@@ -1,0 +1,111 @@
+@use 'mixins.scss' as mixins;
+@use 'breakpoints.scss' as bps;
+
+.formo-blog-query {
+  overflow: auto;
+  padding-bottom: 2em;
+}
+
+.wp-block-query .wp-block-column {
+  padding: 0;
+}
+
+.formo-blog-query.wp-block-query .wp-block-post-template.alignwide {
+  max-width: var(--wp--custom--width--col-10);
+}
+
+.formo-blog-query.wp-block-query .wp-block-categories__list,
+.formo-blog-query.wp-block-query .wp-block-categories-list {
+  padding-bottom: 1em; 
+  display: flex;
+  gap: .25em;
+  
+  & li {
+    list-style: none;
+    margin-bottom: 0;
+    @include bps.bp-down(bigTablet) {
+      font-size: var(--wp--preset--font-size--small);
+    }
+  }
+
+  & a {
+    @include mixins.button;
+    @include mixins.button-outline;
+    font-size: var(--wp--preset--font-size--small);
+    color: var(--wp--preset--color--formo-darktone);
+    display: inline-block;
+    background-color: var(--wp--preset--color--formo-cream);
+    position: relative;
+    z-index: 1;
+  }
+  & li.current-cat a {
+    background-color: var(--wp--preset--color--formo-darktone);
+    color: var(--wp--preset--color--formo-cream);
+    border-color: var(--wp--preset--color--formo-darktone);
+  }
+}
+
+.formo-blog-query.wp-block-query ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--wp--custom--spacing--between);
+}
+
+.formo-blog-query.wp-block-query .wp-block-post {
+  flex: 100% 0 0;
+  @include mixins.post-card;
+  
+  &:nth-child(4),
+  &:nth-child(5),
+  &:nth-child(6),
+  &:nth-child(7) {
+    @include mixins.post-card-small;
+    margin-left: auto;
+    margin-right: auto;
+    
+    @include bps.bp(bigTablet) {
+      flex: var(--wp--custom--width--col-3) 0 0;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    & .wp-block-post-excerpt {
+      display: none;
+    }
+  }
+}
+
+.formo-blog-query .wp-block-query-pagination {
+  justify-content: center;
+  padding: 2em;
+
+  & .page-numbers {
+    color: var(--wp--preset--color--formo-darktone);
+    width: 1.5em;
+    display: inline-block;
+    height: 1.5em;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.5em;
+  }
+  & .page-numbers.current {
+    background-color: var(--wp--preset--color--formo-peach);
+  }
+  
+}
+.formo-blog-query .wp-block-query-pagination-next, 
+.formo-blog-query .wp-block-query-pagination-previous {
+  display: none;
+}
+
+// the Ball doesn't work in the editor but in the front-end
+div:not(.block-editor-block-list__layout) {
+  .formo-blog-query.wp-block-query .wp-block-post {
+    &:nth-child(6) {
+      @include mixins.post-card-small-ball;
+      @include bps.bp(bigTablet) {
+        max-height: var(--wp--custom--width--col-3);
+      }
+    }
+  }
+}

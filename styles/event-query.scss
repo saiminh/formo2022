@@ -1,0 +1,97 @@
+@use 'mixins.scss' as mixin;
+@use 'breakpoints.scss' as bps;
+
+.formo2022-event-query .wp-block-post-template {
+  overflow: auto;
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+}
+
+.formo2022-event-query.layout-latest {
+
+  & .formo2022-event-query-event {
+    @include mixin.pill(); 
+  }
+  & .wp-block-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include bps.bp-down(bigTablet) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto auto;
+
+      & .formo2022-event-query-event-title {
+        margin: 0;
+        grid-column: 1 / span 2;
+        grid-row: 1;
+        font-size: var(--wp--preset--font-size--body);
+      }
+      & .event-location {
+        grid-column: 1 / span 1;
+        grid-row: 2;
+        font-size: var(--wp--preset--font-size--small);
+        margin-top: 14px;
+      }
+      & .event-date {
+        grid-column: 2 / span 2;
+        grid-row: 2;
+        font-size: var(--wp--preset--font-size--small);
+        margin-top: 14px;
+      }
+      & .wp-block-button__link {
+        grid-column: 3 / span 1;
+        grid-row: 1 ;
+      }
+    }
+    
+    & > * {
+      display: inline-block;
+    }
+  }
+  & .formo2022-event-query-event-title {
+    font-family: var(--wp--preset--font-family--roobert);
+    font-size: var(--wp--preset--font-size--medium, 1em);
+    text-transform: none;
+    font-weight: 400;
+    margin: 0 0 0 1em;
+    flex: 33.3% 0 0;
+  }
+  & .event-date, & .event-location {
+    font-size: var(--wp--preset--font-size--body, 1em);
+    flex: 16.66% 0 0;
+  }
+  & .wp-block-button__link {
+    font-size: var(--wp--preset--font-size--small, 0.8em);
+  }
+  & .wp-block-post-content {
+    display: none;
+  }
+
+  & .wp-block-post-featured-image {
+    display: none;
+  }
+}
+
+.formo2022-event-query.layout-full {
+
+  .formo2022-event-query-event {
+    @include mixin.post-card;
+    margin-bottom: 1em;
+  }
+  .event-meta {
+    margin-bottom: .5em;
+  }
+  .event-date {
+    float:left;
+    
+    &:after {
+      content: "|";
+      display: inline;
+      margin: 0 .5em;
+    }
+  }
+}

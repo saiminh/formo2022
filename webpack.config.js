@@ -3,13 +3,13 @@ const path = require('path');
 module.exports = {
   entry: {
     index: {
-      import: './js-src/index.js',
+      import: '/js-src/index.js',
     },
-    second: {
-      import: './js-src/second.js',
-      dependOn: 'shared'
-    },
-    shared: 'gsap'
+    // second: {
+    //   import: '/js-src/second.js',
+    //   dependOn: 'shared'
+    // },
+    // shared: 'gsap'
   },
   optimization: {
     runtimeChunk: 'single',

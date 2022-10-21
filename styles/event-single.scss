@@ -1,0 +1,30 @@
+
+.event-single-content {
+  .wp-block-column {
+    padding-top: var(--wp--preset--font-size--xx-large);
+  }
+  
+  .wp-block-post-featured-image {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--wp--preset--color--formo-grey);
+  }
+
+  p {
+    max-width: var(--wp--custom--width--col-4);
+  }
+  .event-date, .event-location {
+    font-weight: bold;
+  }
+  .event-date {
+    float: left;
+
+    &:after {
+      content: '|';
+      margin: 0 0.5em;
+    }
+  }
+  .event-location + * {
+    margin-top: 1.5em;
+  }
+}
