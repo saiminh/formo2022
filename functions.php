@@ -109,3 +109,9 @@ function remove_jquery_migrate($scripts){
         $scripts->remove( 'jquery');
     }
 }
+
+// Change receipient of simple email contact from
+add_filter( 'mcfb_email_to', function ( $to, $form ) {
+  $to = $form['saiminh@gmail.com'];
+  return $to;
+}, 10, 2 );
