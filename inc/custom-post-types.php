@@ -103,6 +103,31 @@ function formo2022_custom_post_type() {
       'menu_icon'   => 'dashicons-buddicons-buddypress-logo',
       'show_ui'     => true,
       'show_in_rest' => true,
+      'template' => array(
+        array( 'core/group', array(
+          'className' => 'teammember-single-content',
+          'align' => 'full',
+        ), array(
+          array('core/image', array(
+            'lock' => array(
+              'move'   => true,
+              'remove' => true,
+            ),
+            'url' => 'https://via.placeholder.com/400/0000BB/FFFFFF?text=Upload+Image+or+Video',
+          ) ),
+          array('core/post-title', array(
+            'lock' => array(
+              'move'   => true,
+              'remove' => true,
+            ),
+            'fontSize' => 'large',
+          )),
+          array('core/paragraph', array(
+            'placeholder' => 'Add job titles or any other information here.',
+            'content' => 'Add job titles or any other information here.'
+          )),
+        )),
+      ),
       'supports' => array('title', 'editor', 'custom-fields', 'thumbnail'),
       'taxonomies' => array('traits')
     )

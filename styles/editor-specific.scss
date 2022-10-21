@@ -33,6 +33,34 @@ body > .block-editor-block-list__layout .formo2022-teammember-sorting-questions 
 }
 body > .block-editor-block-list__layout {
 
+  & .teammember-single-content {
+    & figure {
+      max-width: 400px;
+      float: left;
+      margin-right: 2em;
+    }
+    & .wp-block-post-title {
+      font-family: var(--wp--preset--font-family--roobert);
+      font-size: var(--wp--preset--font-size--body);
+      margin: .5em 0;
+      position: relative;
+      left: 0;
+
+      &:after {
+        content: 'Team member\'s Name';
+        text-transform: none;
+        position: relative;
+        bottom: 100%;
+        display: block;
+        left: 0;
+        font-size: 12px;
+        color: blue;
+        padding: 0.5em;
+      }
+    }
+
+  }
+
   & .wp-block-post-featured-image .block-editor-media-placeholder:after {
     content: "Featured Image";
     position: absolute;
