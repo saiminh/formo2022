@@ -125,11 +125,10 @@ h3.formo2022-teammember-sorting-title {
     opacity: 0;
   }
 
-  & .entry-content *,
-  & .entry-content + * {
+  & .entry-content *:not(figure, img, video, .wp-block-group) {
     display: none;
   }
-  &:hover .entry-content * {
+  &:hover .entry-content *:not(.wp-block-group) {
     &:not(figure):not(video):not(img) {
       display: block;
       position: relative;

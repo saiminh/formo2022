@@ -1,6 +1,7 @@
 .formo2022_teammember {
   & .wp-block-post-title {
-    font-size: var(--wp--preset--font-size--medium);
+    font-size: var(--wp--preset--font-size--small)!important;
+    font-family: var(--wp--preset--font-family--roobert);
   }
   & p {
     font-size: var(--wp--preset--font-size--small);
