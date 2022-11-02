@@ -2238,6 +2238,30 @@ input[type=radio]:checked + :after {
   margin-top: 1.5em;
 }
 
+#formore-header {
+  width: 100vw;
+  left: calc(-1 * var(--wp--custom--spacing--outer));
+  overflow: hidden;
+}
+#formore-header h1 {
+  font-size: 20vw;
+  white-space: nowrap;
+  text-indent: 0;
+  animation: marquee 15s linear infinite;
+}
+#formore-header h1 > img {
+  width: 0.5em !important;
+  padding: 0 0.1em 0.125em 0.1em;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100vw + 0.44em));
+  }
+}
 .formo-blog-query {
   overflow: auto;
   padding-bottom: 2em;
