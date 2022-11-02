@@ -78,6 +78,9 @@
     & > figure a {
       margin: 0;
     }
+    &:hover img {
+      transform: scale(1.05);
+    }
   }
 
   & .wp-block-columns > .wp-block-column > .wp-block-post-featured-image,
@@ -89,12 +92,14 @@
     display: block;
     position: relative;
     margin: 0;
+    overflow: hidden;
   
     & img{
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
+      transition: transform .3s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
   }
   &.wp-block-group > .wp-block-group > .wp-block-columns > .wp-block-column > figure div {
