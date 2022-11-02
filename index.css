@@ -1160,6 +1160,7 @@ ul.wp-block-navigation__container li {
 
 html {
   box-sizing: border-box;
+  font-feature-settings: "ss01" 1, "ss02" 0, "ss03" 1, "dlig" 1, "liga" 1, "calt" 1;
 }
 
 *, *:before, *:after {
@@ -1171,6 +1172,7 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
+  line-height: 0.85;
   -webkit-hyphens: auto;
   hyphens: auto;
 }
@@ -1190,7 +1192,7 @@ h3 {
   font-size: var(--wp--preset--font-size--xx-large);
 }
 
-p {
+p, li {
   font-size: var(--wp--preset--font-size--body);
 }
 
@@ -1291,6 +1293,11 @@ form label {
 }
 .pill > * {
   margin: 0 !important;
+}
+
+.rounded-corners {
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 h1, h2, h3, h4, h5 {
@@ -4052,14 +4059,6 @@ main.content-wrapper > .entry-content > :first-child > h1:first-child, main.cont
 
 .wp-site-blocks > header + * {
   margin-block-start: 0;
-}
-
-h1, h2 {
-  line-height: 0.8;
-}
-
-h1, h2, h3, p {
-  font-feature-settings: "ss01" 1, "ss02" 0, "ss03" 1, "dlig" 1, "liga" 1, "calt" 1;
 }
 
 /*# sourceMappingURL=index.css.map */

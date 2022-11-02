@@ -48,9 +48,4 @@ main.content-wrapper > .entry-content > :first-child {
 .wp-site-blocks > header + * {
   margin-block-start: 0;
 }
-h1, h2 {
-  line-height: .8;
-}
-h1, h2, h3, p {
-  font-feature-settings: 'ss01' 1, 'ss02' 0, 'ss03' 1, 'dlig' 1, 'liga' 1, 'calt' 1;
-}
+
