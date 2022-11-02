@@ -3190,7 +3190,8 @@ main.content-wrapper > .entry-content > .alignfull:first-child > figure.wp-block
     padding-left: 0;
   }
 }
-.team-teammember-miniprofile figure {
+.team-teammember-miniprofile figure,
+.team-currently-videoblock figure {
   width: 100%;
   height: 0;
   padding-top: 100%;
@@ -3198,7 +3199,11 @@ main.content-wrapper > .entry-content > .alignfull:first-child > figure.wp-block
   border-radius: 15px;
   overflow: hidden;
 }
-.team-teammember-miniprofile figure img, .team-teammember-miniprofile figure video, .team-teammember-miniprofile figure svg, .team-teammember-miniprofile figure > * {
+.team-teammember-miniprofile figure img, .team-teammember-miniprofile figure video, .team-teammember-miniprofile figure svg, .team-teammember-miniprofile figure > *,
+.team-currently-videoblock figure img,
+.team-currently-videoblock figure video,
+.team-currently-videoblock figure svg,
+.team-currently-videoblock figure > * {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -3206,24 +3211,29 @@ main.content-wrapper > .entry-content > .alignfull:first-child > figure.wp-block
   top: 0;
   left: 0;
 }
-.team-teammember-miniprofile figure + p {
+.team-teammember-miniprofile figure + p,
+.team-currently-videoblock figure + p {
   margin: 1em 0 0.25em 0;
 }
 
-.team-teammember-miniprofile.--ball figure {
+.team-teammember-miniprofile.--ball figure,
+.team-currently-videoblock.--ball figure {
   border-radius: 50%;
 }
 
-body > .block-editor-block-list__layout .team-teammember-miniprofile {
+body > .block-editor-block-list__layout .team-teammember-miniprofile,
+body > .block-editor-block-list__layout .team-currently-videoblock {
   position: relative;
   border: 1px solid blue;
 }
-body > .block-editor-block-list__layout .team-teammember-miniprofile figure > div {
+body > .block-editor-block-list__layout .team-teammember-miniprofile figure > div,
+body > .block-editor-block-list__layout .team-currently-videoblock figure > div {
   position: absolute !important;
   width: 100% !important;
   height: 100% !important;
 }
-body > .block-editor-block-list__layout .team-teammember-miniprofile::before {
+body > .block-editor-block-list__layout .team-teammember-miniprofile::before,
+body > .block-editor-block-list__layout .team-currently-videoblock::before {
   content: "Miniprofile";
   display: block;
   position: absolute;
@@ -3236,8 +3246,13 @@ body > .block-editor-block-list__layout .team-teammember-miniprofile::before {
   z-index: 1;
 }
 
+body > .block-editor-block-list__layout .team-currently-videoblock::before {
+  content: "Hover video";
+}
+
 @media (max-width: 781.98px) {
-  .team-teammember-miniprofile {
+  .team-teammember-miniprofile,
+.team-currently-videoblock {
     padding: 1em 0;
   }
 }

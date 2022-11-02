@@ -1,6 +1,7 @@
 @use 'breakpoints.scss' as bps;
 
-.team-teammember-miniprofile {
+.team-teammember-miniprofile,
+.team-currently-videoblock {
   
   & figure {
     width: 100%;
@@ -23,13 +24,15 @@
     margin: 1em 0 .25em 0;
   }
 }
-.team-teammember-miniprofile.--ball {
+.team-teammember-miniprofile.--ball,
+.team-currently-videoblock.--ball {
   & figure {
     border-radius: 50%;
   }
 }
 
-body > .block-editor-block-list__layout .team-teammember-miniprofile  {
+body > .block-editor-block-list__layout .team-teammember-miniprofile ,
+body > .block-editor-block-list__layout .team-currently-videoblock {
   position: relative;
   border: 1px solid blue;
 
@@ -53,8 +56,15 @@ body > .block-editor-block-list__layout .team-teammember-miniprofile  {
   }
 }
 
+body > .block-editor-block-list__layout .team-currently-videoblock {
+  &::before {
+    content: 'Hover video';
+  }
+}
+
 @include bps.bp-down(bigTablet) {
-  .team-teammember-miniprofile {
+  .team-teammember-miniprofile,
+  .team-currently-videoblock {
     padding: 1em 0;
   }
 }
