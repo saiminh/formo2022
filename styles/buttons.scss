@@ -6,6 +6,10 @@
   @include mixins.button;
 }
 
+body .is-layout-flex.wp-block-buttons {
+  gap: .25em;
+}
+
 /*
  * Search and File Block button styles.
  * Necessary until the following issues are resolved in Gutenberg:

@@ -65,33 +65,30 @@ body > .block-editor-block-list__layout.is-root-container p {
 .has-full-height-on-mobile {
   height: calc( var(--vh, 1vh) * 100 );
 }
-body .is-layout-flow > h1 + *, 
-body .is-layout-flow > h2 + *, 
-body .is-layout-flow > h3 + *, 
-body .is-layout-flow > h4 + *, 
-body .is-layout-flow > blockquote + *, 
-body .is-layout-flow > details + *, 
-body .is-layout-flow > * + .wp-block-buttons, 
-body .is-layout-flow > p + * 
-body .is-layout-constrained > h1 + *, 
-body .is-layout-constrained > h2 + *, 
-body .is-layout-constrained > h3 + *, 
-body .is-layout-constrained > h4 + *, 
-body .is-layout-constrained > blockquote + *, 
-body .is-layout-constrained > details + *, 
-body .is-layout-constrained > * + .wp-block-buttons, 
-body .is-layout-constrained > p + * {
-  margin-block-start: 1em;
-}
-body .is-layout-flow > p:last-child,
-body .is-layout-flow > .wp-block-buttons:last-child,
-body .is-layout-constrained > p:last-child,
-body .is-layout-constrained > .wp-block-buttons:last-child {
-  margin-block-end: 1em;
-}
-body .is-layout-flow > h2:last-child {
-  margin-block-end: .25em;
-}
+body .is-layout-flow , 
+body .is-layout-constrained {
+  & > h1 + *,
+  & > h2 + *,
+  & > h3 + *,
+  & > h4 + *,
+  & > blockquote + *,
+  & > details + *,
+  & > * + .wp-block-buttons,
+  & > .wp-block-buttons + *,
+  & > p + *{
+    margin-block-start: 1em;
+  }
+  &.wp-block-column > p:last-child,
+  &.wp-block-column > .wp-block-buttons:last-child,
+  &.wp-block-column > p:last-child,
+  &.wp-block-column > .wp-block-buttons:last-child {
+    margin-block-end: 1em;
+  }
+  &.wp-block-column > h2:last-child {
+    margin-block-end: .25em;
+  }
+} 
+
 @include bps.bp(bigTablet) {
   .is-straddling-gridline {
     transform: translateX( calc( -50% - 0.5 * var(--wp--custom--spacing--between) ) );
