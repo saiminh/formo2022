@@ -1220,6 +1220,10 @@ blockquote:before {
   top: -0.333em;
 }
 
+video {
+  display: block;
+}
+
 body > .block-editor-block-list__layout.is-root-container p {
   margin-bottom: 1em !important;
 }
@@ -3107,7 +3111,7 @@ main.content-wrapper > .entry-content > .alignfull:first-child > figure.wp-block
     padding-left: 0;
   }
   .mission-stats-stat.fig-fill .mission-stats-stat-figure {
-    background-color: var(--wp--custom--color--formo-cream);
+    background-color: var(--wp--custom--color--formo-blue);
   }
   .mission-stats-stat.fig-bottom .mission-stats-stat-figure {
     top: auto;

@@ -56,6 +56,9 @@ blockquote:before {
   font-size: 2em;
   top: -.333em;
 }
+video {
+  display: block;
+}
 body > .block-editor-block-list__layout.is-root-container p {
   margin-bottom: 1em!important;
 }
