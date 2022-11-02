@@ -2259,6 +2259,21 @@ input[type=radio]:checked + :after {
   padding: 0 0.1em 0.125em 0.1em;
 }
 
+body > .block-editor-block-list__layout .formore-header {
+  width: 100vw;
+  left: calc(-1 * var(--wp--custom--spacing--outer));
+  overflow: hidden;
+}
+body > .block-editor-block-list__layout .formore-header h1 {
+  font-size: 20vw;
+  white-space: nowrap !important;
+  text-indent: 0;
+}
+body > .block-editor-block-list__layout .formore-header h1 > img {
+  width: 0.5em !important;
+  padding: 0 0.1em 0.125em 0.1em;
+}
+
 @keyframes marquee {
   0% {
     transform: translateX(0);
