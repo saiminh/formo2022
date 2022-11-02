@@ -75,7 +75,7 @@
   .formo-hero {
     position: relative;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     padding-left: 0;
     padding-right: 0;
     margin-left: calc(-1 * var(--wp--custom--spacing--outer)) !important;
@@ -114,6 +114,7 @@
     font-size: var(--wp--preset--font-size--huge);
     margin-top: 0;
     letter-spacing: -.033em;
+    padding-bottom: .1em;
   }
   
   .content-bottom .formo-hero-text h1,

@@ -222,6 +222,10 @@
       border-left: 1px solid;
       z-index: 0;
     }
+    & > * {
+      position: relative;
+      z-index: 1;
+    }
   }
   .gridline-col3-bg {
     &:before {

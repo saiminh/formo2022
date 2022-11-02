@@ -72,10 +72,21 @@ body .is-layout-flow > h4 + *,
 body .is-layout-flow > blockquote + *, 
 body .is-layout-flow > details + *, 
 body .is-layout-flow > * + .wp-block-buttons, 
-body .is-layout-flow > p + * {
+body .is-layout-flow > p + * 
+body .is-layout-constrained > h1 + *, 
+body .is-layout-constrained > h2 + *, 
+body .is-layout-constrained > h3 + *, 
+body .is-layout-constrained > h4 + *, 
+body .is-layout-constrained > blockquote + *, 
+body .is-layout-constrained > details + *, 
+body .is-layout-constrained > * + .wp-block-buttons, 
+body .is-layout-constrained > p + * {
   margin-block-start: 1em;
 }
-body .is-layout-flow > p:last-child {
+body .is-layout-flow > p:last-child,
+body .is-layout-flow > .wp-block-buttons:last-child,
+body .is-layout-constrained > p:last-child,
+body .is-layout-constrained > .wp-block-buttons:last-child {
   margin-block-end: 1em;
 }
 body .is-layout-flow > h2:last-child {

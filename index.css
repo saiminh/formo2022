@@ -432,7 +432,7 @@ body.cursor-ready a:hover, body.cursor-ready label:hover, body.cursor-ready inpu
 .formo-hero {
     position: relative;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     padding-left: 0;
     padding-right: 0;
     margin-left: calc(-1 * var(--wp--custom--spacing--outer)) !important;
@@ -465,6 +465,7 @@ body.cursor-ready a:hover, body.cursor-ready label:hover, body.cursor-ready inpu
     font-size: var(--wp--preset--font-size--huge);
     margin-top: 0;
     letter-spacing: -0.033em;
+    padding-bottom: 0.1em;
   }
   .content-bottom .formo-hero-text h1,
 .content-bottom .formo-hero-text h2 {
@@ -1237,11 +1238,21 @@ body .is-layout-flow > h4 + *,
 body .is-layout-flow > blockquote + *,
 body .is-layout-flow > details + *,
 body .is-layout-flow > * + .wp-block-buttons,
-body .is-layout-flow > p + * {
+body .is-layout-flow > p + * body .is-layout-constrained > h1 + *,
+body .is-layout-constrained > h2 + *,
+body .is-layout-constrained > h3 + *,
+body .is-layout-constrained > h4 + *,
+body .is-layout-constrained > blockquote + *,
+body .is-layout-constrained > details + *,
+body .is-layout-constrained > * + .wp-block-buttons,
+body .is-layout-constrained > p + * {
   margin-block-start: 1em;
 }
 
-body .is-layout-flow > p:last-child {
+body .is-layout-flow > p:last-child,
+body .is-layout-flow > .wp-block-buttons:last-child,
+body .is-layout-constrained > p:last-child,
+body .is-layout-constrained > .wp-block-buttons:last-child {
   margin-block-end: 1em;
 }
 
@@ -1519,6 +1530,11 @@ h1 .smaller, h2 .smaller, h3 .smaller, h4 .smaller, h5 .smaller {
     height: 100%;
     border-left: 1px solid;
     z-index: 0;
+  }
+  .gridline-middle-bg > *,
+.gridline-col3-bg > * {
+    position: relative;
+    z-index: 1;
   }
   .gridline-col3-bg:before {
     left: calc(var(--wp--custom--width--col-3) + 0.5 * var(--wp--custom--spacing--between));
