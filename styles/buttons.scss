@@ -1,6 +1,8 @@
 @use 'mixins.scss' as mixins;
 
-.wp-block-button__link {
+.wp-block-button__link,
+.wp-block-button > .wp-block-button__link,
+.wp-block-button.is-style-outline > .wp-block-button__link {
   @include mixins.button;
 }
 

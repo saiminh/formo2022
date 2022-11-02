@@ -8,6 +8,7 @@
   text-transform: uppercase;
   white-space: nowrap;
   display: inline-block;
+  background-color: var(--wp--preset--color--formo-blue);
   
   @include bps.bp(bigTablet) {
     transition: padding .3s cubic-bezier(0.165, 0.84, 0.44, 1);

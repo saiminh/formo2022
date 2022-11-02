@@ -35,10 +35,6 @@ h3 {
 }
 p {
   font-size: var(--wp--preset--font-size--body);
-  
-  [class^="wp-container"] > & {
-    margin-bottom: 1em;
-  }
 } 
 ul, ol {
   padding-left: 0;
@@ -69,7 +65,22 @@ body > .block-editor-block-list__layout.is-root-container p {
 .has-full-height-on-mobile {
   height: calc( var(--vh, 1vh) * 100 );
 }
-
+body .is-layout-flow > h1 + *, 
+body .is-layout-flow > h2 + *, 
+body .is-layout-flow > h3 + *, 
+body .is-layout-flow > h4 + *, 
+body .is-layout-flow > blockquote + *, 
+body .is-layout-flow > details + *, 
+body .is-layout-flow > * + .wp-block-buttons, 
+body .is-layout-flow > p + * {
+  margin-block-start: 1em;
+}
+body .is-layout-flow > p:last-child {
+  margin-block-end: 1em;
+}
+body .is-layout-flow > h2:last-child {
+  margin-block-end: .25em;
+}
 @include bps.bp(bigTablet) {
   .is-straddling-gridline {
     transform: translateX( calc( -50% - 0.5 * var(--wp--custom--spacing--between) ) );

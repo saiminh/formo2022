@@ -167,7 +167,7 @@
     }
   }
 
-  [class*="span"] > [class*="span"] {
+  [class*="span"] > [class*="span"]:not([class*="offset"]) {
     margin-left: calc(-0.5 * var(--wp--custom--spacing--between));
   }
 
