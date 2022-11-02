@@ -1,7 +1,7 @@
 export function videoPlayPauseOnScroll() {
 
   
-  const allAutoplayVideosOnPage = document.querySelectorAll('video[autoplay]');
+  const allAutoplayVideosOnPage = document.querySelectorAll(':not(.video-play-on-hover) > video[autoplay]');
 
   if (allAutoplayVideosOnPage.length == 0) {
     return;
@@ -18,7 +18,6 @@ export function videoPlayPauseOnScroll() {
   }, {});
   
   allAutoplayVideosOnPage.forEach(video => {
-
     videoObserver.observe(video);
 
     const onVisibilityChange = () => {
