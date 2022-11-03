@@ -82,7 +82,7 @@ h3.formo2022-teammember-sorting-title {
     text-align: right;
   }
   & > .wp-block-button {
-    width: 50%;
+    width: calc(50% - .15em);
     padding: .25em;
   }
   & .wp-block-button__link {

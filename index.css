@@ -3649,7 +3649,7 @@ h3.formo2022-teammember-sorting-title {
   text-align: right;
 }
 .formo2022-teammember-sorting-nav > .wp-block-button {
-  width: 50%;
+  width: calc(50% - 0.15em);
   padding: 0.25em;
 }
 .formo2022-teammember-sorting-nav .wp-block-button__link {
