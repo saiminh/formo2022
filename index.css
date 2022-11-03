@@ -3652,7 +3652,7 @@ h3.formo2022-teammember-sorting-title {
   width: 50%;
   padding: 0.25em;
 }
-.formo2022-teammember-sorting-nav a {
+.formo2022-teammember-sorting-nav .wp-block-button__link {
   font-size: var(--wp--preset--font-size--small);
 }
 
