@@ -1,0 +1,47 @@
+@use 'breakpoints.scss' as bps;
+
+.jobs-gallery.has-nested-images {
+  margin-left: calc(-1 * var(--wp--custom--spacing--outer));
+  margin-right: calc(-1 * var(--wp--custom--spacing--outer));
+  overflow: hidden;
+  flex-wrap: nowrap;
+  --gallery-block--gutter-size: 1.5vw;
+
+  @include bps.bp-down(bigTablet) {
+    flex-wrap: nowrap;
+  }
+
+  & > figure {
+    overflow: hidden;
+    border-radius: 15px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-height: 25vw;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  & > figure:first-child {
+    flex-basis: 50vw!important;
+    margin-left: -25vw!important;
+  }
+  & > figure:nth-child(2) {
+    flex-basis: 25vw;
+    height: 25vw;
+    border-radius: 50%;
+    margin-top: 10%!important;
+  }
+  & > figure:nth-child(3) {
+    flex-basis: 25vw;
+    height: 25vw;
+    transform: rotate(-5.54deg) translateY(4%);
+  }
+  & > figure:nth-child(4) {
+    flex-basis: 50vw;
+    
+    transform: translateY(15%);
+  }
+}

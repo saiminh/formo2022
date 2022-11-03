@@ -3507,6 +3507,50 @@ body > .block-editor-block-list__layout .team-currently-videoblock::before {
     gap: 0.25em;
   }
 }
+.jobs-gallery.has-nested-images {
+  margin-left: calc(-1 * var(--wp--custom--spacing--outer));
+  margin-right: calc(-1 * var(--wp--custom--spacing--outer));
+  overflow: hidden;
+  flex-wrap: nowrap;
+  --gallery-block--gutter-size: 1.5vw;
+}
+@media (max-width: 781.98px) {
+  .jobs-gallery.has-nested-images {
+    flex-wrap: nowrap;
+  }
+}
+.jobs-gallery.has-nested-images > figure {
+  overflow: hidden;
+  border-radius: 15px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  max-height: 25vw;
+}
+.jobs-gallery.has-nested-images > figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.jobs-gallery.has-nested-images > figure:first-child {
+  flex-basis: 50vw !important;
+  margin-left: -25vw !important;
+}
+.jobs-gallery.has-nested-images > figure:nth-child(2) {
+  flex-basis: 25vw;
+  height: 25vw;
+  border-radius: 50%;
+  margin-top: 10% !important;
+}
+.jobs-gallery.has-nested-images > figure:nth-child(3) {
+  flex-basis: 25vw;
+  height: 25vw;
+  transform: rotate(-5.54deg) translateY(4%);
+}
+.jobs-gallery.has-nested-images > figure:nth-child(4) {
+  flex-basis: 50vw;
+  transform: translateY(15%);
+}
+
 .wp-block-button__link,
 .wp-block-button > .wp-block-button__link,
 .wp-block-button.is-style-outline > .wp-block-button__link {
