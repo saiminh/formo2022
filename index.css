@@ -1080,7 +1080,6 @@ ul.wp-block-navigation__container li {
   }
   .formo-footer .footer-nav-menu-1, .formo-footer .footer-nav-menu-2 {
     padding-top: var(--wp--custom--width--col-6);
-    font-size: var(--wp--preset--font-size--small);
   }
   .formo-footer .footer-nav-menu-1 .wp-block-navigation__container, .formo-footer .footer-nav-menu-2 .wp-block-navigation__container {
     flex-direction: column;
@@ -1088,6 +1087,7 @@ ul.wp-block-navigation__container li {
   }
   .formo-footer .footer-nav-menu-1 .wp-block-navigation-item__content, .formo-footer .footer-nav-menu-2 .wp-block-navigation-item__content {
     padding: 0.5em 0;
+    font-size: 0.75em;
   }
   .formo-footer .footer-nav-menu-2 .wp-block-navigation__responsive-container-content {
     justify-content: flex-end;
@@ -1242,21 +1242,24 @@ body > .block-editor-block-list__layout.is-root-container p {
   height: calc(var(--vh, 1vh) * 100);
 }
 
-body .is-layout-flow > h1 + *, body .is-layout-flow > h2 + *, body .is-layout-flow > h3 + *, body .is-layout-flow > h4 + *, body .is-layout-flow > blockquote + *, body .is-layout-flow > details + *, body .is-layout-flow > figure:not(.formo-hero-video, .formo-hero-image) + *, body .is-layout-flow > * + .wp-block-buttons, body .is-layout-flow > .wp-block-buttons + *, body .is-layout-flow > p + *,
+body .is-layout-flow > h1 + *, body .is-layout-flow > h2 + *, body .is-layout-flow > h3 + *, body .is-layout-flow > h4 + *, body .is-layout-flow > blockquote + *, body .is-layout-flow > details + *, body .is-layout-flow > * + .event-location, body .is-layout-flow > * + .event-date, body .is-layout-flow > figure:not(.formo-hero-video, .formo-hero-image) + *, body .is-layout-flow > * + .wp-block-buttons, body .is-layout-flow > .wp-block-buttons + *, body .is-layout-flow > p + *,
 body .is-layout-constrained > h1 + *,
 body .is-layout-constrained > h2 + *,
 body .is-layout-constrained > h3 + *,
 body .is-layout-constrained > h4 + *,
 body .is-layout-constrained > blockquote + *,
 body .is-layout-constrained > details + *,
+body .is-layout-constrained > * + .event-location,
+body .is-layout-constrained > * + .event-date,
 body .is-layout-constrained > figure:not(.formo-hero-video, .formo-hero-image) + *,
 body .is-layout-constrained > * + .wp-block-buttons,
 body .is-layout-constrained > .wp-block-buttons + *,
 body .is-layout-constrained > p + * {
   margin-block-start: 1em;
 }
-body .is-layout-flow.wp-block-column > p:last-child, body .is-layout-flow.wp-block-column > .wp-block-buttons:last-child,
+body .is-layout-flow.wp-block-column > p:last-child, body .is-layout-flow.wp-block-column > details:last-child, body .is-layout-flow.wp-block-column > .wp-block-buttons:last-child,
 body .is-layout-constrained.wp-block-column > p:last-child,
+body .is-layout-constrained.wp-block-column > details:last-child,
 body .is-layout-constrained.wp-block-column > .wp-block-buttons:last-child {
   margin-block-end: 1em;
 }
@@ -1764,10 +1767,12 @@ input[type=radio]:checked + :after {
   padding: 0;
   margin: 0.5em 0;
 }
+#mc-embedded-subscribe-form .mc-field-group.input-group ul li {
+  margin: 0;
+}
 #mc-embedded-subscribe-form .mc-field-group.input-group label {
   display: inline;
   padding: 0 0 0 0.2em;
-  font-size: 1em;
 }
 #mc-embedded-subscribe-form .content__gdpr, #mc-embedded-subscribe-form .content__gdprLegal {
   padding: 0.5em;
@@ -2007,6 +2012,7 @@ input[type=radio]:checked + :after {
   overflow: hidden;
   margin-bottom: 1em;
   padding: 1em;
+  margin-left: 0;
 }
 @media (max-width: 781.98px) {
   .formo2022-event-query.layout-latest .formo2022-event-query-event {
@@ -2024,6 +2030,7 @@ input[type=radio]:checked + :after {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto;
+    gap: 0.5em;
   }
   .formo2022-event-query.layout-latest .wp-block-group .formo2022-event-query-event-title {
     margin: 0;
@@ -2035,13 +2042,11 @@ input[type=radio]:checked + :after {
     grid-column: 1/span 1;
     grid-row: 2;
     font-size: var(--wp--preset--font-size--small);
-    margin-top: 14px;
   }
   .formo2022-event-query.layout-latest .wp-block-group .event-date {
     grid-column: 2/span 2;
     grid-row: 2;
     font-size: var(--wp--preset--font-size--small);
-    margin-top: 14px;
   }
   .formo2022-event-query.layout-latest .wp-block-group .wp-block-button__link {
     grid-column: 3/span 1;

@@ -10,6 +10,13 @@
 			]
 		},
 		{
+			"name": "single",
+			"title": "Blog Post",
+			"postTypes": [
+				"post"
+			]
+		},
+		{
 			"name": "homepage",
 			"title": "Homepage",
 			"postTypes": [
@@ -24,7 +31,7 @@
 			]
 		},
     {
-      "name": "event",
+      "name": "single-formo2022_event",
       "title": "Event",
       "postTypes": [
         "formo2022_event"

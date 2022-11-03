@@ -91,6 +91,17 @@ function override_admin_bar_css() {
         font-family: var(--wp--preset--font-family--roobert);
         text-transform: none;
       }
+      .editor-styles-wrapper h1.components-heading, 
+      .editor-styles-wrapper h2.components-heading, 
+      .editor-styles-wrapper h3.components-heading, 
+      .editor-styles-wrapper h4.components-heading, 
+      .editor-styles-wrapper h5.components-heading {
+          font-family: var(--wp--preset--font-family--roobert);
+          font-size: 1.5rem;
+      }
+      .components-datetime__date .components-datetime__date__day {
+        padding: 0;
+      }
       .edit-post-visual-editor {
         width: 100vw;
       }
@@ -106,6 +117,9 @@ function override_admin_bar_css() {
       }
       .edit-post-fullscreen-mode-close.components-button .edit-post-fullscreen-mode-close_site-icon {
         object-fit: contain;
+      }
+      .edit-post-visual-editor .components-button {
+        box-sizing: content-box;
       }
     </style>
   <?php }

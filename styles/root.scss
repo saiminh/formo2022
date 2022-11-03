@@ -80,13 +80,16 @@ body .is-layout-constrained {
   & > h4 + *,
   & > blockquote + *,
   & > details + *,
+  & > * + .event-location,
+  & > * + .event-date,
   & > figure:not(.formo-hero-video, .formo-hero-image) + *,
   & > * + .wp-block-buttons,
   & > .wp-block-buttons + *,
-  & > p + *{
+  & > p + * {
     margin-block-start: 1em;
   }
   &.wp-block-column > p:last-child,
+  &.wp-block-column > details:last-child,
   &.wp-block-column > .wp-block-buttons:last-child {
     margin-block-end: 1em;
   }
