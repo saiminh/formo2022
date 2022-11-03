@@ -163,6 +163,7 @@ ul.wp-block-navigation__container li {
     &:nth-child(2), 
     &:nth-child(3) {
       transform: translateY(-100vh);
+      margin-block-start: 0;
       
       & .wp-block-navigation-link {
         transform: translateY(-40px) scale(.8);
@@ -220,10 +221,11 @@ ul.wp-block-navigation__container li {
   }
   .formo-navi .wp-block-navigation-link .wp-block-navigation-item__content {
     font-size: var(--wp--preset--font-size--body);
-    margin: .5em var(--wp--custom--spacing--outer);
     display: block;
     @include mixins.button;
     @include mixins.button-outline;
+    margin: .25em var(--wp--custom--spacing--outer);
+    padding: 12px 20px;
     border-color: transparent;
 
     &.currentNavLink {
