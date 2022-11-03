@@ -5,6 +5,9 @@
   padding: 1.5em 0;
   max-width: 66%;
 }
+.wp-block-post-title {
+  padding-bottom: .33em;
+}
 .wp-block-post-navigation-link a {
   @include mixins.button;
   font-size: var(--wp--preset--font-size--small);

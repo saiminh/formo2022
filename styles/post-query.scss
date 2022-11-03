@@ -3,7 +3,7 @@
 
 #formore-header {
   width: 100vw;
-  left: calc(-1 *var(--wp--custom--spacing--outer));
+  margin-left: calc(-1 *var(--wp--custom--spacing--outer));
   overflow: hidden;
   & h1 {
     font-size: 20vw;
