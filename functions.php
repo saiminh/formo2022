@@ -112,6 +112,6 @@ function remove_jquery_migrate($scripts){
 
 // Change receipient of simple email contact from
 add_filter( 'mcfb_email_to', function ( $to, $form ) {
-  $to = 'saiminh@gmail.com, simon@floter.ink';
+  $to = 'hello@formo.bio';
   return $to;
 }, 10, 2 );

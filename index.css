@@ -1003,6 +1003,7 @@ ul.wp-block-navigation__container li {
   }
   .formo-footer .footer-nav-menu-1 .wp-block-navigation-item__content, .formo-footer .footer-nav-menu-2 .wp-block-navigation-item__content {
     padding: 0.5em 0;
+    font-size: var(--wp--preset--font-size--small);
   }
   .formo-footer .footer-nav-menu-1 .wp-block-navigation, .formo-footer .footer-nav-menu-2 .wp-block-navigation {
     width: var(--wp--custom--width--col-2);
