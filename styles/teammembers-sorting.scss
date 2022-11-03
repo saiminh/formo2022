@@ -129,28 +129,18 @@ h3.formo2022-teammember-sorting-title {
   & .entry-content *:not(figure, img, video, .wp-block-group) {
     display: none;
   }
-  &:hover .entry-content *:not(.wp-block-group) {
-    &:not(figure):not(video):not(img):not(strong):not(em):not(span) {
-      display: block;
+  &:hover .entry-content .wp-block-post-title {
+      display: inline-block;
       position: relative;
       left: 50%;
       top: -20px;
       background-color: var(--wp--preset--color--formo-blue);
       color: white;
-      padding: .25em;
+      padding: .5em;
       margin: 0!important;
       min-width: 150px;
-      &:nth-child(2) {
-        border-radius: 5px 5px 0 0;
-      }
-      &:last-child {
-        border-radius: 0 0 5px 5px;
-      }
-      &:is(h2) {
-        // font-family: var(--wp--preset--font-family--roobert);
-        font-size: var(--wp--preset--font-size--body);
-      }
-    }
+      border-radius: 5px;
+      text-align: center;
   }
   & .entry-content figure, 
   & .entry-content figure > * {
