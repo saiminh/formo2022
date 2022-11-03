@@ -20,10 +20,13 @@
   z-index: 10;
   background-color: var(--wp--preset--color--formo-yellow);
   color: var(--wp--preset--color--formo-darktone);
-  padding: 3px 20px 7px 20px;
-
+  padding: 3px 40px 7px 15px;
+  transform: translateX(0);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  
   &:hover {
-    padding: 3px 25px 7px 25px;
+    padding: 3px 50px 7px 15px;
+    transform: translateX(-5px);
   }
 }
 

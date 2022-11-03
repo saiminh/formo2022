@@ -138,6 +138,10 @@ h3.formo2022-teammember-sorting-title {
       color: white;
       padding: .5em;
       margin: 0!important;
+      // min-width: 100%;
+      max-width: 200%;
+      word-break: keep-all;
+      line-height: 1.2;
       border-radius: 5px;
       text-align: center;
   }

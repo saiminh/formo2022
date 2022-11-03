@@ -1238,9 +1238,10 @@ video {
   height: calc(var(--vh, 1vh) * 100);
 }
 
-body .is-layout-flow > *:not(div) + *:not(div), body .is-layout-flow > * + .wp-block-buttons, body .is-layout-flow > h1 + div, body .is-layout-flow > h2 + div, body .is-layout-flow > h3 + div, body .is-layout-flow > h4 + div,
+body .is-layout-flow > *:not(div) + *:not(div), body .is-layout-flow > * + .wp-block-buttons, body .is-layout-flow > p + div, body .is-layout-flow > h1 + div, body .is-layout-flow > h2 + div, body .is-layout-flow > h3 + div, body .is-layout-flow > h4 + div,
 body .is-layout-constrained > *:not(div) + *:not(div),
 body .is-layout-constrained > * + .wp-block-buttons,
+body .is-layout-constrained > p + div,
 body .is-layout-constrained > h1 + div,
 body .is-layout-constrained > h2 + div,
 body .is-layout-constrained > h3 + div,
@@ -2739,10 +2740,13 @@ div:not(.block-editor-block-list__layout) .formo-blog-query.wp-block-query .wp-b
   z-index: 10;
   background-color: var(--wp--preset--color--formo-yellow);
   color: var(--wp--preset--color--formo-darktone);
-  padding: 3px 20px 7px 20px;
+  padding: 3px 40px 7px 15px;
+  transform: translateX(0);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .post-single-back-button.wp-block-button__link:hover {
-  padding: 3px 25px 7px 25px;
+  padding: 3px 50px 7px 15px;
+  transform: translateX(-5px);
 }
 
 .alignfull.wp-block-post-featured-image + .wp-block-group.alignfull {
@@ -3683,6 +3687,9 @@ h3.formo2022-teammember-sorting-title {
   color: white;
   padding: 0.5em;
   margin: 0 !important;
+  max-width: 200%;
+  word-break: keep-all;
+  line-height: 1.2;
   border-radius: 5px;
   text-align: center;
 }
