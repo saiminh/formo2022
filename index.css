@@ -1260,7 +1260,8 @@ body .is-layout-constrained > .wp-block-buttons + *,
 body .is-layout-constrained > p + * {
   margin-block-start: 1em;
 }
-body .is-layout-flow.wp-block-column > p:last-child, body .is-layout-flow.wp-block-column > details:last-child, body .is-layout-flow.wp-block-column > .wp-block-buttons:last-child,
+body .is-layout-flow.wp-block-group > p:last-child, body .is-layout-flow.wp-block-column > p:last-child, body .is-layout-flow.wp-block-column > details:last-child, body .is-layout-flow.wp-block-column > .wp-block-buttons:last-child,
+body .is-layout-constrained.wp-block-group > p:last-child,
 body .is-layout-constrained.wp-block-column > p:last-child,
 body .is-layout-constrained.wp-block-column > details:last-child,
 body .is-layout-constrained.wp-block-column > .wp-block-buttons:last-child {
@@ -3309,6 +3310,10 @@ main.content-wrapper > .entry-content > .alignfull:first-child > figure.wp-block
   .mission-stats-stat .mission-stats-stat-text p.span2 {
     padding-left: 0;
   }
+}
+.team-teammember-miniprofile,
+.team-currently-videoblock {
+  padding-bottom: 1em;
 }
 .team-teammember-miniprofile figure,
 .team-currently-videoblock figure {

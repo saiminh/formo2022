@@ -93,6 +93,7 @@ body .is-layout-constrained {
   & > p + * {
     margin-block-start: 1em;
   }
+  &.wp-block-group > p:last-child,
   &.wp-block-column > p:last-child,
   &.wp-block-column > details:last-child,
   &.wp-block-column > .wp-block-buttons:last-child {
