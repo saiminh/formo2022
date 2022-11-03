@@ -62,9 +62,14 @@ blockquote:before {
 video {
   display: block;
 }
-body > .block-editor-block-list__layout.is-root-container p {
-  margin-bottom: 1em!important;
-}
+body > .block-editor-block-list__layout.is-root-container {
+  & p {
+    margin-bottom: 1em!important;
+  }
+  & h1, & h2, & h3, & h4 {
+    margin-bottom: .25em!important;
+  }
+} 
 .wp-block-separator {
   border-bottom: 0;
 }
@@ -91,7 +96,7 @@ body .is-layout-constrained {
   &.wp-block-column > p:last-child,
   &.wp-block-column > details:last-child,
   &.wp-block-column > .wp-block-buttons:last-child {
-    margin-block-end: 1em;
+    margin-block-end: 1rem;
   }
   &.wp-block-column > h2:last-child {
     margin-block-end: .25em;

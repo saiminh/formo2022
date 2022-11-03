@@ -118,9 +118,6 @@ function override_admin_bar_css() {
       .edit-post-fullscreen-mode-close.components-button .edit-post-fullscreen-mode-close_site-icon {
         object-fit: contain;
       }
-      .edit-post-visual-editor .components-button {
-        box-sizing: content-box;
-      }
     </style>
   <?php }
 }

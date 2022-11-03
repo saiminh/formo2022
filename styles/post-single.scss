@@ -2,7 +2,7 @@
 
 
 .post-single-postnav {
-  margin: 1em auto;
+  padding: 1.5em 0;
   max-width: 66%;
 }
 .wp-block-post-navigation-link a {
@@ -24,11 +24,6 @@
   }
 }
 
-.single-template .wp-block-post-content .wp-block-group:not(:last-child),
-.single-template .wp-block-post-content .wp-block-columns:not(:last-child),
-.single-template .wp-block-post-content .wp-block-query:not(:last-child) {
-  margin-block-end: 1em;
-}
 .alignfull.wp-block-post-featured-image + .wp-block-group.alignfull {
   margin-block-start: 0;
 }
