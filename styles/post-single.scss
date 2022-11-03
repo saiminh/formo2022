@@ -1,5 +1,38 @@
 @use 'mixins.scss' as mixins;
 
+
+.post-single-postnav {
+  margin: 1em auto;
+  max-width: 66%;
+}
+.wp-block-post-navigation-link a {
+  @include mixins.button;
+  font-size: var(--wp--preset--font-size--small);
+  color: var(--wp--preset--color--formo-cream);
+}
+
+.post-single-back-button.wp-block-button__link {
+  position: absolute;
+  top: calc( var(--vh, 1vh) * 100 - 20px);
+  z-index: 10;
+  background-color: var(--wp--preset--color--formo-yellow);
+  color: var(--wp--preset--color--formo-darktone);
+  padding: 3px 20px 7px 20px;
+
+  &:hover {
+    padding: 3px 25px 7px 25px;
+  }
+}
+
+.single-template .wp-block-post-content .wp-block-group:not(:last-child),
+.single-template .wp-block-post-content .wp-block-columns:not(:last-child),
+.single-template .wp-block-post-content .wp-block-query:not(:last-child) {
+  margin-block-end: 1em;
+}
+.alignfull.wp-block-post-featured-image + .wp-block-group.alignfull {
+  margin-block-start: 0;
+}
+
 main.content-wrapper > .entry-content > figure.wp-block-post-featured-image:first-child ,
 .is-root-container > figure.wp-block-post-featured-image:first-child {
   margin-left: calc(-1 * var(--wp--custom--spacing--outer));

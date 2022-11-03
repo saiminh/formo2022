@@ -43,6 +43,9 @@ ul, ol {
 ul li {
   margin-bottom: 1em;
 }
+.content-wrapper ul li {
+  margin-left: 1em;
+}
 blockquote {
   position: relative;
 }
@@ -77,13 +80,12 @@ body .is-layout-constrained {
   & > h4 + *,
   & > blockquote + *,
   & > details + *,
+  & > figure:not(.formo-hero-video, .formo-hero-image) + *,
   & > * + .wp-block-buttons,
   & > .wp-block-buttons + *,
   & > p + *{
     margin-block-start: 1em;
   }
-  &.wp-block-column > p:last-child,
-  &.wp-block-column > .wp-block-buttons:last-child,
   &.wp-block-column > p:last-child,
   &.wp-block-column > .wp-block-buttons:last-child {
     margin-block-end: 1em;

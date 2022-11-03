@@ -1,5 +1,17 @@
 @use 'mixins.scss' as mixin;
 
+.mailchimp-form {
+  @media (max-width: 1280px) {
+    &.span6 .wp-block-columns {
+      flex-direction: column;
+    }
+    &.span6 .wp-block-columns > .wp-block-column {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
 input[type="text"],
 input[type="email"],
 ::placeholder {

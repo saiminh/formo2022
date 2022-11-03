@@ -1,7 +1,9 @@
+@use 'breakpoints.scss' as bps;
 @use 'mixins.scss' as mixins;
 
 .formo-contact-form {
   border-radius: 15px;
+  margin-bottom: 1em;
   
   &.wp-block-group.has-background {
     padding: 1.5em;
@@ -36,4 +38,16 @@
   border-radius: 15px;
   overflow: hidden;
   margin-bottom: .5em;
+}
+
+@include bps.bp-down(bigTablet) {
+  body .is-layout-flex.contact-content {
+    gap: 1em;
+
+    & .pill {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: .25em;
+    }
+  }
 }
