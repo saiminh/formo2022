@@ -98,6 +98,15 @@ function override_admin_bar_css() {
         position: relative;
         z-index: 9999;
       }
+      .edit-post-fullscreen-mode-close.components-button {
+        background-color: #FFF;
+      }
+      .edit-post-fullscreen-mode-close.components-button::before {
+        box-shadow: none;
+      }
+      .edit-post-fullscreen-mode-close.components-button .edit-post-fullscreen-mode-close_site-icon {
+        object-fit: contain;
+      }
     </style>
   <?php }
 }
