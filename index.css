@@ -1229,13 +1229,6 @@ video {
   display: block;
 }
 
-body > .block-editor-block-list__layout.is-root-container p {
-  margin-bottom: 1em !important;
-}
-body > .block-editor-block-list__layout.is-root-container h1, body > .block-editor-block-list__layout.is-root-container h2, body > .block-editor-block-list__layout.is-root-container h3, body > .block-editor-block-list__layout.is-root-container h4 {
-  margin-bottom: 0.25em !important;
-}
-
 .wp-block-separator {
   border-bottom: 0;
 }
@@ -1245,33 +1238,21 @@ body > .block-editor-block-list__layout.is-root-container h1, body > .block-edit
   height: calc(var(--vh, 1vh) * 100);
 }
 
-body .is-layout-flow > h1 + *, body .is-layout-flow > h2 + *, body .is-layout-flow > h3 + *, body .is-layout-flow > h4 + *, body .is-layout-flow > blockquote + *, body .is-layout-flow > details + *, body .is-layout-flow > * + .event-location, body .is-layout-flow > * + .event-date, body .is-layout-flow > figure:not(.formo-hero-video, .formo-hero-image) + *, body .is-layout-flow > * + .wp-block-buttons, body .is-layout-flow > .wp-block-buttons + *, body .is-layout-flow > p + *,
-body .is-layout-constrained > h1 + *,
-body .is-layout-constrained > h2 + *,
-body .is-layout-constrained > h3 + *,
-body .is-layout-constrained > h4 + *,
-body .is-layout-constrained > blockquote + *,
-body .is-layout-constrained > details + *,
-body .is-layout-constrained > * + .event-location,
-body .is-layout-constrained > * + .event-date,
-body .is-layout-constrained > figure:not(.formo-hero-video, .formo-hero-image) + *,
+body .is-layout-flow > *:not(div) + *:not(div), body .is-layout-flow > * + .wp-block-buttons, body .is-layout-flow > h1 + div, body .is-layout-flow > h2 + div, body .is-layout-flow > h3 + div, body .is-layout-flow > h4 + div,
+body .is-layout-constrained > *:not(div) + *:not(div),
 body .is-layout-constrained > * + .wp-block-buttons,
-body .is-layout-constrained > .wp-block-buttons + *,
-body .is-layout-constrained > p + * {
+body .is-layout-constrained > h1 + div,
+body .is-layout-constrained > h2 + div,
+body .is-layout-constrained > h3 + div,
+body .is-layout-constrained > h4 + div {
   margin-block-start: 1em;
 }
-body .is-layout-flow.wp-block-group > p:last-child, body .is-layout-flow.wp-block-column > p:last-child, body .is-layout-flow.wp-block-column > details:last-child, body .is-layout-flow.wp-block-column > .wp-block-buttons:last-child,
-body .is-layout-constrained.wp-block-group > p:last-child,
-body .is-layout-constrained.wp-block-column > p:last-child,
-body .is-layout-constrained.wp-block-column > details:last-child,
-body .is-layout-constrained.wp-block-column > .wp-block-buttons:last-child {
-  margin-block-end: 1rem;
-}
-body .is-layout-flow.wp-block-column > h2:last-child,
-body .is-layout-constrained.wp-block-column > h2:last-child {
-  margin-block-end: 0.25em;
-}
 
+@media (max-width: 781.98px) {
+  body .is-layout-flex > .wp-block-column + .wp-block-column {
+    margin-block-start: 1em;
+  }
+}
 @media (min-width: 782px) {
   .is-straddling-gridline {
     transform: translateX(calc(-50% - 0.5 * var(--wp--custom--spacing--between)));
@@ -4053,7 +4034,7 @@ body > .block-editor-block-list__layout .formo2022-teammember-sorting-questions 
 }
 @media (max-width: 781.98px) {
   .formo-news-block-4-columns > .wp-block-group .is-nowrap {
-    display: block;
+    gap: 0.25em;
   }
 }
 .formo-news-block-4-columns > .wp-block-group .wp-block-buttons + p {

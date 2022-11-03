@@ -28,7 +28,7 @@
     }
     & .is-nowrap {
       @include bps.bp-down(bigTablet) {
-        display: block;
+        gap: .25em;
       }
     }
     & .wp-block-buttons + p {
