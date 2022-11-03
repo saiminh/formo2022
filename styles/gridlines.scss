@@ -6,17 +6,16 @@
     flex-grow: 0;
     padding-left: calc( 0.5 * var(--wp--custom--spacing--between) );
     padding-right: calc( 0.5 * var(--wp--custom--spacing--between) );
-    
-    &:first-child:not([class*="offset"]) {
-      padding-left: 0;
-    }
-    &:last-child {
-      padding-right: 0;
-    }
+  }
+  .wp-block-column:first-child:not([class*="offset"]) {
+    padding-left: 0;
+  }
+  .wp-block-column:last-child {
+    padding-right: 0;
   }
 
   .wp-block-column.span2 {
-    flex-basis: calc( var(--wp--custom--width--col-2) + var(--wp--custom--spacing--between)   )!important;
+    flex-basis: calc( var(--wp--custom--width--col-2) + var(--wp--custom--spacing--between) )!important;
     &:first-child:not([class*="offset"]),
     &:last-child {
       flex-basis: calc( var(--wp--custom--width--col-2) + 0.5 * var(--wp--custom--spacing--between) )!important;
