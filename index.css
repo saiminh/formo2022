@@ -1623,6 +1623,12 @@ html.is-animating .transition-default video {
     padding-right: 0;
   }
 }
+@media (max-width: 781.98px) {
+  .mailchimp-form {
+    margin-left: calc(-1 * var(--wp--custom--spacing--outer));
+    margin-right: calc(-1 * var(--wp--custom--spacing--outer));
+  }
+}
 
 input[type=text],
 input[type=email],
