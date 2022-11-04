@@ -216,7 +216,7 @@
           "name": "XXX-Large"
         },
         {
-          "size": "clamp(6.9rem, 15vw, 16.875rem)",
+          "size": "clamp(5.75rem, 15vw, 16.875rem)",
           "slug": "huge",
           "name": "Huge"
         }

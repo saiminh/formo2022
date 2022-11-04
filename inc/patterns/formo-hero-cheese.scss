@@ -1,4 +1,4 @@
-@use '../../styles/breakpoints.scss' as bp;
+@use '../../styles/breakpoints.scss' as bps;
 
 //Specific styles for the hero on the cheese page
 
@@ -25,7 +25,7 @@
     }
   }
 
-  @include bp.bp-down(bigTablet) {
+  @include bps.bp-down(bigTablet) {
     & h1 { 
       .outlined {
         position: relative;
