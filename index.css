@@ -3255,6 +3255,9 @@ main.content-wrapper > .entry-content > .alignfull:first-child > figure.wp-block
   }
 }
 @media (max-width: 781.98px) {
+  .columns-4-updown {
+    padding-bottom: 2em;
+  }
   .mission-stats-columns .wp-block-spacer {
     width: 0%;
     height: 0 !important;
