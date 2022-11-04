@@ -88,9 +88,18 @@
     top: auto;
     bottom: 0;
   }
+
+  .columns-4-updown {
+    
+  }
+
 }
 
 @include bps.bp-down(bigTablet) {
+
+  .columns-4-updown {
+    padding-bottom: 2em;
+  }
 
   .mission-stats-columns .wp-block-spacer {
     width: 0%;
