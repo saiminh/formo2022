@@ -71,7 +71,7 @@ video {
 }
 body .is-layout-flow , 
 body .is-layout-constrained {
-  & > *:not(div) + *:not(div),
+  & > *:not(div):not(lt-highlighter) + *:not(div),
   & > * + .wp-block-buttons,
   & > p + div, 
   & > h1 + div, 

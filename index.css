@@ -1240,8 +1240,8 @@ video {
   height: calc(var(--vh, 1vh) * 100);
 }
 
-body .is-layout-flow > *:not(div) + *:not(div), body .is-layout-flow > * + .wp-block-buttons, body .is-layout-flow > p + div, body .is-layout-flow > h1 + div, body .is-layout-flow > h2 + div, body .is-layout-flow > h3 + div, body .is-layout-flow > h4 + div,
-body .is-layout-constrained > *:not(div) + *:not(div),
+body .is-layout-flow > *:not(div):not(lt-highlighter) + *:not(div), body .is-layout-flow > * + .wp-block-buttons, body .is-layout-flow > p + div, body .is-layout-flow > h1 + div, body .is-layout-flow > h2 + div, body .is-layout-flow > h3 + div, body .is-layout-flow > h4 + div,
+body .is-layout-constrained > *:not(div):not(lt-highlighter) + *:not(div),
 body .is-layout-constrained > * + .wp-block-buttons,
 body .is-layout-constrained > p + div,
 body .is-layout-constrained > h1 + div,
