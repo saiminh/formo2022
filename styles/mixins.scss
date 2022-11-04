@@ -152,7 +152,7 @@
   .wp-block-post-date + .wp-block-post-title ,
   .wp-block-post-terms + .wp-block-post-title { 
     margin-top: .5em;
-    font-size: var(--wp--preset--font-size--larger);
+    font-size: var(--wp--preset--font-size--x-large);
   }
 }
 
@@ -190,7 +190,8 @@
       height: calc(100% + 2em)!important;
     }
   }
-  & .wp-block-post-title,
+  & .wp-block-post-date + .wp-block-post-title ,
+  & .wp-block-post-terms + .wp-block-post-title,
   & h2, & h3 {
     font-size: var(--wp--preset--font-size--large);
     margin-bottom: .5em;
