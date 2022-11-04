@@ -3362,6 +3362,7 @@ main.content-wrapper > .entry-content > .alignfull:first-child > figure.wp-block
   position: relative;
   border-radius: 15px;
   overflow: hidden;
+  transform: translate3d(0, 0, 0);
 }
 .team-teammember-miniprofile figure img, .team-teammember-miniprofile figure video, .team-teammember-miniprofile figure svg, .team-teammember-miniprofile figure > *,
 .team-currently-videoblock figure img,
