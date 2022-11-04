@@ -10,6 +10,11 @@
     white-space: nowrap;
     text-indent: 0;
     animation: marquee 15s linear infinite;
+    padding: .125em 0;
+
+    @include bps.bp-down(bigTablet) {
+      padding: .5em 0;
+    }
   
     & > img {
       width: .5em!important;

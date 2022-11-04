@@ -2295,6 +2295,12 @@ input[type=radio]:checked + :after {
   white-space: nowrap;
   text-indent: 0;
   animation: marquee 15s linear infinite;
+  padding: 0.125em 0;
+}
+@media (max-width: 781.98px) {
+  #formore-header h1 {
+    padding: 0.5em 0;
+  }
 }
 #formore-header h1 > img {
   width: 0.5em !important;
