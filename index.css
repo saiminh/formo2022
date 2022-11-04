@@ -1001,6 +1001,9 @@ ul.wp-block-navigation__container li {
     padding-top: 1rem;
     font-size: var(--wp--preset--font-size--small);
   }
+  .formo-footer .footer-nav-menu-1 ul li, .formo-footer .footer-nav-menu-2 ul li {
+    margin-left: 0;
+  }
   .formo-footer .footer-nav-menu-1 .wp-block-navigation__container, .formo-footer .footer-nav-menu-2 .wp-block-navigation__container {
     flex-direction: column;
     align-items: flex-start;
@@ -1062,6 +1065,7 @@ ul.wp-block-navigation__container li {
     font-size: 10px;
     line-height: 1.5;
     white-space: nowrap;
+    padding-bottom: 1em;
   }
   .footer-hygiene-text:after {
     height: 0.5em;
@@ -1139,12 +1143,19 @@ ul.wp-block-navigation__container li {
     flex-basis: 0 !important;
     flex-grow: 0;
   }
+  .formo-footer > .wp-block-columns:nth-child(2) {
+    padding: 1em 0;
+  }
+  .formo-footer > .wp-block-columns:nth-child(2) > .wp-block-column {
+    margin: 0;
+  }
   .footer-hygiene-text {
     text-align: center;
     text-transform: uppercase;
     font-size: var(--wp--preset--font-size--tiny);
     font-size: 10px;
     line-height: 1.5;
+    padding-bottom: 1em;
   }
   .footer-hygiene-text:after {
     height: 0.5em;
