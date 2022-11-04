@@ -3182,27 +3182,18 @@ main.content-wrapper > .entry-content > .alignfull:first-child > figure.wp-block
   }
   .mission-stats-bottom-button-block {
     height: 0;
-    padding-top: 60%;
+    padding-top: 40%;
     position: relative;
   }
   .mission-stats-bottom-button-block > * {
     position: absolute;
     bottom: 3em;
   }
-  .mission-stats-bottom-button {
-    transform: translate(-50%, -100%);
-    position: absolute;
-    left: 50%;
-    z-index: 30;
-  }
-  .mission-stats-bottom-button .wp-block-button__link {
-    position: relative;
-    z-index: 3;
-  }
   .mission-stats-stat {
     height: 0;
     width: 100%;
-    padding-top: 120%;
+    padding-top: 100%;
+    margin-bottom: 20% !important;
     position: relative;
   }
   .mission-stats-stat .mission-stats-stat-figure {
@@ -3238,12 +3229,15 @@ main.content-wrapper > .entry-content > .alignfull:first-child > figure.wp-block
     top: auto;
     bottom: 0;
   }
+  .mission-stats-columns > .wp-block-column:first-child .mission-stats-stat:last-child {
+    margin-bottom: 0 !important;
+  }
   .mission-stats-columns > .wp-block-column:first-child .mission-stats-stat:last-child .mission-stats-stat-figure {
     top: auto;
     bottom: 0;
     transform: translate(-50%, 0);
     height: 100%;
-    width: 80%;
+    width: 70%;
   }
   .mission-stats-columns > .wp-block-column:last-child .mission-stats-stat .mission-stats-stat-text {
     left: auto;
@@ -3280,15 +3274,6 @@ main.content-wrapper > .entry-content > .alignfull:first-child > figure.wp-block
   }
   .mission-stats-bottom-button-block {
     padding: 0 0 3em 0;
-  }
-  .mission-stats-bottom-button {
-    transform: translateY(-50%);
-    position: relative;
-    z-index: 30;
-  }
-  .mission-stats-bottom-button .wp-block-button__link {
-    position: relative;
-    z-index: 3;
   }
   .mission-stats-stat {
     height: auto;

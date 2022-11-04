@@ -8,28 +8,18 @@
   }
   .mission-stats-bottom-button-block {
     height: 0;
-    padding-top: 60%;
+    padding-top: 40%;
     position: relative;
     & > * {
       position: absolute;
       bottom: 3em;
     }
   }
-  .mission-stats-bottom-button {
-    transform: translate(-50%, -100%);
-    position: absolute;
-    left: 50%;
-    z-index: 30;
-
-    & .wp-block-button__link {
-      position: relative;
-      z-index: 3;
-    }
-  }
   .mission-stats-stat {
     height: 0;
     width: 100%;
-    padding-top: 120%;
+    padding-top: 100%;
+    margin-bottom: 20%!important;
     position: relative;
 
     & .mission-stats-stat-figure {
@@ -70,13 +60,18 @@
   }
   //left column
   .mission-stats-columns > .wp-block-column:first-child {
-    //last image in column
+    
+    //last block in left column
+    & .mission-stats-stat:last-child {
+      margin-bottom: 0!important;
+    }
+    //last image in left column
     & .mission-stats-stat:last-child .mission-stats-stat-figure {
       top: auto;
       bottom: 0;
       transform: translate(-50%, 0);
       height: 100%;
-      width: 80%;
+      width: 70%;
     }
   }
   //right column
@@ -128,16 +123,6 @@
   }
   .mission-stats-bottom-button-block {
     padding: 0 0 3em 0;
-  }
-  .mission-stats-bottom-button {
-    transform: translateY(-50%);
-    position: relative;
-    z-index: 30;
-
-    & .wp-block-button__link {
-      position: relative;
-      z-index: 3;
-    }
   }
   .mission-stats-stat {
     height: auto;
