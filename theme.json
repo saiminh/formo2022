@@ -322,7 +322,7 @@
 					"fontFamily": "var(--wp--preset--font-family--roobert)",
 					"fontWeight": "300",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)",
-					"fontSize": "var(--wp--preset--font-size--large)"
+					"fontSize": "var(--wp--preset--font-size--larger)"
 				}
 			},
 			"h5": {
