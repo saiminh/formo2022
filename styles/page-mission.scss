@@ -90,7 +90,21 @@
   }
 
   .columns-4-updown {
+    padding-top: 8em;
     
+    & > .wp-block-column {
+      padding-bottom: 3em;
+    }
+    & > .wp-block-column:first-child {
+      & figure {
+        margin-top: -8em;
+      }
+    }
+    & > .wp-block-column:nth-child(3) {
+      & figure {
+        margin-top: -8em;
+      }
+    }
   }
 
 }
@@ -98,7 +112,7 @@
 @include bps.bp-down(bigTablet) {
 
   .columns-4-updown {
-    padding-bottom: 2em;
+    padding-bottom: 3em;
   }
 
   .mission-stats-columns .wp-block-spacer {

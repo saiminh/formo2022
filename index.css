@@ -3253,10 +3253,22 @@ main.content-wrapper > .entry-content > .alignfull:first-child > figure.wp-block
     top: auto;
     bottom: 0;
   }
+  .columns-4-updown {
+    padding-top: 8em;
+  }
+  .columns-4-updown > .wp-block-column {
+    padding-bottom: 3em;
+  }
+  .columns-4-updown > .wp-block-column:first-child figure {
+    margin-top: -8em;
+  }
+  .columns-4-updown > .wp-block-column:nth-child(3) figure {
+    margin-top: -8em;
+  }
 }
 @media (max-width: 781.98px) {
   .columns-4-updown {
-    padding-bottom: 2em;
+    padding-bottom: 3em;
   }
   .mission-stats-columns .wp-block-spacer {
     width: 0%;
