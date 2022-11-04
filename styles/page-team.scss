@@ -12,6 +12,7 @@
     border-radius: 15px;
     overflow: hidden;
     transform: translate3d(0, 0, 0);
+    transition: border-radius .6s cubic-bezier(0.915, 0.125, 0.135, 0.890);
 
     & img, & video, & svg, & > * {
       width: 100%;
@@ -21,6 +22,9 @@
       top: 0;
       left: 0;
     }
+  }
+  &:hover figure {
+    border-radius: 50%!important;
   }
   & figure + p {
     margin: 1em 0 .25em 0;
