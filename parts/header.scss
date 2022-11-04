@@ -43,6 +43,8 @@ ul.wp-block-navigation__container li {
     color: var(--wp--preset--color--formo-blue);
     transition: all .3s ease-in-out;
     padding: .75em 1em;
+    padding-left: 1.39em;
+    padding-right: 1.39em;
     border-radius: 30px;
     margin: 0 1px;
     position: relative;
@@ -63,8 +65,8 @@ ul.wp-block-navigation__container li {
     
     &.currentNavLink {
       color: var(--wp--preset--color--formo-cream);
-      padding-left: 1.33em;
-      padding-right: 1.33em;
+      padding-left: 1.39em;
+      padding-right: 1.39em;
       
       &:before {
       background-color: var(--wp--preset--color--formo-blue);
@@ -75,8 +77,8 @@ ul.wp-block-navigation__container li {
   .formo-navi a.wp-block-navigation-item__content:hover {
     text-decoration: none;
     color: var(--wp--preset--color--formo-cream);
-    padding-left: 1.25em;
-    padding-right: 1.25em;
+    padding-left: 1.81em;
+    padding-right: 1.81em;
       
     &:before {
       background-color: var(--wp--preset--color--formo-blue);

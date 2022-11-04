@@ -1,3 +1,4 @@
+@use 'mixins.scss' as mixins;
 @use 'breakpoints.scss' as bps;
 
 .formo-jobs-listing-filter {
@@ -7,12 +8,14 @@
   padding: 1em 0;
   
   & .wp-block-button__link {
+    @include mixins.button;
+    @include mixins.button-outline;
     font-size: var(--wp--preset--font-size--tiny);
     color: var(--wp--preset--color--formo-blue);
-    background-color: transparent;
-    border-width: 1px;
-    border-style: solid;
-    padding: .5em .75em;
+    // background-color: transparent;
+    // border-width: 1px;
+    // border-style: solid;
+    // padding: .83em 1.39em;
   }
   & .wp-block-button__link.filter-active {
     background-color: var(--wp--preset--color--formo-blue);
