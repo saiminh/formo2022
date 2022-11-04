@@ -7,6 +7,10 @@
   flex-wrap: wrap;
   gap: var(--wp--custom--spacing--between)!important;
 
+  & .is-layout-flow > p + h2 {
+    margin-block-start: .25em;
+  }
+
   @include bps.bp-down(bigTablet) {
     flex-wrap: wrap!important;
   }

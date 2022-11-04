@@ -3881,6 +3881,9 @@ body > .block-editor-block-list__layout .formo2022-teammember-sorting-questions 
   flex-wrap: wrap;
   gap: var(--wp--custom--spacing--between) !important;
 }
+.formo-news-block-4-columns .is-layout-flow > p + h2 {
+  margin-block-start: 0.25em;
+}
 @media (max-width: 781.98px) {
   .formo-news-block-4-columns {
     flex-wrap: wrap !important;
