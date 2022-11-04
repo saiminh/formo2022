@@ -198,7 +198,11 @@
 					"slug": "large"
 				},
 				{
-					"size": "clamp(2.9rem, 3.83vw, 4.25rem)",
+					"size": "clamp(2.225rem, 2.889vw, 3.25rem)",
+					"slug": "larger"
+				},
+				{
+					"size": "clamp(2.65rem, 3.778vw, 4.25rem)",
 					"slug": "x-large"
 				},
 				{
