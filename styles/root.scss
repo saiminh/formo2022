@@ -88,6 +88,10 @@ body .is-layout-constrained {
     }
   }
 }
+body .is-layout-flow > p:last-child,
+body .is-layout-flow > * + p:last-child {
+  margin-block-end: 1em;
+}
 // body .is-layout-flow , 
 // body .is-layout-constrained {
 //   & > blockquote + *,
