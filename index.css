@@ -3241,8 +3241,9 @@ main.content-wrapper > .entry-content > .alignfull:first-child > figure.wp-block
   .mission-stats-columns > .wp-block-column:first-child .mission-stats-stat:last-child .mission-stats-stat-figure {
     top: auto;
     bottom: 0;
-    left: 40%;
     transform: translate(-50%, 0);
+    height: 100%;
+    width: 80%;
   }
   .mission-stats-columns > .wp-block-column:last-child .mission-stats-stat .mission-stats-stat-text {
     left: auto;

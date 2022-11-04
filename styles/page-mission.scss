@@ -74,8 +74,9 @@
     & .mission-stats-stat:last-child .mission-stats-stat-figure {
       top: auto;
       bottom: 0;
-      left: 40%;
       transform: translate(-50%, 0);
+      height: 100%;
+      width: 80%;
     }
   }
   //right column
@@ -178,18 +179,5 @@
         padding-left: 0;
       }
     }
-    // &:nth-child(even) {
-    //   & .mission-stats-stat-figure {
-    //     left: 50%;
-    //   }
-    //   & .mission-stats-stat-text {
-    //     padding-left: 0;
-    //     padding-right: 20%;
-    //     & > * {
-    //       text-align: right;
-    //       margin: 0 0 0 auto;        
-    //     }
-    //   }
-    // }
   }
 }
