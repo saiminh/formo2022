@@ -3180,6 +3180,15 @@ main.content-wrapper > .entry-content > .alignfull:first-child > figure.wp-block
     height: 0 !important;
     padding-top: 60%;
   }
+  .mission-stats-bottom-button-block {
+    height: 0;
+    padding-top: 60%;
+    position: relative;
+  }
+  .mission-stats-bottom-button-block > * {
+    position: absolute;
+    bottom: 3em;
+  }
   .mission-stats-bottom-button {
     transform: translate(-50%, -100%);
     position: absolute;
@@ -3225,9 +3234,6 @@ main.content-wrapper > .entry-content > .alignfull:first-child > figure.wp-block
   .mission-stats-stat .mission-stats-stat-text p.span2 {
     padding-left: 0;
   }
-  .mission-stats-stat.fig-fill .mission-stats-stat-figure {
-    background-color: var(--wp--custom--color--formo-blue);
-  }
   .mission-stats-stat.fig-bottom .mission-stats-stat-figure {
     top: auto;
     bottom: 0;
@@ -3245,9 +3251,6 @@ main.content-wrapper > .entry-content > .alignfull:first-child > figure.wp-block
   .mission-stats-columns > .wp-block-column:last-child .mission-stats-stat .mission-stats-stat-text > * {
     text-align: right;
     margin: 0 0 0 auto;
-  }
-  .mission-stats-stat.fig-fill .mission-stats-stat-figure {
-    background-color: var(--wp--preset--color--formo-cream);
   }
   .mission-stats-stat.fig-bottom .mission-stats-stat-figure {
     top: auto;
@@ -3273,6 +3276,9 @@ main.content-wrapper > .entry-content > .alignfull:first-child > figure.wp-block
   .mission-stats-columns .wp-block-spacer {
     width: 0%;
     height: 0 !important;
+  }
+  .mission-stats-bottom-button-block {
+    padding: 0 0 3em 0;
   }
   .mission-stats-bottom-button {
     transform: translateY(-50%);

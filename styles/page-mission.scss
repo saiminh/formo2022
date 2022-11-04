@@ -6,6 +6,15 @@
     height: 0!important;
     padding-top: 60%;
   }
+  .mission-stats-bottom-button-block {
+    height: 0;
+    padding-top: 60%;
+    position: relative;
+    & > * {
+      position: absolute;
+      bottom: 3em;
+    }
+  }
   .mission-stats-bottom-button {
     transform: translate(-50%, -100%);
     position: absolute;
@@ -55,14 +64,13 @@
       }
     }
   }
-  .mission-stats-stat.fig-fill .mission-stats-stat-figure {
-    background-color: var(--wp--custom--color--formo-blue);
-  }
   .mission-stats-stat.fig-bottom .mission-stats-stat-figure {
     top: auto;
     bottom: 0;
   }
+  //left column
   .mission-stats-columns > .wp-block-column:first-child {
+    //last image in column
     & .mission-stats-stat:last-child .mission-stats-stat-figure {
       top: auto;
       bottom: 0;
@@ -70,6 +78,7 @@
       transform: translate(-50%, 0);
     }
   }
+  //right column
   .mission-stats-columns > .wp-block-column:last-child {
     
     & .mission-stats-stat .mission-stats-stat-text {
@@ -80,9 +89,6 @@
         margin: 0 0 0 auto;        
       }
     }
-  }
-  .mission-stats-stat.fig-fill .mission-stats-stat-figure {
-    background-color: var(--wp--preset--color--formo-cream);
   }
   .mission-stats-stat.fig-bottom .mission-stats-stat-figure {
     top: auto;
@@ -118,6 +124,9 @@
   .mission-stats-columns .wp-block-spacer {
     width: 0%;
     height: 0!important;
+  }
+  .mission-stats-bottom-button-block {
+    padding: 0 0 3em 0;
   }
   .mission-stats-bottom-button {
     transform: translateY(-50%);
