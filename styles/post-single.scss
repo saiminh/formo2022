@@ -16,7 +16,7 @@
 
 .post-single-back-button.wp-block-button__link {
   position: absolute;
-  top: calc( var(--vh, 1vh) * 100 - 20px);
+  top: calc( var(--vh, 1vh) * 75 - 20px);
   z-index: 10;
   background-color: var(--wp--preset--color--formo-yellow);
   color: var(--wp--preset--color--formo-darktone);
@@ -38,7 +38,7 @@ main.content-wrapper > .entry-content > figure.wp-block-post-featured-image:firs
 .is-root-container > figure.wp-block-post-featured-image:first-child {
   margin-left: calc(-1 * var(--wp--custom--spacing--outer));
   margin-right: calc(-1 * var(--wp--custom--spacing--outer));
-  height: calc(var(--vh, 1vh) * 100);
+  height: calc(var(--vh, 1vh) * 75);
   position: relative;
   
   & img {
@@ -52,7 +52,7 @@ main.content-wrapper > .entry-content > figure.wp-block-post-featured-image:firs
 main.content-wrapper > .entry-content > .alignfull:first-child > figure.wp-block-post-featured-image,
 .is-root-container > .alignfull:first-child > figure.wp-block-post-featured-image {
   margin-top: calc( -1 * var(--wp--custom--height--navbar) );
-  height: calc(var(--vh, 1vh) * 100);
+  height: calc(var(--vh, 1vh) * 75);
   margin-left: calc(-1 * var(--wp--custom--spacing--outer));
   margin-right: calc(-1 * var(--wp--custom--spacing--outer));
   margin-bottom: 2em;
