@@ -16,6 +16,16 @@ body {
   font-size: var(--wp--preset--font-size--body);
 }
 
+textarea,
+input.text,
+input[type="text"],
+input[type="search"],
+input[type="button"],
+input[type="submit"],
+.input-checkbox {
+-webkit-appearance: none;
+}
+
 h1, h2, h3, h4, h5 {
   line-height: .85;
   -webkit-hyphens: auto;
