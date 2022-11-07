@@ -39,6 +39,7 @@
     font-size: var(--wp--preset--font-size--body);
     margin: 0 0 1em 0;
     position: relative;
+    z-index: 2;
     opacity: 1;
     order:1;
     animation: fadeOutBackIn .5s ease-out forwards;
@@ -119,6 +120,7 @@
   .job.hash-shown {
     padding-top: calc( 1em + var(--wp--custom--height--navbar) );
     margin-top: calc( -1 * ( 1em + var(--wp--custom--height--navbar) ) );
+    z-index: 1;
   }
   .job.hash-shown .job-header {
     border-radius: var(--job-border-radius) var(--job-border-radius) 0 0 ;
