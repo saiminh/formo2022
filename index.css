@@ -1558,6 +1558,9 @@ h1 .smaller, h2 .smaller, h3 .smaller, h4 .smaller, h5 .smaller {
   [class*=span] > [class*=span]:not([class*=offset]) {
     margin-left: calc(-0.5 * var(--wp--custom--spacing--between));
   }
+  [class*=span] > * + [class*=span]:not([class*=offset]) {
+    margin-left: 0;
+  }
   .offset1-neg,
 [class*=wp-container-] > .offset1-neg {
     margin-left: calc(-1 * var(--wp--custom--width--col-1) - 0.5 * var(--wp--custom--spacing--between));
@@ -3683,6 +3686,7 @@ body > .block-editor-block-list__layout .team-currently-videoblock::before {
   padding: 0.25em 15px;
   font-size: var(--wp--preset--font-size--body);
   color: var(--wp--preset--color--formo-darktone);
+  background-color: transparent;
 }
 .formo-contact-form .meow-contact-form--default .meow-contact-form__group .meow-contact-form__group-textarea {
   font-size: var(--wp--preset--font-size--small);
