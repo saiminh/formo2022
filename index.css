@@ -1484,52 +1484,52 @@ h1 .smaller, h2 .smaller, h3 .smaller, h4 .smaller, h5 .smaller {
   .wp-block-column.content-bottom > p:last-child:after {
     content: none;
   }
-  p.span1, h1.span1, h2.span1, h3.span1, h4.span1, blockquote.span1, .wp-block-group.span1, ul.span1, ol.span1, nav.span1 {
+  p.span1, h1.span1, h2.span1, h3.span1, h4.span1, blockquote.span1, .wp-block-group.span1, ul.span1, ol.span1, nav.span1, figure.span1 {
     width: calc(var(--wp--custom--width--col-1) + var(--wp--custom--spacing--between));
     padding-left: calc(0.5 * var(--wp--custom--spacing--between));
     padding-right: calc(0.5 * var(--wp--custom--spacing--between));
   }
-  p.span2, h1.span2, h2.span2, h3.span2, h4.span2, blockquote.span2, .wp-block-group.span2, ul.span2, ol.span2, nav.span2 {
+  p.span2, h1.span2, h2.span2, h3.span2, h4.span2, blockquote.span2, .wp-block-group.span2, ul.span2, ol.span2, nav.span2, figure.span2 {
     width: calc(var(--wp--custom--width--col-2) + var(--wp--custom--spacing--between));
     padding-left: calc(0.5 * var(--wp--custom--spacing--between));
     padding-right: calc(0.5 * var(--wp--custom--spacing--between));
   }
-  p.span3, h1.span3, h2.span3, h3.span3, h4.span3, blockquote.span3, .wp-block-group.span3, ul.span3, ol.span3, nav.span3 {
+  p.span3, h1.span3, h2.span3, h3.span3, h4.span3, blockquote.span3, .wp-block-group.span3, ul.span3, ol.span3, nav.span3, figure.span3 {
     width: calc(var(--wp--custom--width--col-3) + var(--wp--custom--spacing--between));
     padding-left: calc(0.5 * var(--wp--custom--spacing--between));
     padding-right: calc(0.5 * var(--wp--custom--spacing--between));
   }
-  p.span4, h1.span4, h2.span4, h3.span4, h4.span4, blockquote.span4, .wp-block-group.span4, ul.span4, ol.span4, nav.span4 {
+  p.span4, h1.span4, h2.span4, h3.span4, h4.span4, blockquote.span4, .wp-block-group.span4, ul.span4, ol.span4, nav.span4, figure.span4 {
     width: calc(var(--wp--custom--width--col-4) + var(--wp--custom--spacing--between));
     padding-left: calc(0.5 * var(--wp--custom--spacing--between));
     padding-right: calc(0.5 * var(--wp--custom--spacing--between));
   }
-  p.span5, h1.span5, h2.span5, h3.span5, h4.span5, blockquote.span5, .wp-block-group.span5, ul.span5, ol.span5, nav.span5 {
+  p.span5, h1.span5, h2.span5, h3.span5, h4.span5, blockquote.span5, .wp-block-group.span5, ul.span5, ol.span5, nav.span5, figure.span5 {
     width: calc(var(--wp--custom--width--col-5) + var(--wp--custom--spacing--between));
     padding-left: calc(0.5 * var(--wp--custom--spacing--between));
     padding-right: calc(0.5 * var(--wp--custom--spacing--between));
   }
-  p.span6, h1.span6, h2.span6, h3.span6, h4.span6, blockquote.span6, .wp-block-group.span6, ul.span6, ol.span6, nav.span6 {
+  p.span6, h1.span6, h2.span6, h3.span6, h4.span6, blockquote.span6, .wp-block-group.span6, ul.span6, ol.span6, nav.span6, figure.span6 {
     width: calc(var(--wp--custom--width--col-6) + var(--wp--custom--spacing--between));
     padding-left: calc(0.5 * var(--wp--custom--spacing--between));
     padding-right: calc(0.5 * var(--wp--custom--spacing--between));
   }
-  p.span7, h1.span7, h2.span7, h3.span7, h4.span7, blockquote.span7, .wp-block-group.span7, ul.span7, ol.span7, nav.span7 {
+  p.span7, h1.span7, h2.span7, h3.span7, h4.span7, blockquote.span7, .wp-block-group.span7, ul.span7, ol.span7, nav.span7, figure.span7 {
     width: calc(var(--wp--custom--width--col-7) + var(--wp--custom--spacing--between));
     padding-left: calc(0.5 * var(--wp--custom--spacing--between));
     padding-right: calc(0.5 * var(--wp--custom--spacing--between));
   }
-  p.span8, h1.span8, h2.span8, h3.span8, h4.span8, blockquote.span8, .wp-block-group.span8, ul.span8, ol.span8, nav.span8 {
+  p.span8, h1.span8, h2.span8, h3.span8, h4.span8, blockquote.span8, .wp-block-group.span8, ul.span8, ol.span8, nav.span8, figure.span8 {
     width: calc(var(--wp--custom--width--col-8) + var(--wp--custom--spacing--between));
     padding-left: calc(0.5 * var(--wp--custom--spacing--between));
     padding-right: calc(0.5 * var(--wp--custom--spacing--between));
   }
-  p.span9, h1.span9, h2.span9, h3.span9, h4.span9, blockquote.span9, .wp-block-group.span9, ul.span9, ol.span9, nav.span9 {
+  p.span9, h1.span9, h2.span9, h3.span9, h4.span9, blockquote.span9, .wp-block-group.span9, ul.span9, ol.span9, nav.span9, figure.span9 {
     width: calc(var(--wp--custom--width--col-9) + var(--wp--custom--spacing--between));
     padding-left: calc(0.5 * var(--wp--custom--spacing--between));
     padding-right: calc(0.5 * var(--wp--custom--spacing--between));
   }
-  p.span10, h1.span10, h2.span10, h3.span10, h4.span10, blockquote.span10, .wp-block-group.span10, ul.span10, ol.span10, nav.span10 {
+  p.span10, h1.span10, h2.span10, h3.span10, h4.span10, blockquote.span10, .wp-block-group.span10, ul.span10, ol.span10, nav.span10, figure.span10 {
     width: calc(var(--wp--custom--width--col-10) + var(--wp--custom--spacing--between));
     padding-left: calc(0.5 * var(--wp--custom--spacing--between));
     padding-right: calc(0.5 * var(--wp--custom--spacing--between));
