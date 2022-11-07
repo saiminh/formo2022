@@ -592,8 +592,8 @@ body.cursor-ready a:hover, body.cursor-ready label:hover, body.cursor-ready inpu
   }
   .formo-hero.formo-hero-mission .wp-block-image {
     position: absolute;
-    right: calc(var(--wp--custom--spacing--outer) * -1);
-    width: 75%;
+    right: calc(var(--wp--custom--spacing--outer) * -2);
+    width: 80%;
     bottom: 0;
     animation: handInMobile 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.8s forwards;
     transform-origin: 100% 50%;
