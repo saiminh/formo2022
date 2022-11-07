@@ -194,6 +194,12 @@ form label {
   transform: translate3d(0,0,0);
 }
 
+.columns-reversed-on-mobile {
+  @include bps.bp-down(bigTablet) {
+    flex-direction: column-reverse;
+  }
+}
+
 [style*="line-height:0.2"] ,
 [style*="line-height: 0.2"] {
   @supports (-webkit-touch-callout: none) {
