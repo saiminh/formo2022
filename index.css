@@ -1363,8 +1363,7 @@ form label {
 
 [style*="line-height:0.2"],
 [style*="line-height: 0.2"] {
-  text-size-adjust: none;
-  -webkit-text-size-adjust: none;
+  line-height: 27px !important;
 }
 
 h1, h2, h3, h4, h5 {
