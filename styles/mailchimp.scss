@@ -4,10 +4,10 @@
 .mailchimp-form,
 .mailchimp-form.wp-block-group.has-background {
   @media (max-width: 1280px) {
-    &.span6 .wp-block-columns {
+    & .wp-block-columns {
       flex-direction: column;
     }
-    &.span6 .wp-block-columns > .wp-block-column {
+    & .wp-block-columns > .wp-block-column {
       padding-left: 0;
       padding-right: 0;
     }

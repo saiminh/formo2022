@@ -1672,12 +1672,12 @@ html.is-animating .transition-default video {
 }
 
 @media (max-width: 1280px) {
-  .mailchimp-form.span6 .wp-block-columns,
-.mailchimp-form.wp-block-group.has-background.span6 .wp-block-columns {
+  .mailchimp-form .wp-block-columns,
+.mailchimp-form.wp-block-group.has-background .wp-block-columns {
     flex-direction: column;
   }
-  .mailchimp-form.span6 .wp-block-columns > .wp-block-column,
-.mailchimp-form.wp-block-group.has-background.span6 .wp-block-columns > .wp-block-column {
+  .mailchimp-form .wp-block-columns > .wp-block-column,
+.mailchimp-form.wp-block-group.has-background .wp-block-columns > .wp-block-column {
     padding-left: 0;
     padding-right: 0;
   }
