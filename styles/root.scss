@@ -194,7 +194,9 @@ form label {
 
 [style*="line-height:0.2"] ,
 [style*="line-height: 0.2"] {
-  line-height: 27px!important;
+  @supports (-webkit-touch-callout: none) {
+    line-height: 1!important;
+  }
   // text-size-adjust: none;
   // -webkit-text-size-adjust: none;
 }
