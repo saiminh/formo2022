@@ -266,6 +266,15 @@
     position: relative;
     z-index: 1;
   }
+  .gridline-covers-center:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc(50% - 1px);
+    width: 1px;
+    height: 100%;
+    border-left: 1px solid;
+  }
 }
 
 
