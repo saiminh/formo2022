@@ -113,7 +113,7 @@
       }
     }
   }
-  p, h1, h2, h3, h4, blockquote, .wp-block-group, .wp-block-columns, ul, ol, nav, figure {
+  p, h1, h2, h3, h4, blockquote, .wp-block-group, ul, ol, nav, figure {
     &.span1 {
       width: calc( var(--wp--custom--width--col-1) + var(--wp--custom--spacing--between));
       padding-left: calc(0.5 * var(--wp--custom--spacing--between));
@@ -166,7 +166,7 @@
     }
   }
 
-  [class*="span"] > [class*="span"]:not([class*="offset"]):not(.wp-block-column:first-child) {
+  [class*="span"] > [class*="span"]:not([class*="offset"]) {
     margin-left: calc(-0.5 * var(--wp--custom--spacing--between));
   }
   [class*="span"] > * + [class*="span"]:not([class*="offset"]) {
