@@ -16,6 +16,10 @@
     &:hover {
       padding: 0.83em 1.81em;
     }
+    &:active {
+      padding: 0.83em 1.39em;
+      transition: padding .1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
   }
 }
 @mixin button-outline {
