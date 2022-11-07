@@ -8,11 +8,11 @@
   &:before, &:after {
     content: 'No';
     display: block;
-    font-size: 15vw;
+    font-size: clamp(4rem, 12vw, 8rem);
     font-family: var(--wp--preset--font-family--krana);
     text-transform: uppercase;
     text-align: center;
-    color: rgba(0,0,255,0.3);
+    color: var(--wp--preset--color--formo-blue);
     padding: calc( var(--vh, 1vh) * 50 - .85em ) 0;
     position: absolute;
     top: 0;

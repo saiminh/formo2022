@@ -180,17 +180,17 @@
           "name": "Tiny"
 				},
 				{
-					"size": "clamp(.8rem, 1vw, 1.25rem)",
+					"size": "clamp(.75rem, 1vw, 1.25rem)",
 					"slug": "small",
           "name": "Small"
 				},
 				{
-					"size": "clamp(1.312rem, 1.4vw, 1.56rem)",
+					"size": "clamp(1rem, 1.4vw, 1.56rem)",
 					"slug": "body",
           "name": "Body"
 				},
 				{
-					"size": "clamp(1.5rem, 1.67vw, 1.875rem)",
+					"size": "clamp(1.4rem, 1.67vw, 1.875rem)",
 					"slug": "medium"
 				},
 				{

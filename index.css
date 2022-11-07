@@ -1218,6 +1218,8 @@ input[type=submit],
 .input-checkbox {
   appearance: none;
   -webkit-appearance: none;
+  font-weight: normal;
+  font-size: var(--wp--preset--font-size--small);
 }
 
 h1, h2, h3, h4, h5 {
@@ -3784,11 +3786,11 @@ body .is-layout-flex.wp-block-buttons {
 .formo2022-teammember-sorting:before, .formo2022-teammember-sorting:after {
   content: "No";
   display: block;
-  font-size: 15vw;
+  font-size: clamp(4rem, 12vw, 8rem);
   font-family: var(--wp--preset--font-family--krana);
   text-transform: uppercase;
   text-align: center;
-  color: rgba(0, 0, 255, 0.3);
+  color: var(--wp--preset--color--formo-blue);
   padding: calc(var(--vh, 1vh) * 50 - 0.85em) 0;
   position: absolute;
   top: 0;
