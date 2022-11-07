@@ -307,14 +307,18 @@
 
 @mixin pill {
   background-color: #FFF;
-  border-radius: 50px;
+  border-radius: 25px;
   overflow: hidden;
-  margin-bottom: 1em;
-  padding: 1em;
+  margin-block-end: 1em!important;
+  padding: 0.5em .5em 0.5em 1.5em!important;
+  
+  & > * {
+    margin: 0!important;
+  }
   
   @include bps.bp-down(bigTablet) {
-    // border-radius: 15px;
     padding: .75em;
+    border-radius: 25px;
   }
 }
 .pill {

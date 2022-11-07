@@ -671,14 +671,18 @@ body.cursor-ready a:hover, body.cursor-ready label:hover, body.cursor-ready inpu
 
 .pill {
   background-color: #FFF;
-  border-radius: 50px;
+  border-radius: 25px;
   overflow: hidden;
-  margin-bottom: 1em;
-  padding: 1em;
+  margin-block-end: 1em !important;
+  padding: 0.5em 0.5em 0.5em 1.5em !important;
+}
+.pill > * {
+  margin: 0 !important;
 }
 @media (max-width: 781.98px) {
   .pill {
     padding: 0.75em;
+    border-radius: 25px;
   }
 }
 
@@ -1337,14 +1341,6 @@ input[type=text], input[type=email], input[type=url], input[type=password], inpu
 
 form label {
   font-size: var(--wp--preset--font-size--small);
-}
-
-.pill {
-  margin: 1em auto;
-  padding: 12px 20px !important;
-}
-.pill > * {
-  margin: 0 !important;
 }
 
 .rounded-corners {
@@ -2091,15 +2087,19 @@ input[type=radio]:checked + :after {
 
 .formo2022-event-query.layout-latest .formo2022-event-query-event {
   background-color: #FFF;
-  border-radius: 50px;
+  border-radius: 25px;
   overflow: hidden;
-  margin-bottom: 1em;
-  padding: 1em;
+  margin-block-end: 1em !important;
+  padding: 0.5em 0.5em 0.5em 1.5em !important;
   margin-left: 0;
+}
+.formo2022-event-query.layout-latest .formo2022-event-query-event > * {
+  margin: 0 !important;
 }
 @media (max-width: 781.98px) {
   .formo2022-event-query.layout-latest .formo2022-event-query-event {
     padding: 0.75em;
+    border-radius: 25px;
   }
 }
 .formo2022-event-query.layout-latest .wp-block-group {

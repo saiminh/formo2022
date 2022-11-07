@@ -174,14 +174,7 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
 form label {
   font-size: var(--wp--preset--font-size--small);
 }
-.pill {
-  margin: 1em auto;
-  padding: 12px 20px!important;
 
-  & > * {
-    margin: 0!important;
-  }
-}
 .rounded-corners {
   border-radius: 15px;
   overflow: hidden;
