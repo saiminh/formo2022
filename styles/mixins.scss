@@ -313,7 +313,10 @@
   padding: 1em;
   
   @include bps.bp-down(bigTablet) {
-    border-radius: 15px;
+    // border-radius: 15px;
     padding: .75em;
   }
+}
+.pill {
+  @include pill;
 }

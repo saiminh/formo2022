@@ -669,6 +669,19 @@ body.cursor-ready a:hover, body.cursor-ready label:hover, body.cursor-ready inpu
   font-size: var(--wp--preset--font-size--small);
 }
 
+.pill {
+  background-color: #FFF;
+  border-radius: 50px;
+  overflow: hidden;
+  margin-bottom: 1em;
+  padding: 1em;
+}
+@media (max-width: 781.98px) {
+  .pill {
+    padding: 0.75em;
+  }
+}
+
 .formo-navi {
   transform: translateY(0%);
   transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -2086,7 +2099,6 @@ input[type=radio]:checked + :after {
 }
 @media (max-width: 781.98px) {
   .formo2022-event-query.layout-latest .formo2022-event-query-event {
-    border-radius: 15px;
     padding: 0.75em;
   }
 }
