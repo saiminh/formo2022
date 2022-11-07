@@ -29,6 +29,9 @@
   & figure + p {
     margin: 1em 0 .25em 0;
   }
+  & figure + p + p {
+    margin-block-start: .5em;
+  }
 }
 .team-teammember-miniprofile.--ball,
 .team-currently-videoblock.--ball {

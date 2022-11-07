@@ -678,6 +678,7 @@ body.nav-hidden .formo-navi {
 }
 
 ul.wp-block-navigation__container li {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -1220,7 +1221,7 @@ ul, ol {
 }
 
 ul li {
-  margin-bottom: 1em;
+  margin-top: 1em;
 }
 
 .content-wrapper ul li {
@@ -1256,30 +1257,22 @@ video {
   height: calc(var(--vh, 1vh) * 100);
 }
 
-body .is-layout-flow > *:not(div):not(lt-highlighter) + *:not(div), body .is-layout-flow > * + .wp-block-buttons, body .is-layout-flow > p + div, body .is-layout-flow > h1 + div, body .is-layout-flow > h2 + div, body .is-layout-flow > h3 + div, body .is-layout-flow > h4 + div,
-body .is-layout-constrained > *:not(div):not(lt-highlighter) + *:not(div),
+@media (min-width: 782px) {
+  body .is-layout-flow > *:not(div):not(section):not(lt-highlighter) + *:not(div):not(section), body .is-layout-flow > * + .wp-block-buttons, body .is-layout-flow > p + div, body .is-layout-flow > div + p, body .is-layout-flow > figure + div, body .is-layout-flow > h1 + div, body .is-layout-flow > h2 + div, body .is-layout-flow > h3 + div, body .is-layout-flow > h4 + div,
+body .is-layout-constrained > *:not(div):not(section):not(lt-highlighter) + *:not(div):not(section),
 body .is-layout-constrained > * + .wp-block-buttons,
 body .is-layout-constrained > p + div,
+body .is-layout-constrained > div + p,
+body .is-layout-constrained > figure + div,
 body .is-layout-constrained > h1 + div,
 body .is-layout-constrained > h2 + div,
 body .is-layout-constrained > h3 + div,
 body .is-layout-constrained > h4 + div {
-  margin-block-start: 1em;
-}
-
-@media (max-width: 781.98px) {
-  body .is-layout-flex > .wp-block-column + .wp-block-column {
     margin-block-start: 1em;
   }
-}
-body .is-layout-flow > p:last-child,
+  body .is-layout-flow > p:last-child,
 body .is-layout-flow > * + p:last-child {
-  margin-block-end: 1em;
-}
-
-@media (min-width: 782px) {
-  .is-straddling-gridline {
-    transform: translateX(calc(-50% - 0.5 * var(--wp--custom--spacing--between)));
+    margin-block-end: 1em;
   }
 }
 @media (max-width: 781.98px) {
@@ -1287,10 +1280,36 @@ body .is-layout-flow > * + p:last-child {
     display: none;
   }
   .wp-block-spacer {
-    height: 1.5em !important;
+    height: 0 !important;
+    margin-block-start: 0 !important;
+  }
+  body .is-layout-flow > p, body .is-layout-flow > figure, body .is-layout-flow > ul:not(:first-child), body .is-layout-flow > .wp-block-buttons, body .is-layout-flow > details,
+body .is-layout-constrained > p,
+body .is-layout-constrained > figure,
+body .is-layout-constrained > ul:not(:first-child),
+body .is-layout-constrained > .wp-block-buttons,
+body .is-layout-constrained > details {
+    margin-block-start: 1em;
+  }
+  body .is-layout-flow > h1, body .is-layout-flow > h2,
+body .is-layout-constrained > h1,
+body .is-layout-constrained > h2 {
+    margin-block-start: 0.33em;
+  }
+  body .is-layout-flow > h3,
+body .is-layout-constrained > h3 {
+    margin-block-start: 0.5em;
+  }
+  body .entry-content > div:not(.formo-popover),
+body .entry-content > section {
+    padding-top: 2em;
+    padding-bottom: 2em;
   }
   .has-full-height {
     height: auto;
+  }
+  .wp-block-cover__inner-container {
+    padding: 1em 0 2em 0;
   }
 }
 .wp-block-column.has-full-height > * {
@@ -1619,6 +1638,11 @@ h1.gridline, h2.gridline, h3.gridline, h4.gridline {
   }
 }
 
+@media (min-width: 782px) {
+  .is-straddling-gridline {
+    transform: translateX(calc(-50% - 0.5 * var(--wp--custom--spacing--between)));
+  }
+}
 .transition-default {
   opacity: 1;
   transition: 0.3s;
@@ -1651,11 +1675,21 @@ html.is-animating .transition-default video {
 @media (max-width: 781.98px) {
   .mailchimp-form,
 .mailchimp-form.wp-block-group.has-background {
+    margin-top: 1em !important;
     margin-left: calc(-1 * var(--wp--custom--spacing--outer));
     margin-right: calc(-1 * var(--wp--custom--spacing--outer));
+    margin-bottom: -2em;
     padding-left: 0;
     padding-right: 0;
     border-radius: 0;
+  }
+  .mailchimp-form > .has-background,
+.mailchimp-form.wp-block-group.has-background > .has-background {
+    padding: 30px !important;
+  }
+  .mailchimp-form > .has-background h3,
+.mailchimp-form.wp-block-group.has-background > .has-background h3 {
+    margin-block-start: 0 !important;
   }
 }
 
@@ -2038,7 +2072,7 @@ input[type=radio]:checked + :after {
   overflow: auto;
   position: relative;
   z-index: 2;
-  margin: 0;
+  margin: 1em 0 0 0;
   padding: 0;
 }
 
@@ -3396,6 +3430,10 @@ main.content-wrapper > .entry-content > .alignfull:first-child > figure.wp-block
 .team-currently-videoblock figure + p {
   margin: 1em 0 0.25em 0;
 }
+.team-teammember-miniprofile figure + p + p,
+.team-currently-videoblock figure + p + p {
+  margin-block-start: 0.5em;
+}
 
 .team-teammember-miniprofile.--ball figure,
 .team-currently-videoblock.--ball figure {
@@ -3494,13 +3532,14 @@ body > .block-editor-block-list__layout .team-currently-videoblock::before {
     left: calc(0.5 * var(--wp--custom--spacing--outer));
     transform: translateX(0);
     margin: 0 !important;
+    padding-top: 2em;
   }
   .method-timeline-milestone:after {
     content: "";
     position: absolute;
     left: auto;
     right: calc(100% + 0.25em);
-    top: 0.25em;
+    top: 2.25em;
     width: 1em;
     height: 1em;
     border-radius: 50%;
@@ -3516,6 +3555,13 @@ body > .block-editor-block-list__layout .team-currently-videoblock::before {
 }
 .formo-contact-form.wp-block-group.has-background {
   padding: 1.5em;
+}
+@media (max-width: 781.98px) {
+  .formo-contact-form.wp-block-group.has-background {
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
 }
 .formo-contact-form .meow-contact-form--default .meow-contact-form__group .meow-contact-form__group-input, .formo-contact-form .meow-contact-form--default .meow-contact-form__group .meow-contact-form__group-textarea {
   padding: 0.25em 15px;
@@ -3936,13 +3982,14 @@ body > .block-editor-block-list__layout .formo2022-teammember-sorting-questions 
   flex-wrap: wrap;
   gap: var(--wp--custom--spacing--between) !important;
 }
-.formo-news-block-4-columns .is-layout-flow > p + h2 {
-  margin-block-start: 0.25em;
-}
 @media (max-width: 781.98px) {
   .formo-news-block-4-columns {
     flex-wrap: wrap !important;
+    padding-top: 1em;
   }
+}
+.formo-news-block-4-columns .is-layout-flow > p + h2 {
+  margin-block-start: 0.25em;
 }
 .formo-news-block-4-columns .wp-block-column {
   padding-right: 0;

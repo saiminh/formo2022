@@ -41,7 +41,7 @@ ul, ol {
   padding-left: 0;
 }
 ul li {
-  margin-bottom: 1em;
+  margin-top: 1em;
 }
 .content-wrapper ul li {
   margin-left: 1em;
@@ -69,29 +69,33 @@ video {
 .has-full-height-on-mobile {
   height: calc( var(--vh, 1vh) * 100 );
 }
-body .is-layout-flow , 
-body .is-layout-constrained {
-  & > *:not(div):not(lt-highlighter) + *:not(div),
-  & > * + .wp-block-buttons,
-  & > p + div, 
-  & > h1 + div, 
-  & > h2 + div, 
-  & > h3 + div, 
-  & > h4 + div {
-    margin-block-start: 1em;
-  }
-}
-@include bps.bp-down(bigTablet) {
-  body .is-layout-flex {
-    & > .wp-block-column + .wp-block-column {
+@include bps.bp(bigTablet) {
+  body .is-layout-flow , 
+  body .is-layout-constrained {
+    & > *:not(div):not(section):not(lt-highlighter) + *:not(div):not(section),
+    & > * + .wp-block-buttons,
+    & > p + div, 
+    & > div + p,
+    & > figure + div,
+    & > h1 + div, 
+    & > h2 + div, 
+    & > h3 + div, 
+    & > h4 + div {
       margin-block-start: 1em;
     }
   }
+  body .is-layout-flow > p:last-child,
+  body .is-layout-flow > * + p:last-child {
+    margin-block-end: 1em;
+  }
 }
-body .is-layout-flow > p:last-child,
-body .is-layout-flow > * + p:last-child {
-  margin-block-end: 1em;
-}
+// @include bps.bp-down(bigTablet) {
+//   body .is-layout-flex {
+//     & > .wp-block-column + .wp-block-column {
+//       margin-block-start: 1em;
+//     }
+//   }
+// }
 // body .is-layout-flow , 
 // body .is-layout-constrained {
 //   & > blockquote + *,
@@ -121,20 +125,42 @@ body .is-layout-flow > * + p:last-child {
 //   }
 // } 
 
-@include bps.bp(bigTablet) {
-  .is-straddling-gridline {
-    transform: translateX( calc( -50% - 0.5 * var(--wp--custom--spacing--between) ) );
-  }
-}
+
 @include bps.bp-down(bigTablet) {
   .hide-on-mobile {
     display: none;
   }
   .wp-block-spacer {
-    height: 1.5em!important;
+    height: 0!important;
+    margin-block-start: 0!important;
   }
+  body .is-layout-flow , 
+  body .is-layout-constrained {
+    & > p,
+    & > figure,
+    & > ul:not(:first-child),
+    & > .wp-block-buttons,
+    & > details {
+      margin-block-start: 1em;
+    }
+    & > h1,
+    & > h2 {
+      margin-block-start: .33em;
+    }
+    & > h3 {
+      margin-block-start: .5em;
+    }
+  }
+  body .entry-content > div:not(.formo-popover), 
+  body .entry-content > section {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  } 
   .has-full-height {
     height: auto;
+  }
+  .wp-block-cover__inner-container {
+    padding: 1em 0 2em 0;
   }
 }
 .wp-block-column.has-full-height > * {

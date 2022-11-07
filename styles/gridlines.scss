@@ -302,3 +302,9 @@ h1, h2, h3, h4 {
     width: var(--wp--custom--width--col-12);
   }
 }
+
+@include bps.bp(bigTablet) {
+  .is-straddling-gridline {
+    transform: translateX( calc( -50% - 0.5 * var(--wp--custom--spacing--between) ) );
+  }
+}

@@ -7,13 +7,15 @@
   flex-wrap: wrap;
   gap: var(--wp--custom--spacing--between)!important;
 
+  @include bps.bp-down(bigTablet) {
+    flex-wrap: wrap!important;
+    padding-top: 1em;
+  }
+
   & .is-layout-flow > p + h2 {
     margin-block-start: .25em;
   }
 
-  @include bps.bp-down(bigTablet) {
-    flex-wrap: wrap!important;
-  }
 
   & .wp-block-column {
     padding-right: 0;

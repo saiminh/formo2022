@@ -7,6 +7,11 @@
   
   &.wp-block-group.has-background {
     padding: 1.5em;
+    @include bps.bp-down(bigTablet) {
+      padding: 1em;
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
   }
   
   & .meow-contact-form--default .meow-contact-form__group .meow-contact-form__group-input, 
