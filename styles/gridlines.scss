@@ -275,6 +275,25 @@
     height: 100%;
     border-left: 1px solid;
   }
+  .gridline-bg-fromcenter {
+    position: relative;
+
+    & > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: calc(50% - 1px);
+      width: 1px;
+      height: 50%;
+      border-left: 1px solid;
+      z-index: 0;
+    }
+  }
 }
 
 

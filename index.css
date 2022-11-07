@@ -1216,6 +1216,7 @@ input[type=search],
 input[type=button],
 input[type=submit],
 .input-checkbox {
+  appearance: none;
   -webkit-appearance: none;
 }
 
@@ -1632,6 +1633,23 @@ h1 .smaller, h2 .smaller, h3 .smaller, h4 .smaller, h5 .smaller {
     width: 1px;
     height: 100%;
     border-left: 1px solid;
+  }
+  .gridline-bg-fromcenter {
+    position: relative;
+  }
+  .gridline-bg-fromcenter > * {
+    position: relative;
+    z-index: 1;
+  }
+  .gridline-bg-fromcenter:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 1px);
+    width: 1px;
+    height: 50%;
+    border-left: 1px solid;
+    z-index: 0;
   }
 }
 .has-border-bottom {
