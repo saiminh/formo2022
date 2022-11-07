@@ -127,6 +127,8 @@ input[type="radio"] {
     background-color: var(--wp--preset--color--formo-blue);
     color: #FFF;
     border-color: var(--wp--preset--color--formo-blue);
+    font-weight: normal;
+    font-size: var(--wp--preset--font-size--small);
   }
   .brandingLogo {
     display: none;

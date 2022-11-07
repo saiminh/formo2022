@@ -1807,6 +1807,8 @@ input[type=radio]:checked + :after {
   background-color: var(--wp--preset--color--formo-blue);
   color: #FFF;
   border-color: var(--wp--preset--color--formo-blue);
+  font-weight: normal;
+  font-size: var(--wp--preset--font-size--small);
 }
 @media (min-width: 782px) {
   #mc-embedded-subscribe-form .button {
