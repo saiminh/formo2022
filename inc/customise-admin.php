@@ -109,12 +109,16 @@ function override_admin_bar_css() {
         position: relative;
         z-index: 9999;
       }
+      .edit-site-navigation-toggle__button.components-button,
       .edit-post-fullscreen-mode-close.components-button {
         background-color: #FFF;
       }
+      .edit-site-navigation-toggle__button.components-button::before,
+      .edit-site-navigation-toggle__button.components-button:focus::before,
       .edit-post-fullscreen-mode-close.components-button::before {
         box-shadow: none;
       }
+      .edit-site-navigation-toggle__button.components-button .edit-site-navigation-toggle__site-icon,
       .edit-post-fullscreen-mode-close.components-button .edit-post-fullscreen-mode-close_site-icon {
         object-fit: contain;
       }
