@@ -48,7 +48,7 @@ function formo2022_register_block_patterns() {
 
 	$block_patterns = array(
 		// 'footer-default',
-    'formo-stamp',
+    // 'formo-stamp',
 		// 'header-default',
     'formo-hero-video',
     'formo-hero-image',

@@ -102,6 +102,34 @@ video {
     margin-block-end: 1em;
   }
 }
+
+//editor styles
+.block-editor-block-list__layout {
+  
+  & *:first-child {
+    margin-block-start: 1em;
+  }
+  & h1:first-child ,
+  & h2:first-child ,
+  & h3:first-child ,
+  & h4:first-child {
+    margin-block-start: .25em;
+  }
+  
+  &.is-layout-flow , 
+  &.is-layout-constrained {
+    
+    & > lt-highlighter + p {
+      margin-block-start: 1em;
+    }
+    & > lt-highlighter + h1, 
+    & > lt-highlighter + h2, 
+    & > lt-highlighter + h3, 
+    & > lt-highlighter + h4 {
+      margin-block-start: .25em;
+    }
+  }
+}
 // @include bps.bp-down(bigTablet) {
 //   body .is-layout-flex {
 //     & > .wp-block-column + .wp-block-column {
@@ -161,7 +189,7 @@ video {
       margin-block-start: .33em;
     }
     & > h3 {
-      margin-block-start: .5em;
+      margin-block-start: .4em;
     }
   }
   body .entry-content > div:not(.formo-popover), 
@@ -203,6 +231,6 @@ form label {
 [style*="line-height:0.2"] ,
 [style*="line-height: 0.2"] {
   @supports (-webkit-touch-callout: none) {
-    line-height: .35!important;
+    line-height: .3!important;
   }
 }
