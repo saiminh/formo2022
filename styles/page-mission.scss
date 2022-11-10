@@ -117,6 +117,9 @@
     padding-bottom: 3em;
   }
 
+  .mission-stats-columns {
+    padding-top: 1em;
+  }
   .mission-stats-columns .wp-block-spacer {
     width: 0%;
     height: 0!important;
@@ -137,6 +140,7 @@
       height: 60%;
       z-index: 1;
       margin: 0;
+      margin-bottom: -40%;
     
       & img, & video, & svg {
         width: 100%;
@@ -146,7 +150,7 @@
     }
     & .mission-stats-stat-text {
       position: relative;
-      top: -2em;
+      top: 0;
       left: 0;
       width: 100%;
       z-index: 2;

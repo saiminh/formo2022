@@ -191,6 +191,10 @@ video {
     & > h3 {
       margin-block-start: .4em;
     }
+    & > h3:last-child,
+    & > h3 + .wp-block-spacer:last-child {
+      margin-block-end: 1rem;
+    }
   }
   body .entry-content > div:not(.formo-popover), 
   body .entry-content > section {
@@ -200,9 +204,9 @@ video {
   .has-full-height {
     height: auto;
   }
-  .wp-block-cover__inner-container {
-    padding: 1em 0 2em 0;
-  }
+  // .wp-block-cover__inner-container {
+  //   padding: 1em 0 1em 0;
+  // }
 }
 .wp-block-column.has-full-height > * {
   flex-basis: 50%;

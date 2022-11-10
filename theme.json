@@ -190,28 +190,28 @@
           "name": "Body"
 				},
 				{
-					"size": "clamp(1.4rem, 1.67vw, 1.875rem)",
+					"size": "clamp(1.25rem, 1.67vw, 1.875rem)",
 					"slug": "medium"
 				},
 				{
-					"size": "clamp(1.8rem, 2vw, 2.25rem)",
+					"size": "clamp(1.5rem, 2vw, 2.25rem)",
 					"slug": "large"
 				},
 				{
-					"size": "clamp(2.225rem, 2.889vw, 3.25rem)",
+					"size": "clamp(1.75rem, 2.889vw, 3.25rem)",
 					"slug": "larger"
 				},
 				{
-					"size": "clamp(2.65rem, 3.778vw, 4.25rem)",
+					"size": "clamp(2rem, 3.778vw, 4.25rem)",
 					"slug": "x-large"
 				},
 				{
-          "size": "clamp(3.5rem, 5.665vw, 6.25rem)",
+          "size": "clamp(2.25rem, 5.665vw, 6.25rem)",
 					"slug": "xx-large",
           "name": "XX-Large"
 				},
         {
-          "size": "clamp(4.1rem, 8.93vw, 10rem)",
+          "size": "clamp(2.5rem, 8.93vw, 10rem)",
           "slug": "xxx-large",
           "name": "XXX-Large"
         },
