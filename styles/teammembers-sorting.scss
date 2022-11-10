@@ -1,9 +1,12 @@
 @use 'breakpoints.scss' as bps;
 
-.formo2022-teammember-sorting {
+.formo2022-teammember-sorting,
+body .entry-content > .formo2022-teammember-sorting {
   position: relative;
   overflow: hidden;
   height: calc( var(--vh, 1vh) * 100 - var(--wp--custom--height--navbar) );
+  padding-top: 1em;
+  padding-bottom: 1em;
   
   &:before, &:after {
     content: 'No';
@@ -30,8 +33,9 @@
   }
 }
 
-h3.formo2022-teammember-sorting-title {
-  margin: 0.75em auto;
+h3.formo2022-teammember-sorting-title,
+body .is-layout-flow > h3.formo2022-teammember-sorting-title {
+  margin: 0 auto 0.25em auto;
   position: relative;
   z-index: 3;
 }
@@ -207,3 +211,29 @@ body > .block-editor-block-list__layout {
     }
   }
 }
+//editor styles
+.block-editor-block-list__layout {
+
+  .formo2022-teammember-sorting {
+    height: auto;
+    
+    &:before, &:after {
+      content: none;
+    }
+  }
+
+  .formo2022-teammember-sorting-questions {
+    position: relative;
+  }
+
+  .formo2022-teammember-sorting-questions {
+    & p a {
+     position: relative;
+     transform: none;
+    }
+   }
+
+   .formo2022-teammember-sorting-teammembers {
+    display: none;
+   }
+} 
