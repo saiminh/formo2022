@@ -10,6 +10,7 @@
       
       font-size: 8.3vw!important;
       line-height: .85;
+      text-shadow: 0 0 30px rgba(0,0,0,0.6);
 
       & .special:nth-child(1) {
         font-size: 1em;
@@ -24,6 +25,10 @@
         font-size: 1.9em;
         color: var(--wp--preset--color--formo-blue);
       }
+    }
+
+    & p {
+      text-shadow: 0 0 .5em rgba(0,0,0,0.8);
     }
   }
 
