@@ -1,6 +1,10 @@
 @use 'breakpoints.scss' as bps;
 
 @include bps.bp(bigTablet) {
+
+  .method-timeline h2 {
+    font-size: clamp(2.5rem, 7.5vw, 10rem);
+  }
   
   .method-timeline-milestone {
     position: relative;
@@ -64,7 +68,7 @@
       content: '';
       position: absolute;
       left: auto;
-      right: calc( 100% + .25em );
+      right: calc( 100% + .36em );
       top: 2.25em;
       width: 1em;
       height: 1em;
