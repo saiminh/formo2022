@@ -88,7 +88,7 @@ video {
     & > *:not(div):not(section):not(lt-highlighter) + *:not(div):not(section),
     & > * + .wp-block-buttons,
     & > p + div, 
-    & > div + p,
+    & > div:not(.wp-block-spacer) + p,
     & > figure + div:not(.wp-block-spacer),
     & > h1 + div, 
     & > h2 + div, 
