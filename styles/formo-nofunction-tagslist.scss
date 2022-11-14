@@ -1,6 +1,6 @@
 @use 'mixins.scss' as mixins;
 
-.content-wrapper .formo-nofunction-tagslist {
+.formo-nofunction-tagslist {
   display: flex;
   list-style: none;
   padding: .5em 0;
@@ -11,6 +11,13 @@
     font-size: var(--wp--preset--font-size--tiny);
     @include mixins.button;
     @include mixins.button-outline;
+
+    &:first-child,
+    & > .block-editor-rich-text__editable, 
+    & > .block-editor-rich-text__editable span {
+      margin-block-start: 0!important;
+      margin-block-end: 0!important;
+    }
   }
   & + p {
     margin-block-start: 0;

@@ -41,6 +41,8 @@
       position: absolute;
 
       &:nth-child(1) {
+        margin-block-start: 0!important;
+        
         @include bps.bp-down(bigTablet) {
           z-index: 2;
         }

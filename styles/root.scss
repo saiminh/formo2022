@@ -89,7 +89,7 @@ video {
     & > * + .wp-block-buttons,
     & > p + div, 
     & > div + p,
-    & > figure + div,
+    & > figure + div:not(.wp-block-spacer),
     & > h1 + div, 
     & > h2 + div, 
     & > h3 + div, 
@@ -224,6 +224,13 @@ form label {
   border-radius: 15px;
   overflow: hidden;
   transform: translate3d(0,0,0);
+}
+
+.invert-x > img {
+  transform: scaleX(-1);
+}
+.invert-y > img {
+  transform: scaleY(-1);
 }
 
 .columns-reversed-on-mobile {

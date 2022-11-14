@@ -91,6 +91,9 @@ body > .block-editor-block-list__layout {
     & .special {
       position: absolute;
 
+      &:nth-child(1) {
+        margin-block-start: 0!important;
+      }
       &:nth-child(2) {
         top: .8em;
         left: .5em;
