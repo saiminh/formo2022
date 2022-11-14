@@ -234,8 +234,8 @@ form label {
 }
 
 @include bps.bp(bigTablet) {
-  .desktop-bottom-offset {
-    margin-bottom: -1.8em;
+  .desktop-top-offset-large {
+    margin-top: -25%;
   }
 }
 
