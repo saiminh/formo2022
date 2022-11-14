@@ -5,6 +5,7 @@
   width: 100vw;
   margin-left: calc(-1 *var(--wp--custom--spacing--outer));
   overflow: hidden;
+  
   & h1 {
     font-size: 20vw;
     white-space: nowrap;
@@ -13,7 +14,9 @@
     padding: .125em 0;
 
     @include bps.bp-down(bigTablet) {
-      padding: .5em 0;
+      padding: .1em 0 .25em 0;
+      font-size: 36vw;
+      animation: marquee-mobile 15s linear infinite;
     }
   
     & > img {
@@ -43,6 +46,14 @@ body > .block-editor-block-list__layout .formore-header {
   }
   100% {
     transform: translateX(calc(-100vw + .44em));
+  }
+}
+@keyframes marquee-mobile {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100vw - 1.77em));
   }
 }
 
