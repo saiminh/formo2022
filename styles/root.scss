@@ -237,7 +237,10 @@ form label {
   .mobile-max-width-17em {
     max-width: 17em;
   }
+  .wp-block-spacer.mobile-spacer {
+    height: 2em !important;
 }
+
 
 .columns-reversed-on-mobile {
   @include bps.bp-down(bigTablet) {
