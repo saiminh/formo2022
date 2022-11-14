@@ -233,8 +233,10 @@ form label {
   transform: scaleY(-1);
 }
 
-.max-width-17em {
-  max-width: 17em;
+@include bps.bp-down(bigTablet) {
+  .mobile-max-width-17em {
+    max-width: 17em;
+  }
 }
 
 .columns-reversed-on-mobile {
