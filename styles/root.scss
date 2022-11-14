@@ -233,6 +233,12 @@ form label {
   transform: scaleY(-1);
 }
 
+@include bps(bigTablet) {
+  .desktop-bottom-offset {
+    margin-bottom: -1.8em;
+  }
+}
+
 @include bps.bp-down(bigTablet) {
   .mobile-max-width-17em {
     max-width: 17em;
@@ -240,14 +246,12 @@ form label {
   .wp-block-spacer.mobile-spacer {
     height: 2em !important;
   }
-}
-
-
-.columns-reversed-on-mobile {
-  @include bps.bp-down(bigTablet) {
+  .columns-reversed-on-mobile {
     flex-direction: column-reverse;
   }
 }
+
+
 
 [style*="line-height:0.2"] ,
 [style*="line-height: 0.2"] {
