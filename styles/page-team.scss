@@ -21,10 +21,16 @@
       position: absolute;
       top: 0;
       left: 0;
+      transform: scale(1);
+      transition: transform .6s cubic-bezier(0.915, 0.125, 0.135, 0.890);
     }
+
   }
   &:hover figure {
     border-radius: 50%!important;
+  }
+  &:hover figure img {
+    transform: scale(1.05);
   }
   & figure + p {
     margin: 1em 0 .25em 0;
