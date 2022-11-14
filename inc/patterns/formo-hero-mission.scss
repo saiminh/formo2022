@@ -25,15 +25,15 @@
   & .special {
     opacity: 0;
     transform: translateY(-10%);
-    animation: fadeIn .5s cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards;
+    animation: fadeIn 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards;
     display: inline-block;
   }
   & .special:nth-child(3) {
-    animation-delay: 0.3s;
+    animation-delay: 0.4s;
     display: block;
   } 
   & .special:nth-child(4) {
-    animation-delay: 0.6s;
+    animation-delay: 0.8s;
   } 
   & .special:nth-child(3), 
   & .special:nth-child(4) {
@@ -50,9 +50,10 @@
     position: absolute;
     right: calc( var(--wp--custom--spacing--outer) * -1 );
     width: 45%;
-    animation: handIn .5s cubic-bezier(0.645, 0.045, 0.355, 1.000) .8s forwards;
+    // animation: handIn .5s cubic-bezier(0.645, 0.045, 0.355, 1.000) .8s forwards;
     transform-origin: 100% 100%;
-    transform: translate(100%, 10%) rotate(-45deg);
+    // transform: translate(100%, 10%) rotate(-45deg);
+    transform: translate(10%, 0) rotate(0deg);
     // animation: name duration timing-function delay iteration-count direction fill-mode;
   }
 }
