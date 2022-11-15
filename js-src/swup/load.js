@@ -3,7 +3,7 @@ import { currentNav } from '../nav-current';
 import { teamMemberSorting } from '../teammember-sorting';
 import { videoPlayPauseOnScroll } from '../videoPlayPauseOnScroll';
 import { videoPlayPauseOnHover } from '../videoPlayPauseOnHover';
-
+import { accordion } from '../accordion';
 
 export function load(){
   window.scrollTo(0, 0);
@@ -12,6 +12,7 @@ export function load(){
   teamMemberSorting();
   videoPlayPauseOnScroll();
   videoPlayPauseOnHover();
+  accordion();
   // need to reload some custom block's scripts here for swup reloading
   if (typeof addJobExpandability === "function") { 
     addJobExpandability();
