@@ -150,12 +150,11 @@ video {
       margin-block-start: 1em;
     }
     & > h1,
-    & > h2 {
-      margin-block-start: .33em;
-    }
+    & > h2,
     & > h3 {
-      margin-block-start: .4em;
+      margin-block-start: .75em;
     }
+    
     & > h3:last-child,
     & > h3 + .wp-block-spacer:last-child {
       margin-block-end: 1rem;
