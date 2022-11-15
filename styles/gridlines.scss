@@ -83,15 +83,11 @@
   }
   .gridline {
     border-right: 1px solid;
-
   }
   .gridline-left {
     border-left: 1px solid;
     position: relative;
     left: -1px;
-  }
-  .wp-block-spacer.gridline-left {
-    left: -.5px;
   }
   .wp-block-column.content-space-between {
     display: flex;
