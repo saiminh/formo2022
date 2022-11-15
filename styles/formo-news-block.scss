@@ -52,7 +52,7 @@ div:not(.block-editor-block-list__layout) {
     & > .wp-block-group:nth-child(3) {
       @include mixins.post-card-small-ball;
       @include bps.bp(bigTablet) {
-        min-height: calc( var(--wp--custom--width--col-3) + var(--wp--custom--spacing--between) );
+        min-height: var(--wp--custom--width--col-3);
       }
       
       & > .wp-block-group > .wp-block-columns .wp-block-column:first-child {
