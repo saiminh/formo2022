@@ -15,17 +15,18 @@
 
   @include bps.bp-down(bigTablet) {
     --unit: 3.55vw;
+    margin-block-start: 1em;
   }
 
   position: relative;
-  height: calc(var(--unit) * 17);
+  height: calc(var(--unit) * 15);
 
   & figure {
     position: absolute;
     width: calc( 3 * var(--unit) );
     height: calc( 3 * var(--unit) );
     margin-top: 0!important;
-    border-radius: 50px;
+    border-radius: 2.7vw;
     overflow: hidden;
     background-color: #FFF;
 
