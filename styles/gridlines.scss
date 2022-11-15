@@ -77,6 +77,10 @@
       flex-basis: calc( var(--wp--custom--width--col-10) + 0.5 * var(--wp--custom--spacing--between) )!important;
     }
   }
+  //this is to make sure gridlines align, the flex-grow will make sure the widths match up
+  .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column[class*="span"][style*="flex-basis"] {
+    flex-grow: 1;
+  }
   .gridline {
     border-right: 1px solid;
 
@@ -85,6 +89,9 @@
     border-left: 1px solid;
     position: relative;
     left: -1px;
+  }
+  .wp-block-spacer.gridline-left {
+    left: -.5px;
   }
   .wp-block-column.content-space-between {
     display: flex;
