@@ -3,6 +3,16 @@
 .formo-image-gallery {
   --unit: 2.7vw;
 
+  // background-image: repeating-linear-gradient(
+  //   90deg,
+  //   rgba(255,0,0,0.5) 0 var(--unit),
+  //   transparent calc(var(--unit) + 1px) calc(var(--unit) * 2)
+  // ), repeating-linear-gradient(
+  //   0deg,
+  //   rgba(255, 255, 255, 0.5) 0 var(--unit),
+  //   transparent calc(var(--unit) + 1px) calc(var(--unit) * 2)
+  // );
+
   @include bps.bp-down(bigTablet) {
     --unit: 3.55vw;
   }
@@ -14,6 +24,7 @@
     position: absolute;
     width: calc( 3 * var(--unit) );
     height: calc( 3 * var(--unit) );
+    margin-top: 0!important;
     border-radius: 50px;
     overflow: hidden;
     background-color: #FFF;
@@ -25,49 +36,27 @@
     }
   }
   & figure:nth-child(1) {
-    top: calc( 9 * var(--unit) );
+    top: calc( 5 * var(--unit) );
     left: calc( 0 * var(--unit) );
+    width: calc( 10 * var(--unit) );
+    height: calc( 7 * var(--unit) );
   }
   & figure:nth-child(2) {
     top: calc( 1 * var(--unit) );
-    left: calc( 2.5 * var(--unit) );
-    width: calc( 7.5 * var(--unit) );
-    height: calc( 7.5 * var(--unit) );
+    left: calc( 11.5 * var(--unit) );
+    width: calc( 6 * var(--unit) );
+    height: calc( 6 * var(--unit) );
   }
   & figure:nth-child(3) {
-    top: calc( 9 * var(--unit) );
-    left: calc( 3.5 * var(--unit) );
-    width: calc( 6.5 * var(--unit) );
-    height: calc( 6.5 * var(--unit) );
+    top: calc( 7.5 * var(--unit) );
+    left: calc( 10.5 * var(--unit) );
+    width: calc( 7 * var(--unit) );
+    height: calc( 7 * var(--unit) );
   }
   & figure:nth-child(4) {
-    top: calc( 4 * var(--unit) );
-    left: calc( 10.5 * var(--unit) );
-    width: calc( 6 * var(--unit) );
-    height: calc( 6 * var(--unit) );
-  }
-  & figure:nth-child(5) {
     top: calc( 0 * var(--unit) );
-    left: calc( 13 * var(--unit) );
-    width: calc( 3.5 * var(--unit) );
-    height: calc( 3.5 * var(--unit) );
-  }
-  & figure:nth-child(6) {
-    top: calc( 10.5 * var(--unit) );
-    left: calc( 13 * var(--unit) );
-    width: calc( 3.5 * var(--unit) );
-    height: calc( 3.5 * var(--unit) );
-  }
-  & figure:nth-child(7) {
-    top: calc( 1 * var(--unit) );
-    left: calc( 17 * var(--unit) );
-    width: calc( 9 * var(--unit) );
-    height: calc( 9 * var(--unit) );
-  }
-  & figure:nth-child(8) {
-    top: calc( 10.5 * var(--unit) );
-    left: calc( 17 * var(--unit) );
-    width: calc( 6 * var(--unit) );
-    height: calc( 6 * var(--unit) );
+    left: calc( 18 * var(--unit) );
+    width: calc( 8.5 * var(--unit) );
+    height: calc( 8.5 * var(--unit) );
   }
 }
