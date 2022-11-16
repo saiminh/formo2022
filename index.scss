@@ -31,7 +31,9 @@
 // @use './styles/overlay-grid.scss'; 
 
 .wp-site-blocks {
-  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 main.content-wrapper > .entry-content > :first-child {
