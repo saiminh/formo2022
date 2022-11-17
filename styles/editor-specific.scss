@@ -4,27 +4,9 @@ body > .block-editor-block-list__layout.is-root-container > .alignfull {
   margin-left: calc( -1 * var(--wp--custom--spacing--outer) ) !important;
   margin-right: calc( -1 * var(--wp--custom--spacing--outer) ) !important;
 }
-body > .block-editor-block-list__layout.is-root-container .wp-block {
-  outline: 2px dashed transparent;
-  &:hover {
-    outline-color: rgba(211, 134, 17, 0.25);
-  }
-  &:hover *:hover {
-    outline-color: rgba(211, 134, 17, .5);
-  }
-  &:hover *:hover *:hover {
-    outline-color: rgba(211, 134, 17, .75);
-  }
-  &:hover *:hover *:hover *:hover{
-    outline-color: rgba(211, 134, 17, 1);
-  }
-  &.is-selected {
-    outline: 2px solid rgba(0,0,255, 1);
-  }
-}
-body > .block-editor-block-list__layout [class*="wp-container-"] > h1 {
-  margin-block-end: .25em;
-}
+// body > .block-editor-block-list__layout [class*="wp-container-"] > h1 {
+//   margin-block-end: .25em;
+// }
 body > .block-editor-block-list__layout blockquote p {
   font-size: inherit;
 }
