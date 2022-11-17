@@ -7,6 +7,9 @@
     padding-left: calc( 0.5 * var(--wp--custom--spacing--between) );
     padding-right: calc( 0.5 * var(--wp--custom--spacing--between) );
   }
+  [class*="span"] {
+    flex-grow: 0!important;
+  }
   .wp-block-column:first-child:not([class*="offset"]) {
     padding-left: 0;
   }
@@ -79,7 +82,7 @@
   }
   //this is to make sure gridlines align, the flex-grow will make sure the widths match up
   .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column[class*="span"][style*="flex-basis"] {
-    flex-grow: 1;
+    flex-grow: 0;
   }
   .gridline {
     border-right: 1px solid;
@@ -219,6 +222,7 @@
   .gridline-middle-bg, 
   .gridline-col3-bg {
     position: relative;
+    flex-grow: 0;
 
       &:before {
       content: '';
@@ -246,7 +250,6 @@
     }
   }
   .wp-block-group.alignfull.gridline-middle-bg, 
-  
   [class*="wp-block"]:not([class*="span"]).gridline-middle-bg {
     &:before {
       left: calc( 50% - 1px );
@@ -257,16 +260,21 @@
       left: calc( 50% - 1px );
     }
   }
-  .wp-block-column.span6.gridline-middle-bg {
+  .wp-block-columns > .gridline-middle-bg:last-child {
     &:before {
-      left: calc( var(--wp--custom--width--col-3) + var(--wp--custom--spacing--between) * 0.5 - 1px );
+      left: calc(50% - 1px + var(--wp--custom--spacing--between) * .25 );
     }
   }
-  .wp-block-column:last-child.span6.gridline-middle-bg {
-    &:before {
-      left: calc( var(--wp--custom--width--col-3) + var(--wp--custom--spacing--between) - 1px );
-    }
-  }
+  // .wp-block-column.span6.gridline-middle-bg {
+  //   &:before {
+  //     left: calc( var(--wp--custom--width--col-3) + var(--wp--custom--spacing--between) * 0.5 - 1px );
+  //   }
+  // }
+  // .wp-block-column:last-child.span6.gridline-middle-bg {
+  //   &:before {
+  //     left: calc( var(--wp--custom--width--col-3) + var(--wp--custom--spacing--between) - 1px );
+  //   }
+  // }
   .wp-block-column.gridline-middle-bg > * {
     position: relative;
     z-index: 1;
