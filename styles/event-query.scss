@@ -14,6 +14,11 @@
   & .formo2022-event-query-event {
     @include mixin.pill(); 
     margin-left: 0;
+
+    @include bps.bp-down(bigTablet) {
+      padding: 0.75em 1em 0.75em 1em !important;
+      border-radius: 1em;
+    }
   }
   & .wp-block-group {
     display: flex;
@@ -44,7 +49,7 @@
       }
       & .wp-block-button__link {
         grid-column: 3 / span 1;
-        grid-row: 1 ;
+        grid-row: 1 / span 2;
       }
     }
     
