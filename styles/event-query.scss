@@ -54,18 +54,18 @@
   }
   & .formo2022-event-query-event-title {
     font-family: var(--wp--preset--font-family--roobert);
-    font-size: var(--wp--preset--font-size--medium, 1em);
+    font-size: var(--wp--preset--font-size--body, 1em);
     text-transform: none;
     font-weight: 400;
-    margin: 0 0 0 1em;
+    margin: 0;
     flex: 33.3% 0 0;
   }
   & .event-date, & .event-location {
-    font-size: var(--wp--preset--font-size--body, 1em);
+    font-size: var(--wp--preset--font-size--small, 0.8em);
     flex: 16.66% 0 0;
   }
   & .wp-block-button__link {
-    font-size: var(--wp--preset--font-size--small, 0.8em);
+    font-size: var(--wp--preset--font-size--tiny, 0.6em);
   }
   & .wp-block-post-content {
     display: none;
