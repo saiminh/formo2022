@@ -228,7 +228,7 @@
       content: '';
       position: absolute;
       top: 0;
-      left: calc(50% - 1px - var(--wp--custom--spacing--between) * .25 );
+      left: calc(50% - .5px - var(--wp--custom--spacing--between) * .25 );
       width: 1px;
       height: 100%;
       border-left: 1px solid;
