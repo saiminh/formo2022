@@ -2,18 +2,43 @@
   opacity: 1;
   transition: .3s;
 
-  & video {
-    opacity: 1;
-    transition: 1s .2s;
-  }
+  // & video {
+  //   opacity: 1;
+  //   transition: 1s .2s;
+  // }
 }
 
 html.is-animating .transition-default {
   opacity: 0;
   transition: .1s;
   
-  & video {
+  // & video {
+  //   opacity: 0;
+  //   transition: .1s;
+  // }
+}
+h1 {
+  animation: h1-in .5s .1s ease-in-out both;
+}
+video {
+  opacity: 0;
+  animation: video-in .3s 0s ease-in-out both;
+}
+@keyframes video-in {
+  0% {
     opacity: 0;
-    transition: .1s;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes h1-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
