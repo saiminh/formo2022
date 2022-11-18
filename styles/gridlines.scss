@@ -333,6 +333,10 @@ h1, h2, h3, h4 {
   }
 }
 
+.text-overflow-span12 {
+  min-width: var(--wp--custom--width--col-12);
+}
+
 .wp-block-post-template.is-flex-container, .wp-block-query-loop.is-flex-container {
   gap: var(--wp--custom--spacing--between);
 }
