@@ -1,18 +1,6 @@
 @use '../../styles/breakpoints.scss' as bps;
 
 
-body.cursor-ready {
-  @media (hover: hover) {
-    cursor: none; //counterintuitive, but for testing in repsonsive design mode i need to see a cursor
-  }
-
-  & a:hover,
-  & label:hover,
-  & input[type="submit"]:hover {
-    cursor: none;
-  }
-}
-
 .cursor-wrapper {
     position: fixed;
     top: 0;

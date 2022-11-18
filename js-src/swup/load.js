@@ -1,4 +1,4 @@
-import { cursorPageLinks } from '../cursor/cursorPageLinks';
+// import { cursorPageLinks } from '../cursor/cursorPageLinks';
 import { currentNav } from '../nav-current';
 import { teamMemberSorting } from '../teammember-sorting';
 import { videoPlayPauseOnScroll } from '../videoPlayPauseOnScroll';
@@ -7,7 +7,7 @@ import { accordion } from '../accordion';
 
 export function load(){
   window.scrollTo(0, 0);
-  cursorPageLinks();
+  // cursorPageLinks();
   currentNav();
   teamMemberSorting();
   videoPlayPauseOnScroll();

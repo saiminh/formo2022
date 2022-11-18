@@ -75,6 +75,14 @@ blockquote:before {
 video {
   display: block;
 }
+//things that aren't native cursor elements
+.formo-popover-toggle-icon-open, 
+.formo-popover-toggle-icon-close,
+summary,
+input[type="submit"],
+label {
+  cursor: pointer;
+}
 .wp-block-separator {
   border-bottom: 0;
 }

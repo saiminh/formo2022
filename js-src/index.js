@@ -1,7 +1,7 @@
 import Swup from 'swup';
 import SwupHeadPlugin from '@swup/head-plugin';
 import SwupScrollPlugin from '@swup/scroll-plugin';
-import { cursorInit } from './cursor/cursorInit';
+// import { cursorInit } from './cursor/cursorInit';
 import { load } from './swup/load';
 import { unload } from './swup/unload';
 import { mobileNav } from './nav-mobile';
@@ -20,7 +20,7 @@ const options = { plugins: [
   })] };
 const swup = new Swup(options);
 
-cursorInit();
+// cursorInit();
 mobileNav();
 hideNav();
 
