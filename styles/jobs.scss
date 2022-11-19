@@ -122,7 +122,7 @@
   .job.hash-shown {
     padding-top: calc( 1em + var(--wp--custom--height--navbar) );
     margin-top: calc( -1 * ( 1em + var(--wp--custom--height--navbar) ) );
-    z-index: 99;
+    z-index: 1;
   }
   .job.hash-shown .job-header {
     border-radius: var(--job-border-radius) var(--job-border-radius) 0 0 ;
@@ -207,7 +207,7 @@
       grid-column: 1 / span 3;
       // max-width: 66%;
     }
-    & .job.hash-shown .job-content {
+    & .job .job-content {
       padding: 0.5em 0.75em;
       display: block;
     }
