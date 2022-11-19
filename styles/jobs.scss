@@ -57,6 +57,7 @@
   }
   .job.filtered {
     animation: fadeOut .5s ease-out forwards;
+    pointer-events: none;
   }
   @keyframes fadeOutBackIn {
     0% { opacity: 0; transform: translateY(20px); }
