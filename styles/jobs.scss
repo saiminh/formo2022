@@ -127,9 +127,6 @@
   .job.hash-shown .job-header {
     border-radius: var(--job-border-radius) var(--job-border-radius) 0 0 ;
   }
-  // .job.hash-shown .job-content {
-  //   display: flex;
-  // }
   .job-content > * {
     flex: calc(50% - .75em) 0 0;
   }
@@ -177,17 +174,12 @@
     --job-border-radius: 15px;
     
     & .job-header {
-      // flex-direction: column;
-      // align-items: flex-start;
       display: grid;
       grid-template-columns: 3fr 1fr;
       grid-template-rows: 1fr 1fr;
       gap: .3em;
       padding: 0.5em 0.75em;
       
-      // & > * {
-      //   flex: 33.3% 0 0;
-      // }
     }
     & .job-header-title {
       line-height: 1.2;
@@ -211,6 +203,5 @@
       padding: 0.5em 0.75em;
       display: block;
     }
-
   }
 }
