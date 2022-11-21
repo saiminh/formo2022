@@ -1,7 +1,11 @@
 .wp-block-post-author__content {
   display: flex;
   justify-content: flex-end;
-  gap: .5em;
+  gap: .2em;
+
+  & > * {
+    font-size: var(--wp--preset--font-size--small);
+  }
 
   & p, 
   & .wp-block-post-author__byline {
