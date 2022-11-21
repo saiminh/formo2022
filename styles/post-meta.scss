@@ -1,7 +1,7 @@
 .wp-block-post-author__content {
   display: flex;
   justify-content: flex-end;
-  gap: .2em;
+  gap: .5em;
 
   & p, 
   & .wp-block-post-author__byline {
@@ -9,6 +9,7 @@
     display: inline;
     width: auto;
     white-space: nowrap;
+    margin-top: 0;
   }
 }
 .wp-block-post-date {

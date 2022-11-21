@@ -104,6 +104,7 @@ function override_admin_bar_css() {
       }
       .edit-post-visual-editor {
         width: 100vw;
+        overflow-x: hidden;
       }
       font[size="1"] {
         position: relative;
@@ -122,8 +123,10 @@ function override_admin_bar_css() {
       .edit-post-fullscreen-mode-close.components-button .edit-post-fullscreen-mode-close_site-icon {
         object-fit: contain;
       }
-      .components-popover.block-editor-block-popover {
-        left: 0!important;
+      .block-editor-block-list__empty-block-inserter.block-editor-block-list__empty-block-inserter, 
+      .block-editor-default-block-appender .block-editor-inserter {
+        top: 100%;
+        left:0;
       }
     </style>
   <?php }

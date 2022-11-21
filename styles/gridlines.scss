@@ -199,32 +199,74 @@
       margin-left: calc( -1 * var(--wp--custom--width--col-1) - var(--wp--custom--spacing--between));
     }
   }
-  .offset1,
+  .offset1, body .is-layout-constrained > .offset1:where(:not(.alignleft):not(.alignright):not(.alignfull)),
   [class*="wp-container-"] > .offset1 {
-    margin-left: calc( var(--wp--custom--width--col-1) + 0.5 * var(--wp--custom--spacing--between));
+    margin-left: calc( var(--wp--custom--width--col-1) + 0.5 * var(--wp--custom--spacing--between))!important;
     .wp-block-column + & {
       margin-left: calc( var(--wp--custom--width--col-1) + var(--wp--custom--spacing--between));
     }
   }
-  .offset2,
+  .offset2, body .is-layout-constrained > .offset2:where(:not(.alignleft):not(.alignright):not(.alignfull)),
   [class*="wp-container-"] > .offset2 {
-    margin-left: calc( var(--wp--custom--width--col-2) + 0.5 * var(--wp--custom--spacing--between));
+    margin-left: calc( var(--wp--custom--width--col-2) + 0.5 * var(--wp--custom--spacing--between))!important;
     .wp-block-column + & {
       margin-left: calc( var(--wp--custom--width--col-2) + var(--wp--custom--spacing--between));
     }
   }
-  .offset3,
+  .offset3, body .is-layout-constrained > .offset3:where(:not(.alignleft):not(.alignright):not(.alignfull)),
   [class*="wp-container-"] > .offset3 {
-    margin-left: calc( var(--wp--custom--width--col-3) + 0.5 * var(--wp--custom--spacing--between));
+    margin-left: calc( var(--wp--custom--width--col-3) + 0.5 * var(--wp--custom--spacing--between))!important;
     .wp-block-column + & {
       margin-left: calc( var(--wp--custom--width--col-3) + var(--wp--custom--spacing--between));
     }
   }
-  .offset4,
+  .offset4, body .is-layout-constrained > .offset4:where(:not(.alignleft):not(.alignright):not(.alignfull)),
   [class*="wp-container-"] > .offset4 {
-    margin-left: calc( var(--wp--custom--width--col-4) + 0.5 * var(--wp--custom--spacing--between));
+    margin-left: calc( var(--wp--custom--width--col-4) + 0.5 * var(--wp--custom--spacing--between))!important;
     .wp-block-column + & {
       margin-left: calc( var(--wp--custom--width--col-4) + var(--wp--custom--spacing--between));
+    }
+  }
+  .offset5, body .is-layout-constrained > .offset5:where(:not(.alignleft):not(.alignright):not(.alignfull)),
+  [class*="wp-container-"] > .offset5 {
+    margin-left: calc( var(--wp--custom--width--col-5) + 0.5 * var(--wp--custom--spacing--between))!important;
+    .wp-block-column + & {
+      margin-left: calc( var(--wp--custom--width--col-5) + var(--wp--custom--spacing--between));
+    }
+  }
+  .offset6, body .is-layout-constrained > .offset6:where(:not(.alignleft):not(.alignright):not(.alignfull)),
+  [class*="wp-container-"] > .offset6 {
+    margin-left: calc( var(--wp--custom--width--col-6) + 0.5 * var(--wp--custom--spacing--between))!important;
+    .wp-block-column + & {
+      margin-left: calc( var(--wp--custom--width--col-6) + var(--wp--custom--spacing--between));
+    }
+  }
+  .offset7, body .is-layout-constrained > .offset7:where(:not(.alignleft):not(.alignright):not(.alignfull)),
+  [class*="wp-container-"] > .offset7 {
+    margin-left: calc( var(--wp--custom--width--col-7) + 0.5 * var(--wp--custom--spacing--between))!important;
+    .wp-block-column + & {
+      margin-left: calc( var(--wp--custom--width--col-7) + var(--wp--custom--spacing--between));
+    }
+  }
+  .offset8, body .is-layout-constrained > .offset8:where(:not(.alignleft):not(.alignright):not(.alignfull)),
+  [class*="wp-container-"] > .offset8 {
+    margin-left: calc( var(--wp--custom--width--col-8) + 0.5 * var(--wp--custom--spacing--between))!important;
+    .wp-block-column + & {
+      margin-left: calc( var(--wp--custom--width--col-8) + var(--wp--custom--spacing--between));
+    }
+  }
+  .offset9, body .is-layout-constrained > .offset9:where(:not(.alignleft):not(.alignright):not(.alignfull)),
+  [class*="wp-container-"] > .offset9 {
+    margin-left: calc( var(--wp--custom--width--col-9) + 0.5 * var(--wp--custom--spacing--between))!important;
+    .wp-block-column + & {
+      margin-left: calc( var(--wp--custom--width--col-9) + var(--wp--custom--spacing--between));
+    }
+  }
+  .offset10, body .is-layout-constrained > .offset10:where(:not(.alignleft):not(.alignright):not(.alignfull)),
+  [class*="wp-container-"] > .offset10 {
+    margin-left: calc( var(--wp--custom--width--col-10) + 0.5 * var(--wp--custom--spacing--between))!important;
+    .wp-block-column + & {
+      margin-left: calc( var(--wp--custom--width--col-10) + var(--wp--custom--spacing--between));
     }
   }
 

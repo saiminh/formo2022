@@ -41,18 +41,19 @@ body .is-layout-flow > h3.formo2022-teammember-sorting-title {
 }
 .formo2022-teammember-sorting-questions {
   
-  position: absolute;
-  width: calc( 100% - 2 * var(--wp--custom--spacing--outer) );
+  position: relative;
   z-index: 10;
   padding-top: .75em;
   margin-block-start: 0!important;
 
   & p {
-    margin: 0;
+    margin: 0!important;
+    text-align: center;
   }
   & p a {
     position: absolute;
-    bottom: 0;
+    top: 0;
+    left: 0;
     z-index: 1;
     text-align: center;
     width: 100%;
@@ -73,8 +74,7 @@ body .is-layout-flow > h3.formo2022-teammember-sorting-title {
   }
 }
 .formo2022-teammember-sorting-nav {
-  width: calc( 100% - 2 * var(--wp--custom--spacing--outer) );
-  position: absolute;
+  position: relative;
   z-index: 10;
   padding-top: 1.5em;
   
@@ -88,9 +88,6 @@ body .is-layout-flow > h3.formo2022-teammember-sorting-title {
     display: none;
   }
   & > .wp-block-button {
-    // width: calc(50% - .15em);
-    // padding: .25em;
-
     //dont show previous button ever, therefore next button is in the center
     width: 100%;
     text-align: center;
@@ -101,14 +98,16 @@ body .is-layout-flow > h3.formo2022-teammember-sorting-title {
   }
 }
 .formo2022-teammember-sorting-teammembers {
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
   z-index: 2;
   height: calc( var(--vh, 1vh) * 70 - var(--wp--custom--height--navbar) );
-  // margin-left: calc( -1 * var(--wp--custom--spacing--outer) );
-  // margin-right: calc( -1 * var(--wp--custom--spacing--outer) );
+  
+  & ul li {
+    list-style: none;
+  }
 
   @include bps.bp-down(smallTablet){
     margin-left: 0;
@@ -118,20 +117,23 @@ body .is-layout-flow > h3.formo2022-teammember-sorting-title {
 
 .formo2022_teammember {
 
-  --tmwidth: 100px;
+  --tmwidth: 2.5vw;
   width: var(--tmwidth)!important;
   height: var(--tmwidth)!important;
 
   @include bps.bp-down(smallTablet){
-    --tmwidth: 15vw;
+    & {
+      --tmwidth: 6vw;
+    }
   }
 
   position: absolute;  
   z-index: 1;
   top: calc( 50% - var(--tmwidth) / 2 );
   left: calc( 50% - var(--tmwidth) / 2 );
-
-  transition: all .5s .3s cubic-bezier(1.000, -0.340, 0.000, 1.245);
+  list-style: none;
+  transition: transform .5s .3s cubic-bezier(1.000, -0.340, 0.000, 1.245);
+  margin: 0!important;
 
   &.hidden {
     opacity: 0;
@@ -140,21 +142,28 @@ body .is-layout-flow > h3.formo2022-teammember-sorting-title {
   & .entry-content *:not(figure, img, video, .wp-block-group) {
     display: none;
   }
+  &:hover {
+    z-index: 9999;
+  }
+  &:hover > div{
+    z-index: 3;
+    transform: scale(1.1);
+  }
   &:hover .entry-content .wp-block-post-title {
       display: inline-block;
       position: relative;
-      left: 50%;
-      top: -20px;
+      left: 60%;
+      top: -25%;
       background-color: var(--wp--preset--color--formo-blue);
       color: white;
       padding: .5em;
       margin: 0!important;
-      // min-width: 100%;
-      max-width: 200%;
+      max-width: 400%;
       word-break: keep-all;
       line-height: 1.2;
       border-radius: 5px;
       text-align: center;
+      pointer-events: none;
   }
   & .entry-content figure, 
   & .entry-content figure > * {
@@ -162,6 +171,7 @@ body .is-layout-flow > h3.formo2022-teammember-sorting-title {
     position: absolute;
     left: 0;
     top: 0;
+    margin: 0!important;
   }
   & .entry-content figure {
     height: var(--tmwidth);

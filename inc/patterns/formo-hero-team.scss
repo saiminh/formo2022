@@ -4,13 +4,32 @@
 
 .formo-hero.formo-hero-team {
   
+  & .formo-hero-image:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(
+      ellipse at 100% 100%, 
+      rgba(0, 0, 0, .5) 0%, 
+      rgba(0, 0, 0, 0.5) 25%,
+      rgba(0, 0, 0, 0) 50%), 
+      radial-gradient(
+        ellipse at 0% 100%, 
+        rgba(0, 0, 0, .5) 0%, 
+        rgba(0, 0, 0, 0.5) 25%,
+        rgba(0, 0, 0, 0) 50%);
+  }
+
   & .formo-hero-text {
 
     & h1, & h2 {
       
       font-size: 8.3vw!important;
       line-height: .85;
-      text-shadow: 0 0 30px rgba(0,0,0,0.6);
+      // text-shadow: 0 0 30px rgba(0,0,0,0.6);
 
       & .special:nth-child(1) {
         font-size: 1em;
@@ -33,9 +52,15 @@
   }
 
   @include bp.bp-down(bigTablet) {
+    & .formo-hero-text {
+      justify-content: flex-end;
+    }
     & .formo-hero-text h1,
     & .formo-hero-text h2 {
       font-size: 12.25vw!important;
+    }
+    & .formo-hero-image:after {
+      background-image: linear-gradient(to top, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0) 100%);
     }
   }
 }

@@ -33,6 +33,7 @@ h1, h2, h3, h4, h5 {
   line-height: .85;
   -webkit-hyphens: auto;
   hyphens: auto;
+  word-break: keep-all;
 
   [class^="wp-container"] > & {
     margin-bottom: .25em;
@@ -107,7 +108,7 @@ label {
     & > h2 + div, 
     & > h3 + div, 
     & > h4 + div {
-      margin-block-start: 1em;
+      margin-block-start: 1rem;
     }
   }
   body .is-layout-flow > p:last-child,
@@ -149,7 +150,7 @@ label {
       margin-block-end: 1rem;
     }
   }
-  body .entry-content > div:not(.formo-popover), 
+  body .entry-content > div:not(.formo-popover):not(.teammember-single-content), 
   body .entry-content > section {
     padding-top: 2em;
     padding-bottom: 2em;
