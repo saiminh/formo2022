@@ -122,6 +122,9 @@ function override_admin_bar_css() {
       .edit-post-fullscreen-mode-close.components-button .edit-post-fullscreen-mode-close_site-icon {
         object-fit: contain;
       }
+      .components-popover.block-editor-block-popover {
+        left: 0!important;
+      }
     </style>
   <?php }
 }

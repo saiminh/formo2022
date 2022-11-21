@@ -80,6 +80,16 @@
       flex-basis: calc( var(--wp--custom--width--col-10) + 0.5 * var(--wp--custom--spacing--between) )!important;
     }
   }
+  .wp-block-column.span11 {
+    flex-basis: calc( var(--wp--custom--width--col-11) + var(--wp--custom--spacing--between)  )!important;
+    &:first-child:not([class*="offset"]),
+    &:last-child {
+      flex-basis: calc( var(--wp--custom--width--col-11) + 0.5 * var(--wp--custom--spacing--between) )!important;
+    }
+  }
+  .wp-block-column.span12 {
+    flex-basis: calc( var(--wp--custom--width--col-12) )!important;
+  }
   //this is to make sure gridlines align, the flex-grow will make sure the widths match up
   .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column[class*="span"][style*="flex-basis"] {
     flex-grow: 0;
@@ -233,6 +243,9 @@
       height: 100%;
       border-left: 1px solid;
       z-index: 0;
+    }
+    &.span12:before {
+      left: calc(50% - .75px);
     }
     & > * {
       position: relative;

@@ -7,8 +7,8 @@ return array(
 	'categories' => array( 'header' ),
 	'blockTypes' => array( 'core/template-part/header' ),
 	'content'    => '<!-- wp:group {"align":"full","backgroundColor":"formo-cream","textColor":"background","className":"formo-hero"} -->
-  <div class="wp-block-group alignfull formo-hero has-background-color has-formo-cream-background-color has-text-color has-background" id="hero"><!-- wp:video {"id":331,"className":"formo-hero-video"} -->
-  <figure class="wp-block-video formo-hero-video"><video autoplay loop muted src="https://oscarz3.sg-host.com/wp-content/uploads/2022/11/formo-video-homepage-01.mp4" playsinline></video></figure>
+  <div class="wp-block-group alignfull formo-hero has-background-color has-formo-cream-background-color has-text-color has-background" id="hero"><!-- wp:video {"id":658,"className":"formo-hero-video"} -->
+  <figure class="wp-block-video formo-hero-video"><video autoplay loop muted poster="https://oscarz3.sg-host.com/wp-content/uploads/2022/10/formo-frontpage-video-poster.jpg" src="https://oscarz3.sg-host.com/wp-content/uploads/2022/11/Formo_Content_Homepage_01-opt.mp4" playsinline></video></figure>
   <!-- /wp:video -->
   
   <!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"textColor":"formo-cream","className":"formo-hero-text"} -->
@@ -26,8 +26,8 @@ return array(
   
   <!-- wp:columns {"className":"grid"} -->
   <div class="wp-block-columns grid"><!-- wp:column {"width":"33.33%","className":"span3 gridline"} -->
-  <div class="wp-block-column span3 gridline" style="flex-basis:33.33%"><!-- wp:paragraph -->
-  <p>Using microorganisms instead of animals to produce the cheese humans love.</p>
+  <div class="wp-block-column span3 gridline" style="flex-basis:33.33%"><!-- wp:paragraph {"className":"mobile-max-width-17em"} -->
+  <p class="mobile-max-width-17em">Using microorganisms instead of animals to produce the cheese humans love.</p>
   <!-- /wp:paragraph --></div>
   <!-- /wp:column -->
   

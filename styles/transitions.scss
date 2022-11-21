@@ -5,15 +5,15 @@
 
 html.is-animating .transition-default {
   opacity: 0;
-  transition: .1s;
+  transition: .3s;
   
 }
 h1 {
-  animation: h1-in .5s .1s ease-in-out both;
+  animation: h1-in .7s .1s ease-in-out both;
 }
 video {
   opacity: 0;
-  animation: video-in .3s 0s ease-in-out both;
+  animation: video-in .5s 0s ease-in-out both;
 }
 @keyframes video-in {
   0% {

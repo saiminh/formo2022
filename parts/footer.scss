@@ -1,8 +1,17 @@
 @use '../styles/breakpoints.scss' as bp;
 
 @include bp.bp(bigTablet) {
-  .formo-footer {
+  main {
     position: relative;
+    min-height: 100vh;
+    padding-bottom: 200px;
+  }
+
+  .formo-footer {
+    position: absolute;
+    bottom: 0;
+    min-height: 200px;
+    width: 100vw!important;
     
     & .footer-nav-menu-1,
     & .footer-nav-menu-2 {
@@ -85,6 +94,7 @@
     font-size: 10px;
     line-height: 1.5;
     padding-bottom: 1em;
+    margin-bottom: 0!important;
     
     &:after {
       height: .5em;
