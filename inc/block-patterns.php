@@ -59,6 +59,7 @@ function formo2022_register_block_patterns() {
     'formo-page-jobs',
     'formo-page-faqs',
     'formo-page-contact',
+    'formo-page-blogpost',
     'formo-hero-video',
     'formo-hero-image',
 		'hidden-404',
