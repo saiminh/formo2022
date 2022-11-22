@@ -131,9 +131,13 @@ input[type="radio"] {
     border-color: var(--wp--preset--color--formo-blue);
     font-weight: normal;
     font-size: var(--wp--preset--font-size--small);
+    margin-bottom-start: 1em;
   }
   .brandingLogo {
     display: none;
+  }
+  .mc-field-group {
+    margin-block-start: .5em;
   }
   .mc-field-group.input-group {
     font-size: var(--wp--preset--font-size--small);
