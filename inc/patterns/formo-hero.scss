@@ -116,6 +116,10 @@
     margin-top: 0;
     letter-spacing: -.033em;
     padding-bottom: .1em;
+
+    &[class*="span"] {
+      flex-basis: auto!important;
+    }
   }
   
   .content-bottom .formo-hero-text h1,

@@ -76,6 +76,14 @@ blockquote:before {
 video {
   display: block;
 }
+sub, sup {
+  line-height: 0;
+  font-size: .6em;
+}
+sub { 
+  position: relative;
+  top: -0.1em;
+}
 //things that aren't native cursor elements
 .formo-popover-toggle-icon-open, 
 .formo-popover-toggle-icon-close,

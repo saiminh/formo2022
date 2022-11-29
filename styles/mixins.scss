@@ -41,10 +41,16 @@
     max-width: var(--wp--custom--width--col-10);
   }
 
+
+
   & > .wp-block-group > .wp-block-columns {
     margin: 0;
   }
 
+  // The card's image container:
+  & > .wp-block-group > .wp-block-columns > .wp-block-column:nth-child(1) {
+    padding: 0;
+  }
   // The card's text container:
   & > .wp-block-group > .wp-block-columns > .wp-block-column:nth-child(2) {
     padding: 1em;
@@ -178,6 +184,7 @@
   }
   & > .wp-block-group > .wp-block-columns > .wp-block-column:first-child {
       height: 160px;
+      padding: 0;
 
       @include bps.bp-down(bigTablet) {
         flex: 33% 0 0!important;
@@ -188,6 +195,7 @@
     padding: 1em;
     height: calc(100% - 150px);
     position: relative;
+    margin: 0;
 
     @include bps.bp-down(bigTablet) {
       flex: 67% 0 0!important;
@@ -226,8 +234,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: var(--wp--custom--width--col-3) 0 0;
-  height: var(--wp--custom--width--col-3);
+  flex: calc( var(--wp--custom--width--col-3) - 0.752 * var(--wp--custom--spacing--between) ) 0 0;
+  height: calc( var(--wp--custom--width--col-3) - 0.752 * var(--wp--custom--spacing--between) );
+  align-self: center;
 
   @include bps.bp-down(bigTablet) {
     flex: var(--wp--custom--width--col-6) 0 0;

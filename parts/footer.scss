@@ -32,11 +32,10 @@
         font-size: var(--wp--preset--font-size--small);
       }
       & .wp-block-navigation {
-        width: var(--wp--custom--width--col-2);
 
         & .wp-block-navigation__container {
           display: grid;
-          grid-template-columns: var(--wp--custom--width--col-1) var(--wp--custom--width--col-1);
+          grid-template-columns: 1fr 1fr;
           gap: var(--wp--custom--spacing--between);
           grid-template-rows: 10px 10px 10px;
           align-items: flex-start;
@@ -77,7 +76,7 @@
       content: '';
       position: absolute;
       top: 0;
-      left: var(--wp--custom--spacing--outer);
+      left: calc( var(--wp--custom--spacing--outer) - 1px );
       width: 1px;
       height: 65px;
       background-color: var(--wp--preset--color--formo-cream);

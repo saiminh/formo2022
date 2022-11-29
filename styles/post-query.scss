@@ -121,7 +121,7 @@
     margin-right: auto;
     
     @include bps.bp(bigTablet) {
-      flex: var(--wp--custom--width--col-3) 0 0;
+      flex: calc( var(--wp--custom--width--col-3) - 0.752 * var(--wp--custom--spacing--between) ) 0 0;
       margin-left: 0;
       margin-right: 0;
     }
@@ -161,7 +161,7 @@ div:not(.block-editor-block-list__layout) {
     &:nth-child(6) {
       @include mixins.post-card-small-ball;
       @include bps.bp(bigTablet) {
-        max-height: var(--wp--custom--width--col-3);
+        max-height: calc( var(--wp--custom--width--col-3) - 0.752 * var(--wp--custom--spacing--between) );
       }
     }
   }

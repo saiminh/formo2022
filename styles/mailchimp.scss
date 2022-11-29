@@ -103,6 +103,7 @@ input[type="radio"] {
   }
   input[type="text"],
   input[type="email"] {
+    width: 100%;
     border-radius: 50px;
     border: 1px solid var(--wp--preset--color--formo-darktone, #000);
     background-color: transparent;

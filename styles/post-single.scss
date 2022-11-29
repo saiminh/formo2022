@@ -73,3 +73,7 @@ main.content-wrapper > .entry-content > .alignfull:first-child > figure.wp-block
     @include mixins.post-card-small-ball;
   }
 }
+
+body .is-layout-constrained > .latest-posts-header + div {
+  margin-block-start: 1rem;
+}
