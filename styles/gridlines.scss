@@ -22,7 +22,8 @@
       padding-right: calc( 0.5 * var(--wp--custom--spacing--between) );
       width: var(--wp--custom--width--col-#{$i})!important;
     }
-    .offset#{$i} {
+    .offset#{$i},
+    body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)).offset#{$i} {
       margin-left: var(--wp--custom--width--col-#{$i})!important;
     }
     [class*="span"] [class*="span"].offset#{$i}, [class*="span"] [class*="span"].offset#{$i}:first-child {
