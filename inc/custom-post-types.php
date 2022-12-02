@@ -74,18 +74,6 @@ function formo2022_custom_post_type() {
               )),
             ))
           )),
-          array( 'core/spacer', array(
-            'height' => 100,
-          )),
-          array( 'core/group', array( 'align' => 'full',), array(
-            array('core/heading', array(
-              'content' => 'More Events',
-              'level' => 3,
-            )),
-            array( 'create-block/events-query', array(
-              'layout' => 'layout-latest',
-            ) ),
-          )),
         )),
       ),
       'supports' => array('title', 'editor', 'excerpt', 'eventdate', 'eventlocation', 'custom-fields', 'thumbnail'),
