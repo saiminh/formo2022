@@ -27,10 +27,16 @@ export function teamMemberSorting(){
         setTimeout(() => {
           member.style.transform = 'translate('+xOff+'px, '+yOff+'px) scale('+scale+')';
         }, 800);
-      } else {
+        
+      } else if (member.classList.contains('traits-'+target+'-not')) {
         member.style.transform = 'translate(0px, 0px) scale(1)';
         setTimeout(() => {
           member.style.transform = 'translate(-'+xOff+'px, '+yOff+'px) scale('+scale+')';
+        }, 800);
+      } else {
+        member.style.transform = 'translate(0px, 0px) scale(1)';
+        setTimeout(() => {
+          member.style.transform = 'translate(0px, 0px) scale(0)';
         }, 800);
       }
     })
