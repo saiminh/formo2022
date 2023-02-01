@@ -37,7 +37,7 @@
 
   .job {
     font-size: var(--wp--preset--font-size--body);
-    margin: 0 0 1em 0;
+    margin: 0 0 1em 0!important;
     position: relative;
     z-index: 2;
     opacity: 1;
