@@ -21,4 +21,7 @@ export function load(){
   if (typeof initPopover === "function") { 
     initPopover();
   }
+  if (typeof initGlassdoorReviews === "function") { 
+    initGlassdoorReviews();
+  }
 }
