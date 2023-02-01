@@ -19,7 +19,7 @@
       font-size: var(--wp--preset--font-size--small);
 
       & ul li {
-        margin-left: 0;
+        margin-left: 0!important;
       }
       
       & .wp-block-navigation__container {
