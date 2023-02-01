@@ -38,6 +38,10 @@
 
 @include bps.bp-down(bigTablet) {
  
+  .formo-hero-method h1 {
+    word-break: break-word;
+  }
+
   .method-timeline .wp-block-columns:nth-child(5),
   .method-timeline .wp-block-columns:nth-child(6),
   .method-timeline .wp-block-columns:nth-child(7),

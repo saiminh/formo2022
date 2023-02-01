@@ -15,12 +15,14 @@
 function formo2022_register_block_patterns() {
 	$block_pattern_categories = array(
 		'featured' => array( 'label' => __( 'Featured', 'formo2022' ) ),
-		// 'footer'   => array( 'label' => __( 'Footers', 'formo2022' ) ),
-		// 'header'   => array( 'label' => __( 'Headers', 'formo2022' ) ),
+		'content'  => array( 'label' => __( 'Content', 'formo2022' ) ),
+		'bios'  => array( 'label' => __( 'Bios', 'formo2022' ) ),
+		'header'   => array( 'label' => __( 'Headers', 'formo2022' ) ),
 		'query'    => array( 'label' => __( 'Query', 'formo2022' ) ),
-		'pages'    => array( 'label' => __( 'Pages', 'formo2022' ) ),
     'graphics' => array( 'label' => __( 'Graphics', 'formo2022' ) ),
     'forms' => array( 'label' => __( 'Forms', 'formo2022' ) ),
+		'pages'    => array( 'label' => __( 'Full Pages', 'formo2022' ) ),
+		// 'footer'   => array( 'label' => __( 'Footers', 'formo2022' ) ),
 	);
 
 	/**
@@ -62,6 +64,11 @@ function formo2022_register_block_patterns() {
     'formo-page-blogpost',
     'formo-hero-video',
     'formo-hero-image',
+    'formo-hero-jobs',
+    'formo-biography',
+    'formo-biography-thumbnail',
+    'formo-content-glassdoor-reviews',
+    'formo-content-jobspage-opportunity',
 		'hidden-404',
 		'query-default',
 		'query-team',

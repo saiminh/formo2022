@@ -48,7 +48,7 @@ h2 {
 h3 {
   font-size: var(--wp--preset--font-size--xx-large);
 }
-p, li {
+p, li:not(.wp-social-link) {
   font-size: var(--wp--preset--font-size--body);
 } 
 ul, ol {
@@ -57,7 +57,7 @@ ul, ol {
 ul li, ol li {
   margin-top: 1em;
 }
-.content-wrapper ul li, .content-wrapper ol li {
+.content-wrapper ul li:not(.wp-social-link), .content-wrapper ol li {
   margin-left: 1em;
 }
 blockquote {
@@ -158,7 +158,7 @@ label {
       margin-block-end: 1rem;
     }
   }
-  body .entry-content > div:not(.formo-popover):not(.teammember-single-content), 
+  body .entry-content > div:not(.formo-popover):not(.teammember-single-content):not(.rounded-corners), 
   body .entry-content > section {
     padding-top: 2em;
     padding-bottom: 2em;
