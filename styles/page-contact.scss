@@ -20,10 +20,14 @@
     font-size: var(--wp--preset--font-size--body);
     color: var(--wp--preset--color--formo-darktone);
     background-color: transparent;
+    width: 100%;
+    display: block;
   }
   & .meow-contact-form--default .meow-contact-form__group .meow-contact-form__group-textarea {
     font-size: var(--wp--preset--font-size--small);
     padding: 15px;
+    width: 100%;
+    display: block;
   }
   & .meow-contact-form__group-label {
     padding: 0 15px;
