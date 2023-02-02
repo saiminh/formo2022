@@ -5,6 +5,10 @@
   border-radius: 15px;
   margin-bottom: 1em;
   
+  & form {
+    margin-top: 0!important;
+  }
+
   &.wp-block-group.has-background {
     padding: 1.5em;
     @include bps.bp-down(bigTablet) {
@@ -28,6 +32,9 @@
     padding: 15px;
     width: 100%;
     display: block;
+  }
+  & .meow-contact-form__group {
+    margin-bottom: 15px;
   }
   & .meow-contact-form__group-label {
     padding: 0 15px;
