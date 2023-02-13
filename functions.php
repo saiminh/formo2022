@@ -90,6 +90,9 @@ require get_template_directory() . '/inc/custom-post-types.php';
 // Customise admin area
 require get_template_directory() . '/inc/customise-admin.php';
 
+// Custom image sizes
+require get_template_directory() . '/inc/custom-image-sizes.php';
+
 // Adding support for certain span tags in Gutenberg
 function addspansupport(){
   wp_enqueue_script(
