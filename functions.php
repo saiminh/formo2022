@@ -68,10 +68,12 @@ if ( ! function_exists( 'formo2022_styles' ) ) :
     wp_enqueue_script( 'runtime' );
     wp_enqueue_script( 'global-js' );
 	}
-
 endif;
 
 add_action( 'wp_enqueue_scripts', 'formo2022_styles' );
+
+// Defer JS to improve page load speed
+require get_template_directory() . '/inc/defer-js.php';
 
 // Remove those filters from the body
 remove_action( 'wp_body_open', 'wp_global_styles_render_svg_filters' );
