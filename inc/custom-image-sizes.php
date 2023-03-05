@@ -22,6 +22,10 @@ add_theme_support( 'post-thumbnails' );
 function add_image_sizes() {
   add_image_size( 'half-screen-width', 1500, 1500, false );
   add_image_size( 'quarter-screen-width', 750, 750, false );
+  add_image_size( '450', 450, 450, false );
+  add_image_size( '650', 650, 650, false );
+  add_image_size( '850', 850, 850, false );
+  add_image_size( '950', 950, 950, false );
 }
 add_action('after_setup_theme', 'add_image_sizes');
 
