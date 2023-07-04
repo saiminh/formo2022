@@ -57,7 +57,7 @@ ul, ol {
 ul li, ol li {
   margin-top: 1em;
 }
-.content-wrapper ul li:not(.wp-social-link), .content-wrapper ol li {
+.content-wrapper ul:not(.wp-block-post-template) li:not(.wp-social-link), .content-wrapper ol li {
   margin-left: 1em;
 }
 blockquote {
