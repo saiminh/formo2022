@@ -4,8 +4,10 @@ import { teamMemberSorting } from '../teammember-sorting';
 import { videoPlayPauseOnScroll } from '../videoPlayPauseOnScroll';
 import { videoPlayPauseOnHover } from '../videoPlayPauseOnHover';
 import { accordion } from '../accordion';
+// import { detach } from '../cookies/cookies';
 
 export function load(){
+  // detach();
   window.scrollTo(0, 0);
   // cursorPageLinks();
   currentNav();
@@ -14,14 +16,14 @@ export function load(){
   videoPlayPauseOnHover();
   accordion();
   // need to reload some custom block's scripts here for swup reloading
-  if (typeof addJobExpandability === "function") { 
-    addJobExpandability();
-    addJobFiltering();
-  }
-  if (typeof initPopover === "function") { 
-    initPopover();
-  }
-  if (typeof initGlassdoorReviews === "function") { 
-    initGlassdoorReviews();
-  }
+  // if (typeof addJobExpandability === "function") { 
+  //   addJobExpandability();
+  //   addJobFiltering();
+  // }
+  // if (typeof initPopover === "function") { 
+  //   initPopover();
+  // }
+  // if (typeof initGlassdoorReviews === "function") { 
+  //   initGlassdoorReviews();
+  // }
 }

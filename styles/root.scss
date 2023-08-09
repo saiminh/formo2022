@@ -8,6 +8,7 @@
 html {
   box-sizing: border-box;
   font-feature-settings: 'ss01' 1, 'ss02' 0, 'ss03' 1, 'dlig' 1, 'liga' 1, 'calt' 1;
+  scroll-behavior: smooth;
 }
 *, *:before, *:after {
   box-sizing: inherit;

@@ -1,18 +1,18 @@
 export function currentNav(){
   
-  let oldCurrentLink = document.querySelector('.currentNavLink');
-  oldCurrentLink ? oldCurrentLink.classList.remove('currentNavLink') : null;
+  let oldCurrentLink = document.querySelector('.current-menu-item a');
+  oldCurrentLink ? oldCurrentLink.parentElement.classList.remove('current-menu-item') : null;
   let currentURL = document.location.href;
   let navLinks = Array.from( document.querySelectorAll('.formo-navi a') );
   let blogLink = document.querySelector('a[href$="/blog/"]');
 
   if ( currentURL.includes('/category/') ) {
-    blogLink.classList.add('currentNavLink');
+    blogLink.parentElement.classList.add('current-menu-item');
   }
 
   navLinks.forEach(link => {
     if (link.href === currentURL) {
-      link.classList.add('currentNavLink');
+      link.parentElement.classList.add('current-menu-item');
     }
   })
 

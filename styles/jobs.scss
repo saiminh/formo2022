@@ -45,6 +45,7 @@
     animation: fadeOutBackIn .5s ease-out forwards;
     overflow: hidden;
     border-radius: var(--job-border-radius);
+    // transition: height 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   }
   .job-header, .job-content {
     background-color: var(--wp--preset--color--formo-grey);
@@ -120,9 +121,11 @@
     border-radius: 0 0 var(--job-border-radius) var(--job-border-radius);
   }
   .job.hash-shown {
-    padding-top: calc( 1em + var(--wp--custom--height--navbar) );
-    margin-top: calc( -1 * ( 1em + var(--wp--custom--height--navbar) ) );
+    // padding-top: calc( 1em + var(--wp--custom--height--navbar) );
+    // margin-top: calc( -1 * ( 1em + var(--wp--custom--height--navbar) ) );
     z-index: 1;
+    // transition: height .5s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding-top .5s ease-in-out, margin-top .5s ease-in-out;
+    transition: height .5s cubic-bezier(0.645, 0.045, 0.355, 1);
   }
   .job.hash-shown .job-header {
     border-radius: var(--job-border-radius) var(--job-border-radius) 0 0 ;
