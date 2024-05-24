@@ -8,6 +8,9 @@
   body.nav-hidden & {
     transform: translateY(-100%);
   }
+  :where(figure) {
+    margin: 0;
+  }
 }
 
 ul.wp-block-navigation__container li {
