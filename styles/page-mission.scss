@@ -1,172 +1,39 @@
 @use 'breakpoints.scss' as bps;
 
-@include bps.bp(bigTablet) {
-  .mission-stats-columns .wp-block-spacer {
-    width: 100%;
-    height: 0!important;
-    padding-top: 60%;
-  }
-  .mission-stats-bottom-button-block {
-    height: 0;
-    padding-top: 40%;
-    position: relative;
-    & > * {
-      position: absolute;
-      bottom: 3em;
-    }
-  }
-  .mission-stats-stat {
-    height: 0;
-    width: 100%;
-    padding-top: 100%;
-    margin-bottom: 20%!important;
-    position: relative;
-
-    & .mission-stats-stat-figure {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 60%;
-      height: 60%;
-      z-index: 0;
-      margin: 0;
-      
-      & img, & video, & svg {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        object-position: bottom;
-      }
-    }
-    & .mission-stats-stat-text {
-      position: absolute; 
-      top: 20%;
-      left: 78%;
-      width: 100%;
-
-      & .smaller {
-        font-size: 0.4em;
-        letter-spacing: -.01em;
-      }
-      & p.span2 {
-        padding-left: 0;
-      }
-    }
-  }
-  .mission-stats-stat.fig-bottom .mission-stats-stat-figure {
-    top: auto;
-    bottom: 0;
-  }
-  //left column
-  .mission-stats-columns > .wp-block-column:first-child {
-    
-    //last block in left column
-    & .mission-stats-stat:last-child {
-      margin-bottom: 0!important;
-    }
-    //last image in left column
-    & .mission-stats-stat:last-child .mission-stats-stat-figure {
-      top: auto;
-      bottom: 0;
-      transform: translate(-50%, 0);
-      height: 100%;
-      width: 70%;
-    }
-  }
-  //right column
-  .mission-stats-columns > .wp-block-column:last-child {
-    
-    & .mission-stats-stat .mission-stats-stat-text {
-      left: auto;
-      right: 78%;
-      & > * {
-        text-align: right;
-        margin: 0 0 0 auto;        
-      }
-    }
-  }
-  .mission-stats-stat.fig-bottom .mission-stats-stat-figure {
-    top: auto;
-    bottom: 0;
-  }
-
-  .columns-4-updown {
-    padding-top: 8em;
-    
-    & > .wp-block-column {
-      padding-bottom: 3em;
-    }
-    & > .wp-block-column:first-child {
-      & figure {
-        margin-top: -8em;
-      }
-    }
-    & > .wp-block-column:nth-child(3) {
-      & figure {
-        margin-top: -8em;
-      }
-    }
-  }
-
-}
-
 @include bps.bp-down(bigTablet) {
-
-  .columns-4-updown {
-    padding-bottom: 3em;
-  }
-
   .mission-stats-columns {
-    padding-top: 1em;
-  }
-  .mission-stats-columns .wp-block-spacer {
-    width: 0%;
-    height: 0!important;
-  }
-  .mission-stats-bottom-button-block {
-    padding: 0 0 3em 0;
-  }
-  .mission-stats-stat {
-    height: auto;
-    width: 100%;
-    padding-top: 0;
-    position: relative;
+    & > .wp-block-columns:nth-child(even) {
+      flex-direction: column-reverse;
+    }
+    & > .wp-block-columns:last-child {
+      margin-bottom: calc(-1 * var(--wp--custom--spacing--outer));
+      display: grid;
 
-    & .mission-stats-stat-figure {
-      position: relative;
-      left: 40%;
-      width: 60%;
-      height: 60%;
-      z-index: 1;
-      margin: 0;
-      margin-bottom: -40%;
-    
-      & img, & video, & svg {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
+      & > .wp-block-column {
+        grid-area: 1 / 1 / 2 / 2;
+
+        & .wp-block-group:has( > h2){
+          justify-content: flex-end;
+
+          & h2 {
+            text-shadow: 0 3px 6px rgba(0,0,0,0.3);
+          }
+        }
       }
     }
-    & .mission-stats-stat-text {
-      position: relative;
-      top: 0;
-      left: 0;
+    & .wp-block-group.is-vertical.is-layout-flex:has( > h2 ) {
+      gap: 0;
+      margin-top: -4rem;
+    }
+    & h2 {
       width: 100%;
-      z-index: 2;
-
-      & .has-huge-font-size {
-        font-size: 32vw!important;
-      }
-
-      & .smaller {
-        font-size: 0.4em;
-        letter-spacing: -.01em;
-      }
-
-      & p.span2 {
-        padding-left: 0;
-      }
+      text-align: center!important;
+    }
+    & h2.has-huge-font-size {
+      font-size: 30vw!important;
+    }
+    & h2.has-xxx-large-font-size {
+      font-size: 20vw!important;
     }
   }
 }
