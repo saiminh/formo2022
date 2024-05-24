@@ -1,11 +1,23 @@
 @use 'breakpoints.scss' as bps;
+.mission-stats-columns {
+  position: relative;
+  
+  & .legende {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1em 0;
+    z-index: 2;
+  }
+}
 
 @include bps.bp-down(bigTablet) {
   .mission-stats-columns {
     & > .wp-block-columns:nth-child(even) {
       flex-direction: column-reverse;
     }
-    & > .wp-block-columns:last-child {
+    & > .wp-block-columns:last-child,
+    & > .wp-block-columns:has( + .legende) {
       margin-bottom: calc(-1 * var(--wp--custom--spacing--outer));
       display: grid;
 
