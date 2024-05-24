@@ -45,7 +45,7 @@
   .gridline-left {
     border-left: 1px solid;
     position: relative;
-    left: -1px;
+    left: -0.5px;
   }
   .wp-block-column.content-space-between {
     display: flex;
@@ -94,7 +94,7 @@
       content: '';
       position: absolute;
       top: 0;
-      left: calc(50% - 1px );
+      left: calc(50% - 0.5px );
       width: 1px;
       height: 100%;
       border-left: 1px solid;

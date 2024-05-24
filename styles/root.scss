@@ -52,6 +52,9 @@ h3 {
 p, li:not(.wp-social-link) {
   font-size: var(--wp--preset--font-size--body);
 } 
+p + p {
+  margin-top: 1em;
+}
 ul, ol {
   padding-left: 0;
 }
