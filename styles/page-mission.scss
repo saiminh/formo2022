@@ -40,12 +40,18 @@
     & h2 {
       width: 100%;
       text-align: center!important;
+      position: relative;
+      z-index: 1;
     }
     & h2.has-huge-font-size {
       font-size: 30vw!important;
     }
     & h2.has-xxx-large-font-size {
       font-size: 20vw!important;
+    }
+    & .wp-block-buttons {
+      width: 100%;
+      justify-content: center;
     }
   }
 }
