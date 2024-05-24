@@ -154,6 +154,11 @@ ul.wp-block-navigation__container li {
 
     --logo-width-mobile: 98px;
   }
+
+  .formo-navi .is-layout-flex {
+    gap: 0;
+  }
+
   .formo-navi.is-open {
     height: 100%;
     color: var(--wp--preset--color--formo-blue);
