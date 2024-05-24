@@ -216,6 +216,11 @@
           "name": "XXX-Large"
         },
         {
+          "size": "clamp(4rem, 12.5vw, 13.4rem)",
+          "slug": "xxxx-large",
+          "name": "XXXX-Large"
+        },
+        {
           "size": "clamp(5.75rem, 15vw, 16.875rem)",
           "slug": "huge",
           "name": "Huge"
@@ -295,7 +300,7 @@
 		"elements": {
 			"h1": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--roobert)",
+          "fontFamily": "var(--wp--preset--font-family--krana)",
 					"fontWeight": "300",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)",
 					"fontSize": "var(--wp--preset--font-size--xxx-large)"
@@ -303,7 +308,7 @@
 			},
 			"h2": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--roobert)",
+          "fontFamily": "var(--wp--preset--font-family--krana)",
 					"fontWeight": "300",
 					"lineHeight": "var(--wp--custom--typography--line-height--small)",
 					"fontSize": "var(--wp--preset--font-size--xx-large)"
@@ -311,7 +316,7 @@
 			},
 			"h3": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--roobert)",
+          "fontFamily": "var(--wp--preset--font-family--krana)",
 					"fontWeight": "300",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)",
 					"fontSize": "var(--wp--preset--font-size--x-large)"

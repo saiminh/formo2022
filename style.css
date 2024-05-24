@@ -51,8 +51,8 @@ a {
  * https://github.com/WordPress/gutenberg/issues/35884
  */
 
- .wp-site-blocks,
-body > .is-root-container,
+/* .wp-site-blocks, */
+/* body > .is-root-container, */
 .edit-post-visual-editor__post-title-wrapper,
 .wp-block-group.alignfull,
 .wp-block-group.has-background,
@@ -63,7 +63,7 @@ body > .is-root-container,
 	padding-right: var(--wp--custom--spacing--outer);
 }
 
-.wp-site-blocks .alignfull,
+/* .wp-site-blocks .alignfull, */
 .wp-site-blocks > .wp-block-group.has-background,
 .wp-site-blocks > .wp-block-cover,
 .wp-site-blocks > .wp-block-template-part > .wp-block-group.has-background,

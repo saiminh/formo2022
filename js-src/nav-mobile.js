@@ -10,6 +10,8 @@ export function mobileNav(){
   
   links.forEach(link => {
     link.addEventListener('click', () => {
+      const linkURL = link.querySelector('a')?.href;
+      if (linkURL === window.location?.href || linkURL === '' || !linkURL) return;
       navbar.classList.contains('is-open') ? navbar.classList.remove('is-open') : null;
       document.body.classList.contains('nav-open') ? document.body.classList.remove('nav-open') : null;
     });

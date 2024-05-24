@@ -4,6 +4,7 @@ export function navClick() {
     link.addEventListener('click', function(e) {
       e.preventDefault();
       const linkURL = link.querySelector('a').href;
+      if (linkURL === window.location.href || linkURL === '') return;
       document.querySelector('.current-menu-item')?.classList.remove('current-menu-item');
       link.classList.add('current-menu-item');
       //navigate to linkURL

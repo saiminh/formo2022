@@ -10,8 +10,8 @@
     height: calc(var(--vh, 1vh) * 100);
     padding-left: 0;
     padding-right: 0;
-    margin-left: calc(-1 * var(--wp--custom--spacing--outer)) !important;
-    margin-right: calc(-1 * var(--wp--custom--spacing--outer)) !important;
+    // margin-left: calc(-1 * var(--wp--custom--spacing--outer)) !important;
+    // margin-right: calc(-1 * var(--wp--custom--spacing--outer)) !important;
   }
   .formo-hero-text {
     position: absolute!important;
@@ -78,8 +78,8 @@
     min-height: 100vh;
     padding-left: 0;
     padding-right: 0;
-    margin-left: calc(-1 * var(--wp--custom--spacing--outer)) !important;
-    margin-right: calc(-1 * var(--wp--custom--spacing--outer)) !important;
+    // margin-left: calc(-1 * var(--wp--custom--spacing--outer)) !important;
+    // margin-right: calc(-1 * var(--wp--custom--spacing--outer)) !important;
   }
   
   .formo-hero-text {

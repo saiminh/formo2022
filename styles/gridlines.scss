@@ -229,7 +229,18 @@ h1, h2, h3, h4 {
   }
 }
 
-
+@include bps.bp-down(bigTablet) {
+  // to create some vertical spacing between mobile elements
+  :where(body .is-layout-flex) {
+    gap: 1em;
+  }
+  .wp-block-column:empty + .wp-block-column:empty {
+    display: none;
+  }
+  .wp-block-columns + .wp-block-columns {
+    margin-top: 1em
+  }
+}
 @include bps.bp(bigTablet) {
   .is-straddling-gridline {
     transform: translateX( calc( -50% - 0.5 * var(--wp--custom--spacing--between) ) );
