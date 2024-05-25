@@ -234,7 +234,7 @@ h1, h2, h3, h4 {
   :where(body .is-layout-flex) {
     gap: 1em;
   }
-  .wp-block-column:empty + .wp-block-column:empty {
+  .wp-block-column:empty {
     display: none;
   }
   .wp-block-columns + .wp-block-columns {
