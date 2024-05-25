@@ -9,6 +9,11 @@ const { RichTextToolbarButton } = window.wp.blockEditor;
     icon: 'arrow-down',
   },
   {
+    name: 'smaller-top',
+    title: ' Smaller Top',
+    icon: 'arrow-up',
+  },
+  {
     name: 'wide',
     title: ' Wide',
     icon: 'leftright',

@@ -50,13 +50,20 @@
     position: absolute;
     right: calc( var(--wp--custom--spacing--outer) * -1 );
     width: 45%;
-    // animation: handIn .5s cubic-bezier(0.645, 0.045, 0.355, 1.000) .8s forwards;
+    animation: handIn .5s cubic-bezier(0.645, 0.045, 0.355, 1.000) .8s both;
     transform-origin: 100% 100%;
-    // transform: translate(100%, 10%) rotate(-45deg);
     transform: translate(10%, 0) rotate(0deg);
-    // animation: name duration timing-function delay iteration-count direction fill-mode;
+
+    & img {
+      width: 100%;
+    }
+  }
+  wbr:after {
+    content: '-';
+    position: absolute;
   }
 }
+
 
 @media (max-width: 690px) {
 
@@ -89,16 +96,34 @@
       right: calc( var(--wp--custom--spacing--outer) * -4 );
       width: 80%;
       bottom: 0;
-      animation: handInMobile .5s cubic-bezier(0.645, 0.045, 0.355, 1.000) .8s forwards;
+      animation: handInMobile .5s cubic-bezier(0.645, 0.045, 0.355, 1.000) .8s both;
       transform-origin: 100% 50%;
     }
   }
-
 }
 
-@include bps.bp-down(smallTablet) {
+@include bps.bp-down(bigTablet) {
   .formo-hero.formo-hero-mission .formo-hero-text h1 { 
-    font-size: 26vw;
+    font-size: 20vw;
+  }
+}
+
+//German special rules bcs of umlaut a and different layout
+html[lang="de-DE"] .formo-hero.formo-hero-mission,
+.pll-lang-de .formo-hero.formo-hero-mission {
+
+  & .wp-block-image {
+    right: -5%;
+    top: 46%;
+  }
+  @include bps.bp-down(bigTablet) {
+    & .formo-hero-text h1 { 
+      line-height: 1!important; // compensate for Ä uppercase
+    }
+    & .wp-block-image {
+      right: calc( var(--wp--custom--spacing--outer) * -4 );
+      top: auto;
+    }
   }
 }
 
