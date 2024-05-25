@@ -6,10 +6,12 @@ import { teamMemberSorting } from './teammember-sorting';
 import { videoPlayPauseOnScroll } from './videoPlayPauseOnScroll';
 import { videoPlayPauseOnHover } from './videoPlayPauseOnHover';
 import { accordion } from './accordion';
+import { currentNav } from './nav-current';
 
 mobileNav();
 hideNav();
 subNav();
+currentNav();
 languageSwitcher();
 teamMemberSorting();
 videoPlayPauseOnScroll();
