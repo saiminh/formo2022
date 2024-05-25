@@ -3,7 +3,7 @@
 
 .formo-navi, .formo-navi-24 {
   transform: translateY(0%);
-  transition: transform .4s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  transition: all .4s cubic-bezier(0.645, 0.045, 0.355, 1.000);
 
   body.nav-hidden & {
     transform: translateY(-100%);
