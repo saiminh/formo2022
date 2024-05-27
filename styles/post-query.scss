@@ -70,8 +70,8 @@
   max-width: var(--wp--custom--width--col-10);
 }
 
-.formo-blog-query.wp-block-query .wp-block-categories__list,
-.formo-blog-query.wp-block-query .wp-block-categories-list {
+ .wp-block-categories__list,
+ .wp-block-categories-list {
   padding-bottom: 1em; 
   display: flex;
   gap: .25em;
@@ -80,6 +80,7 @@
     list-style: none;
     margin-bottom: 0;
     margin-left: 0;
+    
     @include bps.bp-down(bigTablet) {
       font-size: var(--wp--preset--font-size--small);
     }
@@ -94,6 +95,11 @@
     background-color: var(--wp--preset--color--formo-cream);
     position: relative;
     z-index: 1;
+  }
+  & li.active a {
+    background-color: var(--wp--preset--color--formo-blue);
+    color: var(--wp--preset--color--formo-cream);
+    border-color: var(--wp--preset--color--formo-blue);
   }
   & li.current-cat a {
     background-color: var(--wp--preset--color--formo-darktone);
@@ -156,13 +162,13 @@
 }
 
 // the Ball doesn't work in the editor but in the front-end
-div:not(.block-editor-block-list__layout) {
-  .formo-blog-query.wp-block-query .wp-block-post {
-    &:nth-child(6) {
-      @include mixins.post-card-small-ball;
-      @include bps.bp(bigTablet) {
-        max-height: calc( var(--wp--custom--width--col-3) - 0.752 * var(--wp--custom--spacing--between) );
-      }
-    }
-  }
-}
+// div:not(.block-editor-block-list__layout) {
+//   .formo-blog-query.wp-block-query .wp-block-post {
+//     &:nth-child(6) {
+//       @include mixins.post-card-small-ball;
+//       @include bps.bp(bigTablet) {
+//         max-height: calc( var(--wp--custom--width--col-3) - 0.752 * var(--wp--custom--spacing--between) );
+//       }
+//     }
+//   }
+// }

@@ -68,11 +68,11 @@ main.content-wrapper > .entry-content > .alignfull:first-child > figure.wp-block
   @include mixins.post-card;
   @include mixins.post-card-small;
 }
-.more-posts-query:not(.block-editor-block-list__block) .wp-block-post{
-  &:nth-child(3) {
-    @include mixins.post-card-small-ball;
-  }
-}
+// .more-posts-query:not(.block-editor-block-list__block) .wp-block-post{
+//   &:nth-child(3) {
+//     @include mixins.post-card-small-ball;
+//   }
+// }
 
 body .is-layout-constrained > .latest-posts-header + div {
   margin-block-start: 1rem;

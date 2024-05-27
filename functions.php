@@ -142,3 +142,15 @@ add_filter( 'mcfb_email_to', function ( $to, $form ) {
   $to = 'hello@formo.bio';
   return $to;
 }, 10, 2 );
+
+function add_active_class_to_current_category( $output ) {
+  if ( is_single() ) {
+      global $post;
+      foreach ( ( get_the_category( $post->ID ) ) as $category ) {
+          // replace 'cat-item-' with 'cat-item- active' for the current category
+          $output = str_replace( 'cat-item-' . $category->term_id . '"', 'cat-item-' . $category->term_id . ' active"', $output );
+      }
+  }
+  return $output;
+}
+add_filter( 'wp_list_categories', 'add_active_class_to_current_category' );
