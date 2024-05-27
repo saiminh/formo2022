@@ -36,6 +36,10 @@ h1, h2, h3, h4, h5 {
     max-width: 150%!important;
     z-index: 2!important;
     position: relative;
+
+    &.overflow-left {
+      transform: translateX(-36.666%);
+    }
   }
   .text-overflow-200 {
     overflow-x: visible;
@@ -44,6 +48,10 @@ h1, h2, h3, h4, h5 {
     max-width: 200%!important;
     z-index: 2!important;
     position: relative;
+
+    &.overflow-left {
+      transform: translateX(-50%);
+    }
   }
   .text-overflow-250 {
     overflow-x: visible;
@@ -52,6 +60,10 @@ h1, h2, h3, h4, h5 {
     max-width: 250%!important;
     z-index: 2!important;
     position: relative;
+    
+    &.overflow-left {
+      transform: translateX(-50%);
+    }
   }
   .text-overflow-300 {
     overflow-x: visible;
