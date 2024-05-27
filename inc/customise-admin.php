@@ -87,9 +87,14 @@ function override_admin_bar_css() {
         background: black;
         color: white;
       }
+      .editor-styles-wrapper .edit-post-visual-editor__post-title-wrapper {
+        margin-top: 0!important;
+      }
       .editor-styles-wrapper .edit-post-visual-editor__post-title-wrapper h1 {
         font-family: var(--wp--preset--font-family--roobert);
         text-transform: none;
+        margin: 0;
+        padding: 0;
       }
       .editor-styles-wrapper h1.components-heading, 
       .editor-styles-wrapper h2.components-heading, 
@@ -127,6 +132,21 @@ function override_admin_bar_css() {
       .block-editor-default-block-appender .block-editor-inserter {
         top: 100%;
         left:0;
+      }
+      .post-type-formo2022_teammember .wp-block-post-title {
+        margin-top: 1em;
+      }
+      .post-type-formo2022_teammember figure.wp-block-image {
+        width: auto;
+        height: 100%;
+        max-height: 320px;
+        max-width: 320px;
+      }
+      .post-type-formo2022_teammember figure.wp-block-image img {
+        width: auto;
+        height: 100%;
+        max-height: 300px;
+        position: relative;
       }
     </style>
   <?php }
