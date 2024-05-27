@@ -208,27 +208,27 @@ h1, h2, h3, h4 {
   }
 }
 
-.wp-block-post-template.is-flex-container.is-flex-container.columns-4 > li:nth-child(3) {
+// .wp-block-post-template.is-flex-container.is-flex-container.columns-4 > li:nth-child(3) {
 
-  width: calc( var(--wp--custom--width--col-3) - .752 * var(--wp--custom--spacing--between) );
-  flex-basis: calc( var(--wp--custom--width--col-3) - .752 * var(--wp--custom--spacing--between) );
-  height: calc( var(--wp--custom--width--col-3) - .752 * var(--wp--custom--spacing--between) );
-  align-self: center;
+//   width: calc( var(--wp--custom--width--col-3) - .752 * var(--wp--custom--spacing--between) );
+//   flex-basis: calc( var(--wp--custom--width--col-3) - .752 * var(--wp--custom--spacing--between) );
+//   height: calc( var(--wp--custom--width--col-3) - .752 * var(--wp--custom--spacing--between) );
+//   align-self: center;
   
-  @include bps.bp-down(large) {
-    width: calc( var(--wp--custom--width--col-6) - .752 * var(--wp--custom--spacing--between) );
-    flex-basis: calc( var(--wp--custom--width--col-6) - .752 * var(--wp--custom--spacing--between) );
-    height: calc( var(--wp--custom--width--col-6) - .752 * var(--wp--custom--spacing--between) );
-  }
+//   @include bps.bp-down(large) {
+//     width: calc( var(--wp--custom--width--col-6) - .752 * var(--wp--custom--spacing--between) );
+//     flex-basis: calc( var(--wp--custom--width--col-6) - .752 * var(--wp--custom--spacing--between) );
+//     height: calc( var(--wp--custom--width--col-6) - .752 * var(--wp--custom--spacing--between) );
+//   }
   
-  @include bps.bp-down(smallTablet) {
-    width: var(--wp--custom--width--col-12);
-    height: var(--wp--custom--width--col-12);
-    flex-basis: var(--wp--custom--width--col-12);
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
+//   @include bps.bp-down(smallTablet) {
+//     width: var(--wp--custom--width--col-12);
+//     height: var(--wp--custom--width--col-12);
+//     flex-basis: var(--wp--custom--width--col-12);
+//     margin-left: auto;
+//     margin-right: auto;
+//   }
+// }
 
 @include bps.bp-down(bigTablet) {
   // to create some vertical spacing between mobile elements
