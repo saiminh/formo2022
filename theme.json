@@ -45,7 +45,7 @@
 			"palette": [
         {
           "slug": "formo-grey",
-          "color": "#f0f0ff",
+          "color": "#edeaff",
           "name": "Formo Grey"
         },
 				{
@@ -55,27 +55,27 @@
 				},
 				{
 					"slug": "formo-darktone",
-					"color": "#191931",
+					"color": "#0a0a37",
 					"name": "Formo Darktone"
 				},
         {
           "slug": "formo-yellow",
-          "color": "#ffCA11",
+          "color": "#ffca11",
           "name": "Formo Yellow"
         },
 				{
           "slug": "formo-peach",
-					"color": "#ff8064",
+					"color": "#FE5121",
 					"name": "Formo Peach"
 				},
 				{
           "slug": "formo-green",
-					"color": "#64ff73",
+					"color": "#119e38",
 					"name": "Formo Green"
 				},
 				{
           "slug": "formo-cream",
-					"color": "#fff7E8",
+					"color": "#fff7e8",
 					"name": "Formo Cream"
 				},
         {
