@@ -28,12 +28,6 @@
   .gridline-middle-bg-formo-blue:before {
     border-color: var(--wp--preset--color--formo-blue);
   }
-  .text-overflow-150 {
-    overflow-x: visible;
-    word-break: keep-all;
-    width: 150%;
-    z-index: 2!important;
-  }
 }
 
 @include bps.bp-down(bigTablet) {

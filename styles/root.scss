@@ -55,6 +55,9 @@ p, li:not(.wp-social-link) {
 p + p {
   margin-top: 1em;
 }
+p + .wp-block-buttons {
+  margin-top: 1em;
+}
 ul, ol {
   padding-left: 0;
 }

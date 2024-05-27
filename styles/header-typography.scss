@@ -1,3 +1,5 @@
+@use './breakpoints.scss' as bps;
+
 h1, h2, h3, h4, h5 {
   font-family: Krana, sans-serif;
   text-transform: uppercase;
@@ -25,4 +27,38 @@ h1, h2, h3, h4, h5 {
 
 .has-formo-cream-background-color .outlined {
   -webkit-text-stroke-color: var(--wp--preset--color--formo-blue);
+}
+@include bps.bp(bigTablet) {
+  .text-overflow-150 {
+    overflow-x: visible;
+    word-break: keep-all;
+    width: 150%;
+    max-width: 150%!important;
+    z-index: 2!important;
+    position: relative;
+  }
+  .text-overflow-200 {
+    overflow-x: visible;
+    word-break: keep-all;
+    width: 200%;
+    max-width: 200%!important;
+    z-index: 2!important;
+    position: relative;
+  }
+  .text-overflow-250 {
+    overflow-x: visible;
+    word-break: keep-all;
+    width: 250%;
+    max-width: 250%!important;
+    z-index: 2!important;
+    position: relative;
+  }
+  .text-overflow-300 {
+    overflow-x: visible;
+    word-break: keep-all;
+    width: 300%;
+    max-width: 300%!important;
+    z-index: 2!important;
+    position: relative;
+  }
 }
