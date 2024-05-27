@@ -72,12 +72,12 @@
 
  .wp-block-categories__list,
  .wp-block-categories-list {
-  padding-bottom: 1em; 
   display: flex;
   gap: .25em;
   
   & li {
     list-style: none;
+    margin-top: 0;
     margin-bottom: 0;
     margin-left: 0;
     
