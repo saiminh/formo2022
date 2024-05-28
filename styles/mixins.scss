@@ -185,6 +185,7 @@
   & > .wp-block-group > .wp-block-columns > .wp-block-column:first-child {
       height: 160px;
       padding: 0;
+      margin-left: 0;
 
       @include bps.bp-down(bigTablet) {
         flex: 33% 0 0!important;

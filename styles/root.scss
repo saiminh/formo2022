@@ -54,7 +54,12 @@ p, li:not(.wp-social-link) {
 } 
 p + p,
 p + .wp-block-quote,
-p + .wp-block-buttons {
+p + blockquote,
+p + .wp-block-buttons,
+p + ul, p + ol, ul + p, ol + p,
+figure + p, p + figure,
+:where(h1, h2, h3, h4, h5) + p,
+p + :where(h1, h2, h3, h4, h5) {
   margin-top: 1em;
 }
 ul, ol {
