@@ -28,6 +28,11 @@ h1, h2, h3, h4, h5 {
 .has-formo-cream-background-color .outlined {
   -webkit-text-stroke-color: var(--wp--preset--color--formo-blue);
 }
+@include bps.bp-down(bigTablet) {
+  [class*="text-overflow-"].overflow-left {
+    text-align: left;
+  }
+}
 @include bps.bp(bigTablet) {
   .text-overflow-150 {
     overflow-x: visible;
