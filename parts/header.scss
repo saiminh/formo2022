@@ -87,7 +87,7 @@ ul.wp-block-navigation__container li {
     transition: all .3s ease-in-out;
   }
   .formo-navi a.wp-block-navigation-item__content.currentNavLink,
-  .formo-navi .current-menu-item > a.wp-block-navigation-item__content,
+  .formo-navi .current-menu-item:not(.anchorlink) > a.wp-block-navigation-item__content,
   .formo-navi a.wp-block-navigation-item__content:has( + .wp-block-navigation__submenu-container .current-menu-item) {
     color: var(--wp--preset--color--formo-cream)!important;
     padding-left: 1.81em;
