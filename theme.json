@@ -229,7 +229,7 @@
 		},
 		"layout": {
 			"contentSize": "100%",
-			"wideSize": "1000px"
+			"wideSize": "calc(100vw - 2 * var(--wp--custom--spacing--outer))"
 		}
 	},
 	"styles": {

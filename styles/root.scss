@@ -203,11 +203,22 @@ form label {
   overflow: hidden;
   transform: translate3d(0,0,0);
 }
-.grow {
+.col-grow {
   flex-grow: 1!important;
 }
-.shrink {
+.col-shrink {
   flex-shrink: 1!important;
+}
+.alignfull {
+  width: 100vw!important;
+  margin-left: 0!important;
+  margin-right: 0!important;
+}
+.wp-block-group.has-background > .alignfull {
+  margin-left: calc(-1 * var(--wp--custom--spacing--outer))!important;
+}
+.wp-block-group.has-background > .wp-block-columns.alignfull > .wp-block-column > * {
+  padding-left: var(--wp--custom--spacing--outer);
 }
 .invert-x > img {
   transform: scaleX(-1);

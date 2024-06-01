@@ -1,8 +1,0 @@
-@use 'breakpoints.scss' as bps;
-@use 'mixins.scss' as mixins;
-
-@include bps.bp(bigTablet) {
-  .contact-content.wp-block-group.has-background {
-    // padding: 0 3rem;
-  }
-}
