@@ -2,7 +2,8 @@
 
 .wp-block-button__link,
 .wp-block-button > .wp-block-button__link,
-.wp-block-button.is-style-outline > .wp-block-button__link {
+.wp-block-button.is-style-outline > .wp-block-button__link,
+input[type="submit"] {
   @include mixins.button;
 }
 

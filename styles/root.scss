@@ -18,10 +18,12 @@ body {
 }
 
 textarea,
+select,
 input.text,
 input[type="text"],
 input[type="search"],
 input[type="button"],
+input[type="submit"],
 input[type="submit"],
 .input-checkbox {
   appearance: none;
@@ -179,10 +181,19 @@ label {
 .wp-block-column.has-full-height > * {
   flex-basis: 50%;
 }
-input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], textarea {
-  border-radius: 20px;
-  padding: 0.5em 1em;
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], textarea, select {
+  border-radius: 2em;
+  padding: 1em 1.5em;
   border: 1px solid var(--wp--preset--color--formo-darktone);
+  font-family: var(--wp--preset--font-family--roobert);
+  box-sizing: border-box;
+}
+select {
+  background: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 1em);
+  background-position-y: 50%;
 }
 form label {
   font-size: var(--wp--preset--font-size--small);
@@ -191,6 +202,12 @@ form label {
   border-radius: 15px;
   overflow: hidden;
   transform: translate3d(0,0,0);
+}
+.grow {
+  flex-grow: 1!important;
+}
+.shrink {
+  flex-shrink: 1!important;
 }
 .invert-x > img {
   transform: scaleX(-1);
@@ -214,7 +231,6 @@ figure.figure-ignores-padding img {
   }
 }
 
-
 @include bps.bp(bigTablet) {
   .desktop-top-offset-large {
     margin-top: -25%!important;
@@ -225,15 +241,10 @@ figure.figure-ignores-padding img {
   .mobile-max-width-17em {
     max-width: 17em;
   }
-  .wp-block-spacer:not(.hide-on-mobile) {
-    height: 2em !important;
-  }
   .columns-reversed-on-mobile {
     flex-direction: column-reverse;
   }
 }
-
-
 
 [style*="line-height:0.2"] ,
 [style*="line-height: 0.2"] {
