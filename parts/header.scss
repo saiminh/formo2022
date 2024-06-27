@@ -507,8 +507,8 @@ ul.wp-block-navigation__container li {
     }
     //submenu items
     & .wp-block-navigation__submenu-container .wp-block-navigation-item__content {
-      background-color: var(--wp--preset--color--formo-cream);
-      color: var(--wp--preset--color--formo-blue);
+      background-color: var(--wp--preset--color--formo-blue);
+      color: var(--wp--preset--color--formo-cream);
     }
   }
   @include bps.bp-down(bigTablet) {
