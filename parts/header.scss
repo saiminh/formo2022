@@ -109,8 +109,13 @@ ul.wp-block-navigation__container li {
     }
   }
   // submenu items
+  .formo-navi .wp-block-navigation .has-child:not(.open-on-click):hover>.wp-block-navigation__submenu-container {
+    width: 100%;
+  }
   .formo-navi .wp-block-navigation__submenu-container .wp-block-navigation-item > a.wp-block-navigation-item__content {
     font-size: .9em;
+    width: 100%;
+    overflow: hidden;
   }
   .formo-navi .wp-block-navigation__submenu-container .wp-block-navigation-item:hover > a.wp-block-navigation-item__content {
     text-decoration: none;
