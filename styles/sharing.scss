@@ -1,0 +1,31 @@
+.formo-share{
+  & .wp-social-link-chain {
+    position: relative;
+    overflow: visible;
+  }
+  & .wp-social-link-chain.copied:before {
+    content: 'Copied!';
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--wp--preset--color--formo-blue);
+    color: var(--wp--preset--color--formo-cream);
+    font-size: .75rem;
+    padding: .5em;
+    border-radius: 6px;
+    width: 200%;
+    display: inline-block;
+    text-align: center;
+  }
+  & .wp-social-link-chain.copied:after {
+    content: '';
+    position: absolute;
+    top: calc(-100% + 1.5rem + 2.5px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: var(--wp--preset--color--formo-blue);
+    width: 0;
+  }
+}

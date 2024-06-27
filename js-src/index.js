@@ -7,7 +7,9 @@ import { videoPlayPauseOnScroll } from './videoPlayPauseOnScroll';
 import { videoPlayPauseOnHover } from './videoPlayPauseOnHover';
 import { accordion } from './accordion';
 import { currentNav } from './nav-current';
+import { addSharing } from './addSharing';
 
+addSharing();
 mobileNav();
 hideNav();
 subNav();
