@@ -2,6 +2,7 @@ export function languageSwitcher() {
   const switcher = document.querySelector('.wp-block-polylang-language-switcher');
 
 
+  console.log('switcher', switcher);
   switcher.addEventListener('mouseenter', () => {
     switcher.classList.toggle('expanded');
   })

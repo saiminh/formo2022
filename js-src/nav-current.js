@@ -13,7 +13,8 @@ export function currentNav(){
   else { null };
 
   const firstContainer = document.querySelector('.entry-content > :first-child');
-  const allClasses = Array.from(firstContainer.classList);
+  if (!firstContainer) return;
+  const allClasses = Array.from(firstContainer?.classList);
   const newBgClass = allClasses.filter( (className) => {
     return className.includes('has-formo-');
   })
