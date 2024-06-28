@@ -209,7 +209,7 @@ form label {
 .col-shrink {
   flex-shrink: 1!important;
 }
-.alignfull {
+.alignfull:not(.teammember-single-content) {
   width: 100vw!important;
   margin-left: 0!important;
   margin-right: 0!important;
