@@ -70,21 +70,6 @@
         height: var(--wp--preset--font-size--small);
       }
     }
-  
-    &::before, 
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: calc( var(--wp--custom--spacing--outer) - 1px );
-      width: 1px;
-      height: 65px;
-      background-color: var(--wp--preset--color--formo-cream);
-    }
-    &::after {
-      left: auto;
-      right: var(--wp--custom--spacing--outer);
-    }
   }
   .footer-hygiene-text {
   
