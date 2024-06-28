@@ -7,6 +7,10 @@ input[type="submit"] {
   @include mixins.button;
 }
 
+.meow-contact-form--default .meow-contact-form__group-button {
+  @include mixins.button;
+}
+
 body .is-layout-flex.wp-block-buttons {
   gap: .25em;
 }
