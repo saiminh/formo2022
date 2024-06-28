@@ -85,9 +85,10 @@
   
   .formo-hero-text {
     position: absolute!important;
-    top: var(--wp--custom--height--navbar);
+    top: 0;
     left: var(--wp--custom--spacing--outer);
     right: var(--wp--custom--spacing--outer);
+    padding-top: var(--wp--custom--height--navbar);
     bottom: 0;
     display: flex;
     margin: 0!important;
