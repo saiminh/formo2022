@@ -103,6 +103,12 @@
 // -------------------------
 }
 @include bp.bp-down(bigTablet) {
+
+  .wp-site-blocks > footer.wp-block-template-part > .wp-block-group.has-background {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
   .formo-footer {
     position: relative;
     
@@ -147,21 +153,6 @@
         width: var(--wp--preset--font-size--small);
         height: var(--wp--preset--font-size--small);
       }
-    }
-  
-    &::before, 
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: calc(var(--wp--custom--spacing--outer) * 0.5);
-      width: 1px;
-      height: 100%;
-      background-color: var(--wp--preset--color--formo-cream);
-    }
-    &::after {
-      left: auto;
-      right: calc(var(--wp--custom--spacing--outer) * 0.5);
     }
   }
   .formo-footer > .wp-block-columns:first-child > .wp-block-column,
