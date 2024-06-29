@@ -457,6 +457,21 @@ ul.wp-block-navigation__container li {
   & .wp-block-columns .wp-block-column:nth-child(1) {
     border-bottom-color: var(--wp--preset--color--formo-cream);
   }
+  & .wp-block-columns .wp-block-column:nth-child(1) figure a:after,
+  & .wp-block-columns .wp-block-column:nth-child(2):before {
+    background-color: var(--wp--preset--color--formo-cream);
+  }
+  & .wp-block-polylang-language-switcher {
+    background-color: var(--wp--preset--color--formo-cream);
+
+    &:after {
+      color: var(--wp--preset--color--formo-blue);
+    }
+
+    & .lang-item a {
+      color: var(--wp--preset--color--formo-blue);
+    }
+  }
   @include bps.bp(bigTablet) {
     & a.wp-block-navigation-item__content:hover {
       text-decoration: none;
