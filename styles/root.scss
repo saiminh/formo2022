@@ -71,7 +71,8 @@ ul, ol {
 ul li, ol li {
   margin-top: 1em;
 }
-.content-wrapper ul:not(.wp-block-post-template) li:not(.wp-social-link):not(.cat-item), .content-wrapper ol li {
+.content-wrapper ul:not(.wp-block-post-template, .wp-block-navigation__container) li:not(.wp-social-link):not(.cat-item), 
+.content-wrapper ol li {
   margin-left: 1em;
 }
 blockquote {
