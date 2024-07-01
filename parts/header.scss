@@ -488,6 +488,12 @@ ul.wp-block-navigation__container li {
       color: var(--wp--preset--color--formo-blue);
     }
   }
+  @include bps.bp-down(bigTablet) {
+    //submenu items
+    & .wp-block-navigation__submenu-container .wp-block-navigation-item .wp-block-navigation-item__content {
+      color: var(--wp--preset--color--formo-cream);
+    }
+  }
 }
 // -----------------------
 // DARKTONE BG COLOR
