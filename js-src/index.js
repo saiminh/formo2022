@@ -10,7 +10,6 @@ import { currentNav } from './nav-current';
 import { addSharing } from './addSharing';
 import { cheeseAlternative } from './cheese-alternative';
 
-cheeseAlternative();
 addSharing();
 mobileNav();
 hideNav();
@@ -21,6 +20,12 @@ teamMemberSorting();
 videoPlayPauseOnScroll();
 videoPlayPauseOnHover();
 accordion();
+document.addEventListener('DOMContentLoaded', () => {
+  // Put this one on a timeout and behind domloaded so that the other JS generated elements are already there eg the newsticker
+  setTimeout(() => {
+    cheeseAlternative();
+  }, 1000)
+})
 
 // Fake vh for mobile
 var vh = window.innerHeight * 0.01;
