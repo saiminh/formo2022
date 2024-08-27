@@ -24,9 +24,7 @@ export function cheeseAlternative(){
           entry.target.classList.remove('alternative-pill--hiding');
         }, 2500);
         entry.target.setAttribute('hasIntersectedOnce', 'true');
-      } else {
-        //nothing
-      }
+      } 
     });
   }
 
@@ -34,10 +32,11 @@ export function cheeseAlternative(){
     
     const alternativePill = document.createElement('span');
     alternativePill.classList.add('alternative-pill');
-    //add the pill inside the abbr tag
+    
     const alternativePillInner = document.createElement('span');
     alternativePillInner.classList.add('alternative-pill-inner');
     alternativePillInner.textContent = '*alternative';
+    
     alternativePill.appendChild(alternativePillInner);
     cheese.appendChild(alternativePill);
 
@@ -70,10 +69,15 @@ export function cheeseAlternative(){
     else {
       alternativePillInner.style.color = parentBgColor;
     }
-
     
+    // add event listeners to show and hide the alternative pill
     cheese.addEventListener('mouseover', () => {
-      cheese.classList.add('alternative-pill--showing');
+      if ( cheese.classList.contains('alternative-pill--hiding') ) {
+        cheese.classList.remove('alternative-pill--hiding');
+      }
+      if (!cheese.classList.contains('alternative-pill--showing')) {
+        cheese.classList.add('alternative-pill--showing');
+      } 
     });
     cheese.addEventListener('mouseout', () => {
       cheese.classList.remove('alternative-pill--showing');
