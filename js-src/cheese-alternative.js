@@ -45,7 +45,13 @@ export function cheeseAlternative(){
       //get the closest parent of cheese that has a class of 'has-background'
       const parent = cheese.closest('.has-background');
       //get the computed background-color of the parent
-      const computedParentStyle = window.getComputedStyle(parent);
+      let computedParentStyle;
+      if (parent) {
+        computedParentStyle = window.getComputedStyle(parent);
+      }
+      else {
+        computedParentStyle = window.getComputedStyle(document.body);
+      }
       const parentBgColor = computedParentStyle.backgroundColor;
 
       //get the computed text color of cheese
