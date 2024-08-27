@@ -43,12 +43,12 @@ if ( ! function_exists( 'formo2022_styles' ) ) :
 	 * @return void
 	 */
 
-  function enqueue_cookieyes_first() {
-    //enqueue cookieyes script first befor all other scripts
-    wp_enqueue_script( 'cookieyes', 'https://cdn-cookieyes.com/client_data/5c65f2f66d288c2936293391/script.js', array(), '1.0', false );
-  }
+  // function enqueue_cookieyes_first() {
+  //   //enqueue cookieyes script first befor all other scripts
+  //   wp_enqueue_script( 'cookieyes', 'https://cdn-cookieyes.com/client_data/5c65f2f66d288c2936293391/script.js', array(), '1.0', false );
+  // }
 
-  add_action( 'wp_enqueue_scripts', 'enqueue_cookieyes_first', 1 );
+  // add_action( 'wp_enqueue_scripts', 'enqueue_cookieyes_first', 1 );
 
   // add_filter( 'script_loader_tag', 'my_script_attributes', 10, 3 );
 

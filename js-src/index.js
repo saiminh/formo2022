@@ -8,7 +8,9 @@ import { videoPlayPauseOnHover } from './videoPlayPauseOnHover';
 import { accordion } from './accordion';
 import { currentNav } from './nav-current';
 import { addSharing } from './addSharing';
+import { cheeseAlternative } from './cheese-alternative';
 
+cheeseAlternative();
 addSharing();
 mobileNav();
 hideNav();
