@@ -30,16 +30,6 @@ export function cheeseAlternative(){
 
   cheeseOccurences.forEach(cheese => {
 
-    const cheeseRect = cheese.getBoundingClientRect();
-    // check how far the cheese is from the right side of the viewport
-    const distanceFromRight = window.innerWidth - cheeseRect.right;
-    let isOnRightBorder = false;
-    if ( distanceFromRight < 200 ) {
-      cheese.classList.add('alternative-pill--right');
-    }
-    
-    
-
     const alternativePill = document.createElement('span');
     alternativePill.classList.add('alternative-pill');
     
@@ -79,6 +69,15 @@ export function cheeseAlternative(){
     else {
       alternativePillInner.style.color = parentBgColor;
     }
+
+    // check how far the cheese is from the right side of the viewport
+    const cheeseRect = cheese.getBoundingClientRect();
+    const alternativePillRect = alternativePill.getBoundingClientRect();
+    const distanceFromRight = window.innerWidth - cheeseRect.right; 
+    if ( distanceFromRight < alternativePillRect.width + 20 ) {
+      cheese.classList.add('alternative-pill--right');
+    }
+
     
     // add event listeners to show and hide the alternative pill
     cheese.addEventListener('mouseover', () => {
