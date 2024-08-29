@@ -1,8 +1,8 @@
 abbr[data-title="alternative"] {
   text-decoration: none;
   position: relative;
-  // padding-right: .15em;
   cursor: help;
+  white-space: nowrap;
 
   &:after {
     content: "*";
