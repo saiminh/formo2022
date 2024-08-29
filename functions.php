@@ -71,7 +71,7 @@ if ( ! function_exists( 'formo2022_styles' ) ) :
 		$version_string = is_string( $theme_version ) ? $theme_version : false;
 		wp_register_style(
 			'formo2022-style',
-			get_template_directory_uri() . '/index.css',
+			get_template_directory_uri() . '/index.css?v='.time(),
 			array(),
 			$version_string
 		);
