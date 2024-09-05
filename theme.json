@@ -173,6 +173,7 @@
 					]
 				}
 			],
+      "defaultFontSizes": false,
 			"fontSizes": [
 				{
 					"size": "clamp(0.66rem , 0.6vw, 1rem)",
