@@ -1,4 +1,5 @@
 const { createElement, Fragment } = window.wp.element
+const components = window.wp.components
 const { registerFormatType, toggleFormat } = window.wp.richText
 const { RichTextShortcut } = window.wp.editor;
 const { RichTextToolbarButton } = window.wp.blockEditor;
@@ -40,32 +41,62 @@ const { RichTextToolbarButton } = window.wp.blockEditor;
     registerFormatType(type, {
       title,
       tagName: 'abbr',
-      className: name,
-      attributes: {
-        'title': 'title',
-        'data-title': 'data-title'
-      },
-      edit ({ isActive, value, onChange }) {
-        const onToggle = () => onChange(
-          toggleFormat(value, { 
-            type,
-            attributes: { 
-              'title': 'alternative',
-              'data-title': 'alternative'
-            }
-          }),
-        )
-  
-        return (
-          createElement(Fragment, null,
-            createElement(RichTextToolbarButton, {
-              title,
-              icon: icon,
-              onClick: onToggle,
-              isActive,
+      className: 'star_alternative',
+      attributes: [
+        {
+          name: 'title',
+        }, {
+          name: 'data-title'
+        }
+      ],
+      edit (props) {
+        const onToggle = () => { 
+          console.log(props);
+          props.onChange(
+            toggleFormat(props.value, { 
+              type
             })
-          )
-        )
+          )}
+  
+        return [
+            createElement(Fragment, { key: 'fragment'},
+              createElement(RichTextToolbarButton, {
+                key: 'toolbarbuttn',
+                title,
+                icon: icon,
+                onClick: onToggle,
+                isActive: props.isActive,
+              }, title)
+            ),
+            props.isActive && ( createElement( components.Popover,
+              {
+                key: 'popover',
+                position: "bottom center",
+                headerTitle: "hanypanky"
+              },
+              
+                createElement( components.TextControl, {
+                  key: 'textcontrol',
+                  placeholder: "alternative",
+                  value: props.activeAttributes.title ? props.activeAttributes.title : '',
+                  style: { width: '200px' },
+                  onChange:  (newName) => {
+                    newval = wp.richText.applyFormat(
+                        props.value,
+                        {
+                          type,
+                          attributes: { 
+                            'title': newName || 'alternative',
+                            'data-title': newName || 'alternative'
+                          }
+                        }
+                    );
+                    props.onChange( newval );
+                  },
+                })
+              
+            ))
+        ]
       }
     })
   }

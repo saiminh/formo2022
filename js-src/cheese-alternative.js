@@ -1,5 +1,5 @@
 export function cheeseAlternative(){
-  const cheeseOccurences = document.querySelectorAll('abbr[data-title="alternative"]');
+  const cheeseOccurences = document.querySelectorAll('abbr.star_alternative, abbr[data-title="alternative"]');
 
   if (!cheeseOccurences) {
     return;
@@ -23,7 +23,7 @@ export function cheeseAlternative(){
         setTimeout(() => {
           entry.target.classList.remove('alternative-pill--hiding');
         }, 2500);
-        entry.target.setAttribute('hasIntersectedOnce', 'true');
+        // entry.target.setAttribute('hasIntersectedOnce', 'true');
       } 
     });
   }
@@ -35,7 +35,7 @@ export function cheeseAlternative(){
     
     const alternativePillInner = document.createElement('span');
     alternativePillInner.classList.add('alternative-pill-inner');
-    alternativePillInner.textContent = '*alternative';
+    alternativePillInner.textContent = '*' + cheese.getAttribute('data-title');
     
     alternativePill.appendChild(alternativePillInner);
     cheese.appendChild(alternativePill);
