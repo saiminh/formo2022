@@ -38,23 +38,23 @@ const { RichTextToolbarButton } = window.wp.blockEditor;
   const type = 'advanced/' + name;
 
   if ( type === 'advanced/alternative' ) {
-    registerFormatType(type, {
+    registerFormatType( type, {
       title,
       tagName: 'abbr',
       className: 'star_alternative',
-      attributes: [
-        {
-          name: 'title',
-        }, {
-          name: 'data-title'
-        }
-      ],
+      attributes: {
+        title: 'title',
+        dataTitle: 'data-title'
+      },
       edit (props) {
         const onToggle = () => { 
-          console.log(props);
           props.onChange(
             toggleFormat(props.value, { 
-              type
+              type,
+              attributes: { 
+                title: 'alternative',
+                dataTitle: 'alternative'
+              }
             })
           )}
   
@@ -77,17 +77,17 @@ const { RichTextToolbarButton } = window.wp.blockEditor;
               
                 createElement( components.TextControl, {
                   key: 'textcontrol',
-                  placeholder: "alternative",
-                  value: props.activeAttributes.title ? props.activeAttributes.title : '',
+                  placeholder: "Type the pill text here",
+                  value: props.activeAttributes.title,
                   style: { width: '200px' },
                   onChange:  (newName) => {
-                    newval = wp.richText.applyFormat(
+                    const newval = wp.richText.applyFormat(
                         props.value,
                         {
                           type,
                           attributes: { 
-                            'title': newName || 'alternative',
-                            'data-title': newName || 'alternative'
+                            title: !newName ? 'alternative' : newName,
+                            dataTitle: !newName ? 'alternative' : newName
                           }
                         }
                     );
