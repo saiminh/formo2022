@@ -119,11 +119,13 @@ require get_template_directory() . '/inc/custom-image-sizes.php';
 
 // Adding support for certain span tags in Gutenberg
 function addspansupport(){
+  $theme_version = wp_get_theme()->get( 'Version' );
+  $version_string = is_string( $theme_version ) ? $theme_version : false;
   wp_enqueue_script(
     'addspansupport',
     get_template_directory_uri().'/js-src/addspansupport.js',
     array('wp-blocks', 'wp-i18n', 'wp-element', 'wp-components', 'wp-editor'),
-    '1.0', 
+    $version_string, 
     true
   );
 }

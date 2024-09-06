@@ -70,9 +70,7 @@ const { RichTextToolbarButton } = window.wp.blockEditor;
             ),
             props.isActive && ( createElement( components.Popover,
               {
-                key: 'popover',
-                position: "bottom center",
-                headerTitle: "hanypanky"
+                key: 'popover'
               },
               
                 createElement( components.TextControl, {
