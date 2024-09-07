@@ -121,3 +121,24 @@ const { RichTextToolbarButton } = window.wp.blockEditor;
     })
   }
 })
+document.addEventListener('DOMContentLoaded', () => {
+  //check if we are in the WordPress Editor
+  if (pagenow === 'page' || pagenow === 'site-editor') {
+    document.addEventListener('keydown', (e) => {
+      const activeElement = document.activeElement;
+      if (e.code === 'Space' && activeElement.tagName.toLowerCase() === 'summary') {
+        e.preventDefault();
+        //add a space character to the summary field
+        const selection = window.getSelection();
+        const range = selection.getRangeAt(0);
+        const textNode = document.createTextNode(' ');
+        range.insertNode(textNode);
+        range.setStartAfter(textNode);
+        range.setEndAfter(textNode);
+        selection.removeAllRanges();
+        selection.addRange(range);
+
+      } 
+    });
+  }
+})
