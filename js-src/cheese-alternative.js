@@ -105,6 +105,11 @@ export function cheeseAlternative(){
       }, 500);
     });      
 
+    // IF THE POPUP IS IN THE NEWSTICKER IT'S A BIT ANNOYING
+    // if (!cheese.parentElement.classList.contains('formo-newsticker_content')) {
+    //   cheeseObserver.observe(cheese);
+    // }
+
     cheeseObserver.observe(cheese);
   });
 }
