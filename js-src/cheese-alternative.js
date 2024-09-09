@@ -54,11 +54,18 @@ export function cheeseAlternative(){
 
     //get the computed text color of cheese
     const computedStyle = window.getComputedStyle(cheese);
-    const textColor = computedStyle.color;
+    let textColor;
+    //outline text color if it is transparent
+    if (computedStyle.color === 'rgba(0, 0, 0, 0)') {
+      textColor = computedStyle.webkitTextStrokeColor || 'rgb(0, 0, 0)';
+    } 
+    else {
+      textColor = computedStyle.color
+    }
 
     //give cheese textColor as a background-color and parentBgColor as a color
     alternativePill.style.backgroundColor = textColor;
-    alternativePill.style.color = textColor;
+    alternativePill.style.color = parentBgColor;
 
     if (parentBgColor === textColor) {
       // create the inverted color of parentBgColor in rgb(r,g,b) format
@@ -69,6 +76,7 @@ export function cheeseAlternative(){
     else {
       alternativePillInner.style.color = parentBgColor;
     }
+    alternativePillInner.style.webkitTextStroke = 0;
 
     // check how far the cheese is from the right side of the viewport
     const cheeseRect = cheese.getBoundingClientRect();
