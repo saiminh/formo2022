@@ -285,7 +285,7 @@ return array(
         <!-- wp:column {"className":" span6"} -->
         <div class="wp-block-column  span6">
     
-        <!-- wp:post-featured-image {"style":{"border":{"radius":"12px"}}} /-->
+        <!-- wp:post-featured-image {"aspectRatio":"16/9","style":{"border":{"radius":"12px"}}} /-->
         
         </div>
         <!-- /wp:column -->

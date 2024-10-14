@@ -23,7 +23,7 @@ function formo2022_custom_post_type() {
           'singular_name' => __('Recipe', 'textdomain'),
       ),
       'public'       => true,
-      'has_archive'  => true,
+      'has_archive'  => false,
       'menu_icon'    => 'dashicons-food',
       'show_ui'      => true,
       'show_in_rest' => true,
@@ -45,7 +45,7 @@ function formo2022_custom_post_type() {
     'rewrite' => ['slug' => 'main_ingredient'],
     'show_admin_column' => true,
     'public' => true,
-    'has_archive' => true,
+    'has_archive' => false,
     'show_in_rest' => true,
     'labels' => [
       'singular_name' => __('Main Ingredient', 'txtdomain'),
@@ -70,7 +70,7 @@ function formo2022_custom_post_type() {
     'rewrite' => ['slug' => 'preptime'],
     'show_admin_column' => true,
     'public' => true,
-    'has_archive' => true,
+    'has_archive' => false,
     'show_in_rest' => true,
     'labels' => [
       'singular_name' => __('Preparation Time', 'txtdomain'),
@@ -95,7 +95,7 @@ function formo2022_custom_post_type() {
     'rewrite' => ['slug' => 'meal'],
     'show_admin_column' => true,
     'public' => true,
-    'has_archive' => true,
+    'has_archive' => false,
     'show_in_rest' => true,
     'labels' => [
       'singular_name' => __('Meal', 'txtdomain'),
