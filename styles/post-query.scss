@@ -89,12 +89,14 @@
   & a {
     @include mixins.button;
     @include mixins.button-outline;
-    font-size: var(--wp--preset--font-size--small);
-    color: var(--wp--preset--color--formo-darktone);
-    display: inline-block;
-    background-color: var(--wp--preset--color--formo-cream);
-    position: relative;
-    z-index: 1;
+    & {
+      font-size: var(--wp--preset--font-size--small);
+      color: var(--wp--preset--color--formo-darktone);
+      display: inline-block;
+      background-color: var(--wp--preset--color--formo-cream);
+      position: relative;
+      z-index: 1;
+    }
   }
   & li.active a {
     background-color: var(--wp--preset--color--formo-blue);

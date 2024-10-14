@@ -169,6 +169,13 @@
 							"fontStyle": "normal",
 							"fontStretch": "normal",
 							"src": [ "file:./assets/webfonts/Roobert-Light.woff2" ]
+						},
+						{
+              "fontFamily": "Roobert",
+							"fontWeight": "600",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./assets/webfonts/Roobert-SemiBold.woff2" ]
 						}
 					]
 				}

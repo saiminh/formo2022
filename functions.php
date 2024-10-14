@@ -156,3 +156,30 @@ function add_active_class_to_current_category( $output ) {
   return $output;
 }
 add_filter( 'wp_list_categories', 'add_active_class_to_current_category' );
+
+if (function_exists('pll_register_string')) {
+  $name = 'formo-recipe-header-with';
+  $string = 'with';
+  $group = 'formo-recipe-header';
+  $multiline = false;
+  pll_register_string( $name, $string, $group, $multiline );
+
+  $name = 'formo-recipe-header-preparationtime';
+  $string = 'Preparation time';
+  $group = 'formo-recipe-categorised';
+  $multiline = false;
+  pll_register_string( $name, $string, $group, $multiline );
+
+  $name = 'formo-recipe-header-ingredients';
+  $string = 'Main Ingredients';
+  $group = 'formo-recipe-categorised';
+  $multiline = false;
+  pll_register_string( $name, $string, $group, $multiline );
+
+  $name = 'formo-recipe-header-meal';
+  $string = 'Meal';
+  $group = 'formo-recipe-categorised';
+  $multiline = false;
+  pll_register_string( $name, $string, $group, $multiline );
+
+}

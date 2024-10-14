@@ -148,6 +148,28 @@ function override_admin_bar_css() {
         max-height: 300px;
         position: relative;
       }
+      .xdebug-error {
+        position: fixed;
+        top: 2em;
+        left: 2em;
+        right: 2em;
+        height: calc(100vh - 4em);
+        overflow: scroll;
+        z-index: 999999;
+        display: block;
+        /* animation: hideerror 1s 1s forwards; */
+      }
+      @keyframes hideerror {
+        0% {
+          z-index: 9999999;
+          opacity: 1;
+        }
+        100% {
+          z-index: 0;
+          opacity: 0;
+          pointer-events: none;
+        }
+      }
     </style>
   <?php }
 }

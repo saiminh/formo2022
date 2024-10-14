@@ -13,7 +13,109 @@
  * @return void
  */
 
+/* REGISTER CUSTOM POST TYPES */
 function formo2022_custom_post_type() {
+  /* RECIPE POST TYPE */
+  register_post_type( 'formo2022_recipe',
+    array(
+      'labels'      => array(
+          'name'          => __('Recipes', 'textdomain'),
+          'singular_name' => __('Recipe', 'textdomain'),
+      ),
+      'public'       => true,
+      'has_archive'  => true,
+      'menu_icon'    => 'dashicons-food',
+      'show_ui'      => true,
+      'show_in_rest' => true,
+      'rewrite'      => array( 'slug' => 'recipes' ),
+      'supports'     => array('title', 'editor', 'custom-fields', 'thumbnail'),
+      'template' => array(
+        array(
+            'core/pattern',
+            array(
+                'slug' => 'formo2022/recipe'
+            ),
+        )
+      )
+    )
+  );
+  register_taxonomy('main_ingredient', 'formo2022_recipe', [
+    'label' => __('Main Ingredient(s)', 'txtdomain'),
+    'hierarchical' => false,
+    'rewrite' => ['slug' => 'main_ingredient'],
+    'show_admin_column' => true,
+    'public' => true,
+    'has_archive' => true,
+    'show_in_rest' => true,
+    'labels' => [
+      'singular_name' => __('Main Ingredient', 'txtdomain'),
+      'all_items' => __('All Main Ingredients', 'txtdomain'),
+      'edit_item' => __('Edit Main Ingredient', 'txtdomain'),
+      'view_item' => __('View Main Ingredient', 'txtdomain'),
+      'update_item' => __('Update Main Ingredient', 'txtdomain'),
+      'add_new_item' => __('Add New Main Ingredient', 'txtdomain'),
+      'new_item_name' => __('New Main Ingredient Name', 'txtdomain'),
+      'search_items' => __('Search Main Ingredients', 'txtdomain'),
+      'popular_items' => __('Popular Main Ingredients', 'txtdomain'),
+      'separate_items_with_commas' => __('Separate Main Ingredients with comma', 'txtdomain'),
+      'choose_from_most_used' => __('Choose from most used Main Ingredients', 'txtdomain'),
+      'not_found' => __('No Main Ingredients found', 'txtdomain'),
+    ]
+  ]);
+  register_taxonomy_for_object_type('main_ingredient', 'formo2022_teammember');
+  
+  register_taxonomy('preptime', 'formo2022_recipe', [
+    'label' => __('Preparation Time', 'txtdomain'),
+    'hierarchical' => false,
+    'rewrite' => ['slug' => 'preptime'],
+    'show_admin_column' => true,
+    'public' => true,
+    'has_archive' => true,
+    'show_in_rest' => true,
+    'labels' => [
+      'singular_name' => __('Preparation Time', 'txtdomain'),
+      'all_items' => __('All Preparation Times', 'txtdomain'),
+      'edit_item' => __('Edit Preparation Time', 'txtdomain'),
+      'view_item' => __('View Preparation Time', 'txtdomain'),
+      'update_item' => __('Update Preparation Time', 'txtdomain'),
+      'add_new_item' => __('Add New Preparation Time', 'txtdomain'),
+      'new_item_name' => __('New Preparation Time Name', 'txtdomain'),
+      'search_items' => __('Search Preparation Times', 'txtdomain'),
+      'popular_items' => __('Popular Preparation Times', 'txtdomain'),
+      'separate_items_with_commas' => __('Separate Preparation Times with comma', 'txtdomain'),
+      'choose_from_most_used' => __('Choose from most used Preparation Times', 'txtdomain'),
+      'not_found' => __('No Preparation Times found', 'txtdomain'),
+    ]
+  ]);
+  register_taxonomy_for_object_type('preptime', 'formo2022_teammember');
+  
+  register_taxonomy('meal', 'formo2022_recipe', [
+    'label' => __('Meal', 'txtdomain'),
+    'hierarchical' => false,
+    'rewrite' => ['slug' => 'meal'],
+    'show_admin_column' => true,
+    'public' => true,
+    'has_archive' => true,
+    'show_in_rest' => true,
+    'labels' => [
+      'singular_name' => __('Meal', 'txtdomain'),
+      'all_items' => __('All Meals', 'txtdomain'),
+      'edit_item' => __('Edit Meal', 'txtdomain'),
+      'view_item' => __('View Meal', 'txtdomain'),
+      'update_item' => __('Update Meal', 'txtdomain'),
+      'add_new_item' => __('Add New Meal', 'txtdomain'),
+      'new_item_name' => __('New Meal Name', 'txtdomain'),
+      'search_items' => __('Search Meals', 'txtdomain'),
+      'popular_items' => __('Popular Meals', 'txtdomain'),
+      'separate_items_with_commas' => __('Separate Meals with comma', 'txtdomain'),
+      'choose_from_most_used' => __('Choose from most used Meals', 'txtdomain'),
+      'not_found' => __('No Meals found', 'txtdomain'),
+    ]
+  ]);
+  register_taxonomy_for_object_type('meal', 'formo2022_teammember');
+
+
+  /* EVENT POST TYPE */
   register_post_type( 'formo2022_event',
     array(
       'labels'      => array(
@@ -79,7 +181,7 @@ function formo2022_custom_post_type() {
       'supports' => array('title', 'editor', 'excerpt', 'eventdate', 'eventlocation', 'custom-fields', 'thumbnail'),
     )
   );
-
+  /* TEAMMEMBER POST TYPE */
   register_post_type('formo2022_teammember',
     array(
       'labels'      => array(
@@ -133,6 +235,7 @@ function formo2022_custom_post_type() {
     )
   );
   
+  /* TEAMMEMBER TRAITS */
   register_taxonomy('traits', 'formo2022_teammember', [
     'label' => __('Traits', 'txtdomain'),
     'hierarchical' => false,
@@ -158,6 +261,7 @@ function formo2022_custom_post_type() {
   ]);
   register_taxonomy_for_object_type('traits', 'formo2022_teammember');
   
+  /* TEAMMEMBER DEPARTMENT */
   register_taxonomy('department', 'formo2022_teammember', [
     'label' => __('Department', 'txtdomain'),
     'hierarchical' => false,
@@ -204,8 +308,6 @@ function teammember_fullname_meta_box_callback($post) {
 
 function add_teammember_column($columns) {
   unset( $columns['date'] );
-  unset( $columns['password'] );
-  unset( $columns['template'] );
   $columns['teammember_fullname_meta_field'] = 'Full Name';
   return $columns;
 }
@@ -222,6 +324,7 @@ function show_teammember_meta_value($column, $post_id) {
 
 
 function teammember_quick_edit_custom_box($column_name, $post_type) {
+  // unset( $column_name['date'] );
   if ($column_name != 'teammember_fullname_meta_field') return;
   ?>
     <div class="fullname_meta">

@@ -1,0 +1,15 @@
+.recipe-query-alternating-colors {
+  & .wp-block-post:nth-child(2) ,
+  & .wp-block-post:nth-child(2)[style="display: none;"] + .wp-block-post {
+    & > * {
+      background-color: var(--wp--preset--color--formo-darktone)!important;
+    }
+  } 
+  & .wp-block-post:nth-child(3),
+  & .wp-block-post:nth-child(3)[style="display: none;"] + .wp-block-post,
+  & .wp-block-post:nth-child(2)[style="display: none;"] + .wp-block-post + .wp-block-post {
+    & > * {
+      background-color: var(--wp--preset--color--formo-peach)!important;
+    }
+  } 
+}

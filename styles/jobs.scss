@@ -10,12 +10,10 @@
   & .wp-block-button__link {
     @include mixins.button;
     @include mixins.button-outline;
+  }
+  & .wp-block-button__link {
     font-size: var(--wp--preset--font-size--tiny);
     color: var(--wp--preset--color--formo-blue);
-    // background-color: transparent;
-    // border-width: 1px;
-    // border-style: solid;
-    // padding: .83em 1.39em;
   }
   & .wp-block-button__link.filter-active {
     background-color: var(--wp--preset--color--formo-blue);

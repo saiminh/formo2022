@@ -17,9 +17,10 @@
     --unit: 3.55vw;
     margin-block-start: 1em;
   }
-
-  position: relative;
-  height: calc(var(--unit) * 15);
+  & {
+    position: relative;
+    height: calc(var(--unit) * 15);
+  }
 
   & figure {
     position: absolute;

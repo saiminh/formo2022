@@ -238,9 +238,9 @@ h1, h2, h3, h4 {
   .wp-block-column:empty {
     display: none;
   }
-  .wp-block-columns + .wp-block-columns {
-    margin-top: 1em
-  }
+  // .wp-block-columns + .wp-block-columns {
+  //   margin-top: 1em
+  // }
 }
 @include bps.bp(bigTablet) {
   .is-straddling-gridline {

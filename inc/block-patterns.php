@@ -49,29 +49,9 @@ function formo2022_register_block_patterns() {
 	}
 
 	$block_patterns = array(
-		// 'footer-default',
-    // 'formo-stamp',
-		// 'header-default',
-    // 'formo-page-home',
-    // 'formo-page-cheese',
-    // 'formo-page-mission',
-    // 'formo-page-process',
-    // 'formo-page-team',
-    // 'formo-page-team-full',
-    // 'formo-page-jobs',
-    // 'formo-page-faqs',
-    // 'formo-page-contact',
-    // 'formo-page-blogpost',
-    // 'formo-hero-video',
-    // 'formo-hero-image',
-    // 'formo-hero-jobs',
-    // 'formo-biography',
-    // 'formo-biography-thumbnail',
-    // 'formo-content-glassdoor-reviews',
-    // 'formo-content-jobspage-opportunity',
 		'hidden-404',
 		'query-default',
-		// 'query-team',
+    'recipe'
     // 'mailchimp-signup'
 	);
 

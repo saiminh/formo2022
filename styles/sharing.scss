@@ -29,3 +29,17 @@
     width: 0;
   }
 }
+.formo-share-recipe {
+  margin-top: 0.5em!important;
+
+  &.wp-block-social-links .wp-social-link .wp-block-social-link-anchor {
+    border: 1px solid;
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .25em;
+  }
+}

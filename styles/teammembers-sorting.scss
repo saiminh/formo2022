@@ -125,13 +125,15 @@ body .is-layout-flow > h3.formo2022-teammember-sorting-title {
       --tmwidth: 6vw;
     }
   }
-  position: absolute;  
-  z-index: 1;
-  top: calc( 50% - var(--tmwidth) / 2 );
-  left: calc( 50% - var(--tmwidth) / 2 );
-  list-style: none;
-  transition: transform .5s .3s cubic-bezier(1.000, -0.340, 0.000, 1.245);
-  margin: 0!important;
+  & {
+    position: absolute;  
+    z-index: 1;
+    top: calc( 50% - var(--tmwidth) / 2 );
+    left: calc( 50% - var(--tmwidth) / 2 );
+    list-style: none;
+    transition: transform .5s .3s cubic-bezier(1.000, -0.340, 0.000, 1.245);
+    margin: 0!important;
+  }
 
   &.hidden {
     opacity: 0;

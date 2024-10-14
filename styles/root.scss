@@ -1,7 +1,8 @@
-@use './breakpoints.scss' as bps;
+@use './breakpoints.scss' as bp;
 
 :root {
   font-size: 16px;
+  interpolate-size: allow-keywords;
   --cubic-bounce: cubic-bezier(0.080, 1.635, 0.430, 0.840);
 }
 
@@ -55,25 +56,100 @@ h3 {
 p, li:not(.wp-social-link) {
   font-size: var(--wp--preset--font-size--body);
 } 
-p + p,
-p + .wp-block-quote,
-p + blockquote,
-p + .wp-block-buttons,
-p + ul, p + ol, ul + p, ol + p,
-figure + p, p + figure,
-:where(h1, h2, h3, h4, h5) + p,
-p + :where(h1, h2, h3, h4, h5) {
-  margin-top: 1em;
+:root,
+:root :where(.is-layout-flow) {
+  * > p + p,
+  * > p + .wp-block-quote,
+  * > p + blockquote,
+  * > p + .wp-block-buttons,
+  * > p + ul, * > p + ol, * > ul + p, * > ol + p,
+  * > figure + p, * > p + figure,
+  * > :where(h1, h2, h3, h4, h5) + p,
+  * > p + :where(h1, h2, h3, h4, h5) {
+    margin-top: 1em;
+  }
+  * > ul + p,
+  * > ol + p {
+    margin-top: 2em;
+  }
 }
+@include bp.bp(bigTablet){
+  .wp-block-spacer {
+    &:not(.hide-on-desktop),
+    & + .wp-block-spacer.hide-on-desktop {
+      & + h1, & + h2, & + h3, & + h4 {
+        margin-top: 0;
+      }
+    }
+  }
+}
+@include bp.bp-down(bigTablet){
+
+  // When there's text elements in separate columns, give them spacing before on mobile
+  .wp-block-column:has( > h5:last-child),
+  .wp-block-column:has( > h4:last-child),
+  .wp-block-column:has( > h3:last-child),
+  .wp-block-column:has( > h2:last-child),
+  .wp-block-column:has( > h1:last-child),
+  .wp-block-column:has( > p:last-child) {
+
+    & + .wp-block-column {
+
+      & > h1, & > h2, & > h3, & > h4, & > h5, & > p  {
+        margin-top: 1em;
+      }
+    }
+  }
+
+  h1, h2, h3, h4, h5, p {
+
+    & + .wp-block-columns > .wp-block-column:first-child {
+
+      & h1:first-child, & h2:first-child, h3:first-child, h4:first-child, h5:first-child, p:first-child {
+        margin-top: 1em;
+      }
+    }
+  }
+
+
+  .wp-block-spacer {
+    &:not(.hide-on-mobile), 
+    & + .wp-block-spacer.hide-on-mobile {
+      & + h1, & + h2, & + h3, & + h4 {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
 ul, ol {
   padding-left: 0;
+  margin-top: 1em;
 }
 ul li, ol li {
   margin-top: 1em;
 }
-.content-wrapper ul:not(.wp-block-post-template, .wp-block-navigation__container) li:not(.wp-social-link):not(.cat-item), 
-.content-wrapper ol li {
+ul:not(.wp-block-post-template, .wp-block-navigation__container, .wp-block-polylang-language-switcher) li:not(.wp-social-link):not(.cat-item) {
   margin-left: 1em;
+}
+ol {
+  counter-reset: li;
+  list-style: none;
+
+  & > li {
+    position: relative;
+    padding-left: 1.4em;
+    
+  }
+  & > li:before {
+    content: counter(li)'.'; /* Use the counter as content */
+    counter-increment: li; /* Increment the counter by 1 */
+    font-size: 1em;
+    white-space: nowrap;
+    font-family: var(--wp--preset--font-family--krana);
+    position: absolute;
+    left: 0;
+  }
 }
 blockquote {
   position: relative;
@@ -118,32 +194,13 @@ label {
   margin-block-start: 0!important;
   margin-block-end: 0!important;
 }
-@include bps.bp(bigTablet) {
-  // body .is-layout-flow , 
-  // body .is-layout-constrained {
-  //   & > *:not(div):not(section):not(lt-highlighter) + *:not(div):not(section),
-  //   & > * + .wp-block-buttons,
-  //   & > p + div, 
-  //   & > div + p,
-  //   & > lt-highlighter:not(:first-child) + * ,
-  //   & > figure + div:not(.wp-block-spacer),
-  //   & > h1 + div, 
-  //   & > h2 + div, 
-  //   & > h3 + div, 
-  //   & > h4 + div {
-  //     margin-block-start: 1rem;
-  //   }
-  // }
-  // body .is-layout-flow > p:last-child,
-  // body .is-layout-flow > * + p:last-child {
-  //   margin-block-end: 1em;
-  // }
+@include bp.bp(bigTablet) {
   .hide-on-desktop {
     display: none;
   }
 }
 
-@include bps.bp-down(bigTablet) {
+@include bp.bp-down(bigTablet) {
   .hide-on-mobile {
     display: none;
   }
@@ -238,19 +295,19 @@ figure.figure-ignores-padding img {
   width: 100vw;
   max-width: 100vw;
 }
-@include bps.bp-down(bigTablet) {
+@include bp.bp-down(bigTablet) {
   figure.figure-ignores-padding:last-child img {
     margin-bottom: -2em;
   }
 }
 
-@include bps.bp(bigTablet) {
+@include bp.bp(bigTablet) {
   .desktop-top-offset-large {
     margin-top: -25%!important;
   }
 }
 
-@include bps.bp-down(bigTablet) {
+@include bp.bp-down(bigTablet) {
   .mobile-max-width-17em {
     max-width: 17em;
   }
@@ -264,4 +321,15 @@ figure.figure-ignores-padding img {
   @supports (-webkit-touch-callout: none) {
     line-height: .3!important;
   }
+}
+
+.xdebug-error {
+  position: fixed;
+  top: 2em;
+  left: 2em;
+  right: 2em;
+  height: calc(100vh - 4em);
+  overflow: scroll;
+  z-index: 999999;
+  display: block;
 }
