@@ -42,9 +42,7 @@ return array(
         <div style="height:2rem" aria-hidden="true" class="wp-block-spacer  hide-on-mobile"></div>
         <!-- /wp:spacer -->
 
-        <!-- wp:create-block/formo-recipe-header -->
-        <p class="wp-block-create-block-formo-recipe-header">Formo Recipe Header – hello from the saved content!</p>
-        <!-- /wp:create-block/formo-recipe-header -->
+        <!-- wp:create-block/formo-recipe-header {"className":"wp-block-create-block-formo-recipe-header"} /-->
 
         <!-- wp:spacer {"height":"2em"} -->
         <div style="height:2em" aria-hidden="true" class="wp-block-spacer"></div>
