@@ -7,7 +7,7 @@ return array(
   'categories' => array( 'query' ),
   'blockTypes' => array( 'core/query' ),
   'content'    => '
-  <!-- wp:post-featured-image {"className":"formo-recipe-page-featured-image"} /-->
+  <!-- wp:post-featured-image {"aspectRatio":"16/9","width":"100%","height":"","className":"formo-recipe-page-featured-image"} /-->
 
   <!-- wp:group {
     "className":"formo-recipe-page-content",
