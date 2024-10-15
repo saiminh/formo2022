@@ -43,27 +43,6 @@ if ( ! function_exists( 'formo2022_styles' ) ) :
 	 * @return void
 	 */
 
-  // function enqueue_cookieyes_first() {
-  //   //enqueue cookieyes script first befor all other scripts
-  //   wp_enqueue_script( 'cookieyes', 'https://cdn-cookieyes.com/client_data/5c65f2f66d288c2936293391/script.js', array(), '1.0', false );
-  // }
-
-  // add_action( 'wp_enqueue_scripts', 'enqueue_cookieyes_first', 1 );
-
-  // add_filter( 'script_loader_tag', 'my_script_attributes', 10, 3 );
-
-  // function my_script_attributes( $tag, $handle, $src )
-  // {
-  //     // change to the registered script handle, e. g. 'jquery'
-  //     if ( 'cookieyes' === $handle ) {
-
-  //         // add attributes of your choice
-  //         $tag = '<script id="cookieyes" src="' . esc_url( $src ) . '"></script>';
-  //     }
-
-  //     return $tag;
-  // }
-
 	function formo2022_styles() {
 		// Register theme stylesheet.
 		$theme_version = wp_get_theme()->get( 'Version' );
@@ -75,11 +54,6 @@ if ( ! function_exists( 'formo2022_styles' ) ) :
 			array(),
 			$version_string
 		);
-
-    // Dequeue the default Gutenberg stylesheets? 
-    // wp_dequeue_style( 'wp-block-library' );
-    // wp_dequeue_style( 'wp-block-library-theme' );
-    // wp_dequeue_style( 'global-styles' );
 
 		// Enqueue theme stylesheet.
 		wp_enqueue_style( 'formo2022-style' );
@@ -98,7 +72,7 @@ add_action( 'wp_enqueue_scripts', 'formo2022_styles' );
 require get_template_directory() . '/inc/defer-js.php';
 
 // Remove those filters from the body
-remove_action( 'wp_body_open', 'wp_global_styles_render_svg_filters' );
+// remove_action( 'wp_body_open', 'wp_global_styles_render_svg_filters' );
 
 // Remove WP default block patterns
 add_action('init', function() {

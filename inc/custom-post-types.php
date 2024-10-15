@@ -350,21 +350,62 @@ function teammember_save_postdata($post_id) {
 }
 add_action('save_post', 'teammember_save_postdata');
 
-add_action('admin_footer', 'move_quick_edit_custom_box');
-function move_quick_edit_custom_box() {
+add_action('admin_footer', 'alter_quick_edit');
+function alter_quick_edit() {
     ?>
     <script type="text/javascript">
       document.addEventListener( 'DOMContentLoaded',  () => {
+
+          // moving the Full Name meta field to the top of the quick edit form for team member quick edit
           const rowActions = document.querySelectorAll('.row-actions');
           rowActions.forEach((rowAction) => {
-              const quickEditBtn = rowAction.querySelector('.edit + span > button');
+              const quickEditBtn = rowAction.querySelector('.edit + span > .editinline');
               quickEditBtn.addEventListener('click', () => {
                   const quickEditForm = document.querySelector('.quick-edit-row .inline-edit-col-right .inline-edit-col');
                   const fullnameMeta = document.querySelector('.fullname_meta');
-                  quickEditForm.insertBefore(fullnameMeta, quickEditForm.firstChild);
+                  if (fullnameMeta) {
+                    quickEditForm.insertBefore(fullnameMeta, quickEditForm.firstChild);
+                  }
               });
           });
-          
+
+          // adding a missing wicked_move td to a table after a quick edit, but only if it's missing and if the table is changing
+          // for example: when Quick Edit is used to change a post, the table is updated
+          const poststable = document.querySelector('#the-list');
+
+          const config = { attributes: true, childList: true, subtree: true };
+
+          const callback = (mutationList, observer) => {
+            for (const mutation of mutationList) {
+              if (mutation.type === "childList") {
+                
+                const rows = poststable.querySelectorAll('tr')
+
+                const hasWicked = (elem) => {
+                  return elem.querySelector('.wicked_move');
+                }
+
+                if (!hasWicked(poststable)) {
+                  // If there is no wicked_move td in the table, then wicked is likely not installed and we can stop here
+                  return;
+                } 
+                else {
+                  // otherwise we need to check each row for the wicked_move td and if it's missing, add it
+                  rows.forEach((row) => {
+                    if (!hasWicked(row)) {
+                      const wicked = document.createElement('td');
+                      wicked.classList.add('wicked_move');
+                      row.insertBefore(wicked, row.firstChild);
+                    }
+                  });
+                }
+              } 
+            }
+          };
+          const observer = new MutationObserver(callback);
+
+          // Start observing the target node for configured mutations
+          observer.observe(poststable, config);
       });
     </script>
     <?php
