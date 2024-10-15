@@ -110,7 +110,11 @@ ul.wp-block-navigation__container li {
   }
   // submenu items
   .formo-navi .wp-block-navigation .has-child:not(.open-on-click):hover>.wp-block-navigation__submenu-container {
-    width: 100%;
+    justify-content: center;
+
+    & li {
+      margin-left: 0;
+    }
   }
   .formo-navi .wp-block-navigation__submenu-container .wp-block-navigation-item > a.wp-block-navigation-item__content {
     font-size: .9em;
