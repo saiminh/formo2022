@@ -62,7 +62,7 @@ function formo2022_custom_post_type() {
       'not_found' => __('No Main Ingredients found', 'txtdomain'),
     ]
   ]);
-  register_taxonomy_for_object_type('main_ingredient', 'formo2022_teammember');
+  register_taxonomy_for_object_type('main_ingredient', 'formo2022_recipe');
   
   register_taxonomy('preptime', 'formo2022_recipe', [
     'label' => __('Preparation Time', 'txtdomain'),
@@ -87,7 +87,32 @@ function formo2022_custom_post_type() {
       'not_found' => __('No Preparation Times found', 'txtdomain'),
     ]
   ]);
-  register_taxonomy_for_object_type('preptime', 'formo2022_teammember');
+  register_taxonomy_for_object_type('preptime', 'formo2022_recipe');
+
+  // Add custom field to the term edit screen
+  function add_preptime_order_field($term) {
+      $order = get_term_meta($term->term_id, 'order', true);
+      ?>
+      <tr class="form-field">
+          <th scope="row" valign="top">
+              <label for="order"><?php _e('Order'); ?></label>
+          </th>
+          <td>
+              <input type="number" name="order" id="order" value="<?php echo esc_attr($order); ?>" />
+              <p class="description"><?php _e('Je kleiner der Wert hier, desto weiter oben in der Liste aller Preptimes wird diese Preptime angezeigt. (Bei gleichen Werten wird alphabetisch gerordnet)'); ?></p>
+          </td>
+      </tr>
+      <?php
+  }
+  add_action('preptime_edit_form_fields', 'add_preptime_order_field');
+
+  // Save custom field value
+  function save_preptime_order_field($term_id) {
+      if (isset($_POST['order'])) {
+          update_term_meta($term_id, 'order', intval($_POST['order']));
+      }
+  }
+  add_action('edited_preptime', 'save_preptime_order_field');
   
   register_taxonomy('meal', 'formo2022_recipe', [
     'label' => __('Meal', 'txtdomain'),
@@ -112,7 +137,32 @@ function formo2022_custom_post_type() {
       'not_found' => __('No Meals found', 'txtdomain'),
     ]
   ]);
-  register_taxonomy_for_object_type('meal', 'formo2022_teammember');
+  register_taxonomy_for_object_type('meal', 'formo2022_recipe');
+
+  // Add custom field to the term edit screen
+  function add_meal_order_field($term) {
+      $order = get_term_meta($term->term_id, 'order', true);
+      ?>
+      <tr class="form-field">
+          <th scope="row" valign="top">
+              <label for="order"><?php _e('Order'); ?></label>
+          </th>
+          <td>
+              <input type="number" name="order" id="order" value="<?php echo esc_attr($order); ?>" />
+              <p class="description"><?php _e('Je kleiner der Wert hier, desto weiter oben in der Liste aller Meals wird dieses Meal angezeigt. (Bei gleichen Werten wird alphabetisch gerordnet)'); ?></p>
+          </td>
+      </tr>
+      <?php
+  }
+  add_action('meal_edit_form_fields', 'add_meal_order_field');
+
+  // Save custom field value
+  function save_meal_order_field($term_id) {
+      if (isset($_POST['order'])) {
+          update_term_meta($term_id, 'order', intval($_POST['order']));
+      }
+  }
+  add_action('edited_meal', 'save_meal_order_field');
 
 
   /* EVENT POST TYPE */
