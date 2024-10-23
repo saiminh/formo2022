@@ -91,6 +91,9 @@ require get_template_directory() . '/inc/customise-admin.php';
 // Custom image sizes
 require get_template_directory() . '/inc/custom-image-sizes.php';
 
+// Exclude current post from query
+require get_template_directory() . '/inc/query-exclude-current-post.php';
+
 // Adding support for certain span tags in Gutenberg
 function addspansupport(){
   $theme_version = wp_get_theme()->get( 'Version' );
