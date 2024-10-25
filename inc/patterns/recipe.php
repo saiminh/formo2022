@@ -266,12 +266,15 @@ return array(
           <!-- wp:social-links {"iconColor":"formo-cream","iconColorValue":"#fff7e8","className":"is-style-logos-only formo-share formo-share-recipe","style":{"spacing":{"blockGap":{"left":"var:preset|spacing|30"}}}} -->
           <ul class="wp-block-social-links has-icon-color is-style-logos-only formo-share formo-share-recipe">
           
-            <!-- wp:social-link {"url":"hank","service":"pinterest"} /-->
+            <!-- wp:social-link {"url":"pinterest","service":"pinterest"} /-->
 
-            <!-- wp:social-link {"url":"yank","service":"instagram"} /-->
+            <!-- wp:social-link {"url":"https://instagram.com","service":"instagram"} /-->
+
+            <!-- wp:social-link {"url":"copylink","service":"chain"} /-->
 
           </ul>
           <!-- /wp:social-links -->
+          
 
           <!-- wp:spacer {"height":"1rem"} -->
           <div style="height:1rem" aria-hidden="true" class="wp-block-spacer"></div>

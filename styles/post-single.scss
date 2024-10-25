@@ -1,5 +1,5 @@
 @use 'mixins.scss' as mixins;
-
+@use 'breakpoints.scss' as bps;
 
 .post-single-postnav {
   padding: 1.5em 0;
@@ -36,12 +36,24 @@
   margin-block-start: 0;
 }
 
+main.content-wrapper > .entry-content > .wp-block-cover:first-child {
+  height: 75svh;
+  width: 100%;
+
+  @include bps.bp-down(bigTablet) {
+    height: 66vw;
+  }
+}
 main.content-wrapper > .entry-content > figure.wp-block-post-featured-image:first-child ,
 .is-root-container > figure.wp-block-post-featured-image:first-child {
   margin-left: calc(-1 * var(--wp--custom--spacing--outer));
   margin-right: calc(-1 * var(--wp--custom--spacing--outer));
-  height: calc(var(--vh, 1vh) * 75);
+  height: 75svh;
   position: relative;
+
+  @include bps.bp-down(bigTablet) {
+    height: 66vw;
+  }
   
   & img {
     width: 100%;
