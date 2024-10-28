@@ -251,8 +251,7 @@
 					"text": "var(--wp--preset--color--formo-white)"
 				},
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--body)",
-          "textTransform": "uppercase"
+					"fontSize": "var(--wp--preset--font-size--body)"
 				},
         "spacing": {
           "padding": "10px 20px"

@@ -425,15 +425,16 @@ function alter_quick_edit() {
 
           const config = { attributes: true, childList: true, subtree: true };
 
+          const hasWicked = (elem) => {
+            return elem.querySelector('.wicked_move');
+          }
+
           const callback = (mutationList, observer) => {
             for (const mutation of mutationList) {
               if (mutation.type === "childList") {
                 
                 const rows = poststable.querySelectorAll('tr')
 
-                const hasWicked = (elem) => {
-                  return elem.querySelector('.wicked_move');
-                }
 
                 if (!hasWicked(poststable)) {
                   // If there is no wicked_move td in the table, then wicked is likely not installed and we can stop here
@@ -455,7 +456,9 @@ function alter_quick_edit() {
           const observer = new MutationObserver(callback);
 
           // Start observing the target node for configured mutations
-          observer.observe(poststable, config);
+          if (hasWicked(document)) {
+            observer.observe(poststable, config);
+          }
       });
     </script>
     <?php
