@@ -62,8 +62,8 @@ return array(
     </div>
     <!-- /wp:columns -->
 
-    <!-- wp:columns -->
-    <div class="wp-block-columns">
+    <!-- wp:columns {"className":" is-reversed-mobile","reverseOnMobile":true} -->
+    <div class="wp-block-columns  is-reversed-mobile">
 
       <!-- wp:column {"width":"50%","className":"span6"} -->
       <div class="wp-block-column  span6" style="flex-basis:50%">
