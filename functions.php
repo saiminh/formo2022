@@ -14,9 +14,7 @@ if ( ! function_exists( 'formo2022_support' ) ) :
 
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
-	 *
 	 * @since Formo 2022 1.0
-	 *
 	 * @return void
 	 */
 	function formo2022_support() {
@@ -26,20 +24,33 @@ if ( ! function_exists( 'formo2022_support' ) ) :
 
 		// Enqueue editor styles.
 		add_editor_style( 'index.css' );
-
 	}
 
 endif;
 
 add_action( 'after_setup_theme', 'formo2022_support' );
 
+if ( ! function_exists( 'formo2022_add_meta_tags' ) ) :
+  
+  /**
+	 * Adds meta tags to the head.
+	 * @since Formo 2022 1.3.5
+	 * @return void
+	 */
+
+  function formo2022_add_meta_tags() {
+    echo '<meta name="p:domain_verify" content="2c2062030f7270e4623f850ac6eabc44" />' . "\n";
+  }
+
+endif;
+
+add_action( 'wp_head', 'formo2022_add_meta_tags' );
+
 if ( ! function_exists( 'formo2022_styles' ) ) :
 
 	/**
 	 * Enqueue styles.
-	 *
 	 * @since Formo 2022 1.0
-	 *
 	 * @return void
 	 */
 
