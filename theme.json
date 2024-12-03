@@ -17,13 +17,6 @@
 			]
 		},
 		{
-			"name": "homepage",
-			"title": "Homepage",
-			"postTypes": [
-				"page"				
-			]
-		},
-		{
 			"name": "team",
 			"title": "team",
 			"postTypes": [
@@ -31,10 +24,24 @@
 			]
 		},
     {
+      "name": "single-formo2022_recipe",
+      "title": "Recipe",
+      "postTypes": [
+        "formo2022_recipe"
+      ]
+    },
+    {
       "name": "single-formo2022_event",
       "title": "Event",
       "postTypes": [
         "formo2022_event"
+      ]
+    },
+    {
+      "name": "single-formo2022_teammember",
+      "title": "Team Member",
+      "postTypes": [
+        "formo2022_teammember"
       ]
     }
 	],
@@ -244,7 +251,7 @@
 		"blocks": {
 			"core/button": {
 				"border": {
-					"radius": "50px"
+					"radius": "2em"
 				},
 				"color": {
 					"background": "var(--wp--preset--color--formo-blue)",
@@ -254,7 +261,12 @@
 					"fontSize": "var(--wp--preset--font-size--body)"
 				},
         "spacing": {
-          "padding": "10px 20px"
+          "padding": {
+            "top": "0.83em",
+            "right": "1.39em",
+            "bottom": "0.83em",
+            "left": "1.39em"
+          }
         }
 			},
 			"core/post-title": {

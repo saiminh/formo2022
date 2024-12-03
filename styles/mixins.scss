@@ -1,32 +1,29 @@
 @use 'breakpoints.scss' as bps;
 
 @mixin button {
-  padding: 0.83em 1.39em;
-  border-radius: 2em;
-  border-width: 0;
-  border-style: solid;
+  // padding: 0.83em 1.39em;
+  // border-radius: 2em;
+  // border-width: 0;
+  // border-style: solid;
   
   white-space: nowrap;
-  display: inline-block;
-  background-color: var(--wp--preset--color--formo-blue);
+  // display: inline-block;
+  // background-color: var(--wp--preset--color--formo-blue);
   
   @include bps.bp(bigTablet) {
     transition: padding .3s cubic-bezier(0.165, 0.84, 0.44, 1);
     
     &:hover {
-      padding: 0.83em 1.81em;
-    }
-    &:active {
-      padding: 0.83em 1.39em;
-      transition: padding .1s cubic-bezier(0.165, 0.84, 0.44, 1);
+      padding-left: 1.81em;
+      padding-right: 1.81em;
     }
   }
 }
 @mixin button-outline {
   & {
     border-width: 1px;
-    border-style: solid;
-    background-color: transparent;
+    // border-style: solid;
+    // background-color: transparent;
   }
 }
 
