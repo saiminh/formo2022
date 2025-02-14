@@ -120,12 +120,12 @@ function addspansupport(){
 add_action('enqueue_block_editor_assets', 'addspansupport');
 
 // Remove jQuery
-// add_filter( 'wp_default_scripts', 'remove_jquery_migrate' );
-// function remove_jquery_migrate($scripts){
-//     if(!is_admin()){
-//         $scripts->remove( 'jquery');
-//     }
-// }
+add_filter( 'wp_default_scripts', 'remove_jquery_migrate' );
+function remove_jquery_migrate($scripts){
+    if(!is_admin()){
+        $scripts->remove( 'jquery');
+    }
+}
 
 // Change receipient of simple email contact from
 add_filter( 'mcfb_email_to', function ( $to, $form ) {
@@ -144,6 +144,26 @@ function add_active_class_to_current_category( $output ) {
   return $output;
 }
 add_filter( 'wp_list_categories', 'add_active_class_to_current_category' );
+
+// Remove the default Contact Form 7 reCAPTCHA loading
+add_action('wp_print_scripts', function() {
+  wp_dequeue_script('google-recaptcha');
+  wp_deregister_script('google-recaptcha');
+}, 100);
+
+// Add the script our way
+add_action('wp_footer', function() {
+  ?>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LflhrkqAAAAAKxPWbSGC3eGLqKM9cN7wgvG2anE" async defer></script>
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          grecaptcha.ready(function() {
+              grecaptcha.execute('6LflhrkqAAAAAKxPWbSGC3eGLqKM9cN7wgvG2anE', {action: 'submit'});
+          });
+      });
+  </script>
+  <?php
+}, 10);
 
 if (function_exists('pll_register_string')) {
   $name = 'formo-recipe-header-with';
@@ -169,5 +189,4 @@ if (function_exists('pll_register_string')) {
   $group = 'formo-recipe-categorised';
   $multiline = false;
   pll_register_string( $name, $string, $group, $multiline );
-
 }
