@@ -364,7 +364,7 @@ ul.wp-block-navigation__container li {
   .formo-navi .wp-block-navigation-item .wp-block-navigation-item__content {
     font-size: var(--wp--preset--font-size--body);
     display: block;
-    @include mixins.buttonWithPresets;
+    @include mixins.button;
     @include mixins.button-outline;
     margin: .25em var(--wp--custom--spacing--outer);
     padding: 10px 0;
