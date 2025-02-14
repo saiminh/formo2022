@@ -120,12 +120,12 @@ function addspansupport(){
 add_action('enqueue_block_editor_assets', 'addspansupport');
 
 // Remove jQuery
-add_filter( 'wp_default_scripts', 'remove_jquery_migrate' );
-function remove_jquery_migrate($scripts){
-    if(!is_admin()){
-        $scripts->remove( 'jquery');
-    }
-}
+// add_filter( 'wp_default_scripts', 'remove_jquery_migrate' );
+// function remove_jquery_migrate($scripts){
+//     if(!is_admin()){
+//         $scripts->remove( 'jquery');
+//     }
+// }
 
 // Change receipient of simple email contact from
 add_filter( 'mcfb_email_to', function ( $to, $form ) {
