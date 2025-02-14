@@ -145,53 +145,6 @@ function add_active_class_to_current_category( $output ) {
 }
 add_filter( 'wp_list_categories', 'add_active_class_to_current_category' );
 
-// Remove the default Contact Form 7 reCAPTCHA loading
-add_action('wp_print_scripts', function() {
-  wp_dequeue_script('google-recaptcha');
-  wp_deregister_script('google-recaptcha');
-}, 100);
-
-// Add the script our way
-add_action('wp_footer', function() {
-  ?>
-  <script src="https://www.google.com/recaptcha/api.js?render=6LflhrkqAAAAAKxPWbSGC3eGLqKM9cN7wgvG2anE" async defer></script>
-  <script>
-      document.addEventListener('DOMContentLoaded', function() {
-          // Find all CF7 forms
-          var forms = document.querySelectorAll('.wpcf7-form');
-          
-          forms.forEach(function(form) {
-              form.addEventListener('submit', function(event) {
-                  event.preventDefault();
-                  
-                  grecaptcha.ready(function() {
-                      grecaptcha.execute('6LflhrkqAAAAAKxPWbSGC3eGLqKM9cN7wgvG2anE', {action: 'submit'})
-                      .then(function(token) {
-                          // Add the token to the form
-                          var tokenInput = form.querySelector('.g-recaptcha-response');
-                          if (!tokenInput) {
-                              tokenInput = document.createElement('input');
-                              tokenInput.setAttribute('type', 'hidden');
-                              tokenInput.setAttribute('name', 'g-recaptcha-response');
-                              tokenInput.classList.add('g-recaptcha-response');
-                              form.appendChild(tokenInput);
-                          }
-                          tokenInput.setAttribute('value', token);
-                          
-                          // Submit the form
-                          var submitButton = form.querySelector('input[type="submit"]');
-                          if (submitButton) {
-                              submitButton.click();
-                          }
-                      });
-                  });
-              });
-          });
-      });
-  </script>
-  <?php
-}, 10);
-
 if (function_exists('pll_register_string')) {
   $name = 'formo-recipe-header-with';
   $string = 'with';
