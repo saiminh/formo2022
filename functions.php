@@ -157,8 +157,35 @@ add_action('wp_footer', function() {
   <script src="https://www.google.com/recaptcha/api.js?render=6LflhrkqAAAAAKxPWbSGC3eGLqKM9cN7wgvG2anE" async defer></script>
   <script>
       document.addEventListener('DOMContentLoaded', function() {
-          grecaptcha.ready(function() {
-              grecaptcha.execute('6LflhrkqAAAAAKxPWbSGC3eGLqKM9cN7wgvG2anE', {action: 'submit'});
+          // Find all CF7 forms
+          var forms = document.querySelectorAll('.wpcf7-form');
+          
+          forms.forEach(function(form) {
+              form.addEventListener('submit', function(event) {
+                  event.preventDefault();
+                  
+                  grecaptcha.ready(function() {
+                      grecaptcha.execute('6LflhrkqAAAAAKxPWbSGC3eGLqKM9cN7wgvG2anE', {action: 'submit'})
+                      .then(function(token) {
+                          // Add the token to the form
+                          var tokenInput = form.querySelector('.g-recaptcha-response');
+                          if (!tokenInput) {
+                              tokenInput = document.createElement('input');
+                              tokenInput.setAttribute('type', 'hidden');
+                              tokenInput.setAttribute('name', 'g-recaptcha-response');
+                              tokenInput.classList.add('g-recaptcha-response');
+                              form.appendChild(tokenInput);
+                          }
+                          tokenInput.setAttribute('value', token);
+                          
+                          // Submit the form
+                          var submitButton = form.querySelector('input[type="submit"]');
+                          if (submitButton) {
+                              submitButton.click();
+                          }
+                      });
+                  });
+              });
           });
       });
   </script>
