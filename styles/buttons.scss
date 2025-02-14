@@ -20,6 +20,7 @@ input[type="submit"] {
 body .is-layout-flex.wp-block-buttons {
   gap: .25em;
 }
+.grecaptcha-badge { visibility: hidden; }
 
 /*
  * Search and File Block button styles.
