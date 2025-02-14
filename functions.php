@@ -80,7 +80,7 @@ endif;
 add_action( 'wp_enqueue_scripts', 'formo2022_styles' );
 
 // Defer JS to improve page load speed
-// require get_template_directory() . '/inc/defer-js.php';
+require get_template_directory() . '/inc/defer-js.php';
 
 // Remove those filters from the body
 // remove_action( 'wp_body_open', 'wp_global_styles_render_svg_filters' );
@@ -144,6 +144,26 @@ function add_active_class_to_current_category( $output ) {
   return $output;
 }
 add_filter( 'wp_list_categories', 'add_active_class_to_current_category' );
+
+// Remove the default Contact Form 7 reCAPTCHA loading
+add_action('wp_print_scripts', function() {
+  wp_dequeue_script('google-recaptcha');
+  wp_deregister_script('google-recaptcha');
+}, 100);
+
+// Add the script our way
+add_action('wp_footer', function() {
+  ?>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LflhrkqAAAAAKxPWbSGC3eGLqKM9cN7wgvG2anE" async defer></script>
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          grecaptcha.ready(function() {
+              grecaptcha.execute('6LflhrkqAAAAAKxPWbSGC3eGLqKM9cN7wgvG2anE', {action: 'submit'});
+          });
+      });
+  </script>
+  <?php
+}, 10);
 
 if (function_exists('pll_register_string')) {
   $name = 'formo-recipe-header-with';
