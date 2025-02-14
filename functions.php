@@ -79,11 +79,6 @@ endif;
 
 add_action( 'wp_enqueue_scripts', 'formo2022_styles' );
 
-// Defer JS to improve page load speed
-require get_template_directory() . '/inc/defer-js.php';
-
-// Remove those filters from the body
-// remove_action( 'wp_body_open', 'wp_global_styles_render_svg_filters' );
 
 // Remove WP default block patterns
 add_action('init', function() {
@@ -118,14 +113,6 @@ function addspansupport(){
   );
 }
 add_action('enqueue_block_editor_assets', 'addspansupport');
-
-// Remove jQuery
-add_filter( 'wp_default_scripts', 'remove_jquery_migrate' );
-function remove_jquery_migrate($scripts){
-    if(!is_admin()){
-        $scripts->remove( 'jquery');
-    }
-}
 
 // Change receipient of simple email contact from
 add_filter( 'mcfb_email_to', function ( $to, $form ) {
