@@ -126,7 +126,7 @@ input[type="radio"] {
     text-align: right;
   }
   .button {
-    @include mixin.button;
+    @include mixin.buttonWithPresets;
   }
   .button {
     background-color: var(--wp--preset--color--formo-blue);

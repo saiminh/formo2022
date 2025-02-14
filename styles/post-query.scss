@@ -87,7 +87,7 @@
   }
 
   & a {
-    @include mixins.button;
+    @include mixins.buttonWithPresets;
     @include mixins.button-outline;
     & {
       font-size: var(--wp--preset--font-size--small);

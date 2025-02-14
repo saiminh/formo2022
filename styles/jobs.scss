@@ -8,7 +8,7 @@
   padding: 1em 0;
   
   & .wp-block-button__link {
-    @include mixins.button;
+    @include mixins.buttonWithPresets;
     @include mixins.button-outline;
   }
   & .wp-block-button__link {

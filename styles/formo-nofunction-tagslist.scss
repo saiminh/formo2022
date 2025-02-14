@@ -9,7 +9,7 @@
   & li {
     margin: 0;
     font-size: var(--wp--preset--font-size--tiny);
-    @include mixins.button;
+    @include mixins.buttonWithPresets;
     @include mixins.button-outline;
 
     &:first-child,

@@ -9,6 +9,9 @@
 input[type="submit"] {
   @include mixins.button;
 }
+input[type="submit"] {
+  @include mixins.buttonWithPresets;
+}
 
 .meow-contact-form--default .meow-contact-form__group-button {
   @include mixins.button;
